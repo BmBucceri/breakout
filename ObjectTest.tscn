@@ -1,0 +1,94 @@
+[gd_scene load_steps=4 format=3 uid="uid://1eraj5cry3c2"]
+
+[ext_resource type="Script" uid="uid://b8b32otwwftm1" path="res://score_counter.gd" id="1_33al8"]
+[ext_resource type="PackedScene" uid="uid://d1ogb0eean0hi" path="res://ball.tscn" id="1_utnms"]
+[ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://block.tscn" id="2_33al8"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Control"]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 60.0
+grow_horizontal = 2
+
+[node name="ScoreCounter" type="RichTextLabel" parent="UI/Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_alignment = 1
+script = ExtResource("1_33al8")
+
+[node name="Ball" parent="." instance=ExtResource("1_utnms")]
+position = Vector2(591, 225)
+linear_damp_mode = 1
+script = null
+
+[node name="Blocks" type="Node2D" parent="."]
+
+[node name="BlockBase" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(514, 468)
+
+[node name="BlockBase2" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(606, 468)
+
+[node name="BlockBase3" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(698, 468)
+
+[node name="BlockBase10" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(514, 560)
+
+[node name="BlockBase11" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(606, 560)
+
+[node name="BlockBase12" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(698, 560)
+
+[node name="BlockBase13" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(238, 560)
+
+[node name="BlockBase14" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(330, 560)
+
+[node name="BlockBase15" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(422, 560)
+
+[node name="BlockBase16" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(790, 560)
+
+[node name="BlockBase17" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(882, 560)
+
+[node name="BlockBase18" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(974, 560)
+
+[node name="BlockBase4" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(790, 468)
+
+[node name="BlockBase5" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(882, 468)
+
+[node name="BlockBase6" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(974, 468)
+
+[node name="BlockBase7" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(238, 468)
+
+[node name="BlockBase8" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(330, 468)
+
+[node name="BlockBase9" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(422, 468)

@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://buyvsud8eecnx"]
+
+[ext_resource type="Script" uid="uid://1yjlqu7i84db" path="res://blockbase.gd" id="1_xfwl5"]
+[ext_resource type="Texture2D" uid="uid://bmrkcdp1krflj" path="res://icon.svg" id="2_5d32t"]
+[ext_resource type="Script" uid="uid://cxtdhn4hf5pod" path="res://hurtbox.gd" id="2_xfwl5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gho8k"]
+size = Vector2(88, 88)
+
+[node name="BlockBase" type="StaticBody2D"]
+script = ExtResource("1_xfwl5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.162066, 0.162066, 0.162066, 1)
+light_mask = 3
+scale = Vector2(0.6875, 0.6875)
+texture = ExtResource("2_5d32t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gho8k")
+
+[node name="Hurtbox" type="Area2D" parent="." node_paths=PackedStringArray("block_base")]
+collision_layer = 3
+collision_mask = 4
+script = ExtResource("2_xfwl5")
+block_base = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("RectangleShape2D_gho8k")
