@@ -8,16 +8,9 @@
 size = Vector2(88, 88)
 
 [node name="BlockBase" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 4
 script = ExtResource("1_xfwl5")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.162066, 0.162066, 0.162066, 1)
-light_mask = 3
-scale = Vector2(0.6875, 0.6875)
-texture = ExtResource("2_5d32t")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_gho8k")
 
 [node name="Hurtbox" type="Area2D" parent="." node_paths=PackedStringArray("block_base")]
 collision_layer = 3
@@ -27,3 +20,12 @@ block_base = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 shape = SubResource("RectangleShape2D_gho8k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gho8k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.162066, 0.162066, 0.162066, 1)
+light_mask = 3
+scale = Vector2(0.6875, 0.6875)
+texture = ExtResource("2_5d32t")

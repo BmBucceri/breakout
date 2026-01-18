@@ -30,15 +30,8 @@ grow_horizontal = 2
 [node name="ScoreCounter" type="RichTextLabel" parent="UI/Control/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Score tracker"
 horizontal_alignment = 1
 script = ExtResource("1_33al8")
-
-[node name="Ball" parent="." instance=ExtResource("1_utnms")]
-position = Vector2(581, 262)
-
-[node name="Ball2" parent="." instance=ExtResource("1_utnms")]
-position = Vector2(991, 266)
 
 [node name="Blocks" type="Node2D" parent="."]
 
@@ -105,8 +98,5 @@ position = Vector2(330, 468)
 modulate = Color(0.973074, 0.361228, 0.897034, 1)
 position = Vector2(422, 468)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-collision_layer = 3
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(1, -2, 3, 643, 31, 645, 27, 19, 573.772, 18.0068, 1128, 17, 1125, 647, 1153, 649, 1149, 0)
+[node name="Ball" parent="." instance=ExtResource("1_utnms")]
+position = Vector2(588, 294)

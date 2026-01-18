@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0dac6bf3gfyu"]
+
+[ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://BlockBase.tscn" id="1_q6aci"]
+
+[node name="BlockSpecial" instance=ExtResource("1_q6aci")]
+block_score = 33.333
+
+[node name="Sprite2D" parent="." index="2"]
+modulate = Color(0.463187, 0.307301, 0.0977078, 1)
+flip_v = true
