@@ -13,11 +13,13 @@ config_version=5
 config/name="Breakout"
 run/main_scene="uid://1eraj5cry3c2"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/icon.svg"
 
 [autoload]
 
 ScoreManager="*res://Autoloads/score_manager.gd"
+MusicManager="*res://Autoloads/MusicManager.tscn"
+InputManager="*res://Autoloads/input_manager.gd"
 
 [layer_names]
 

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4pqdmrlvpd1h"]
+
+[ext_resource type="Script" uid="uid://kg25nce5clud" path="res://Autoloads/music_manager.gd" id="1_v20jb"]
+[ext_resource type="AudioStream" uid="uid://bjvkujwr8x24p" path="res://Audio/Music/Louie Zong - RAT TAXI - 08 RECESS.mp3" id="2_jvbw4"]
+
+[node name="MusicManager" type="Node"]
+script = ExtResource("1_v20jb")
+
+[node name="Recess" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_jvbw4")
+volume_db = -20.0
+parameters/looping = true

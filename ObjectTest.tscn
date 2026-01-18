@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://1eraj5cry3c2"]
+[gd_scene load_steps=6 format=3 uid="uid://1eraj5cry3c2"]
 
 [ext_resource type="Script" uid="uid://b8b32otwwftm1" path="res://score_counter.gd" id="1_33al8"]
-[ext_resource type="PackedScene" uid="uid://d1ogb0eean0hi" path="res://ball.tscn" id="1_utnms"]
+[ext_resource type="Script" uid="uid://b6tlb3o6p10bs" path="res://level.gd" id="1_rv1el"]
 [ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://BlockBase.tscn" id="2_33al8"]
+[ext_resource type="Script" uid="uid://bdjmj8w35eetb" path="res://cannon.gd" id="4_3ddhe"]
+[ext_resource type="Texture2D" uid="uid://bp7aipxx8ujmg" path="res://Assets/Dropper.png" id="5_3ddhe"]
 
-[node name="Node2D" type="Node2D"]
+[node name="ROOTLEVEL" type="Node2D"]
+script = ExtResource("1_rv1el")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -34,79 +37,86 @@ text = "Score tracker"
 horizontal_alignment = 1
 script = ExtResource("1_33al8")
 
-[node name="Ball" parent="." instance=ExtResource("1_utnms")]
-position = Vector2(581, 262)
-
-[node name="Ball2" parent="." instance=ExtResource("1_utnms")]
-position = Vector2(991, 266)
-
 [node name="Blocks" type="Node2D" parent="."]
 
 [node name="BlockBase" parent="Blocks" instance=ExtResource("2_33al8")]
 modulate = Color(0.973074, 0.361228, 0.897034, 1)
-position = Vector2(514, 468)
+position = Vector2(496, 77)
 
 [node name="BlockBase2" parent="Blocks" instance=ExtResource("2_33al8")]
 modulate = Color(0.973074, 0.361228, 0.897034, 1)
-position = Vector2(606, 468)
+position = Vector2(588, 77)
 
 [node name="BlockBase3" parent="Blocks" instance=ExtResource("2_33al8")]
 modulate = Color(0.973074, 0.361228, 0.897034, 1)
-position = Vector2(698, 468)
+position = Vector2(680, 77)
 
 [node name="BlockBase10" parent="Blocks" instance=ExtResource("2_33al8")]
-position = Vector2(514, 560)
+position = Vector2(496, 169)
 
 [node name="BlockBase11" parent="Blocks" instance=ExtResource("2_33al8")]
-position = Vector2(606, 560)
+position = Vector2(588, 169)
 
 [node name="BlockBase12" parent="Blocks" instance=ExtResource("2_33al8")]
-position = Vector2(698, 560)
+position = Vector2(680, 169)
 
 [node name="BlockBase13" parent="Blocks" instance=ExtResource("2_33al8")]
-position = Vector2(238, 560)
+position = Vector2(220, 169)
 
 [node name="BlockBase14" parent="Blocks" instance=ExtResource("2_33al8")]
-position = Vector2(330, 560)
+position = Vector2(312, 169)
 
 [node name="BlockBase15" parent="Blocks" instance=ExtResource("2_33al8")]
-position = Vector2(422, 560)
+position = Vector2(404, 169)
 
 [node name="BlockBase16" parent="Blocks" instance=ExtResource("2_33al8")]
-position = Vector2(790, 560)
+position = Vector2(772, 169)
 
 [node name="BlockBase17" parent="Blocks" instance=ExtResource("2_33al8")]
-position = Vector2(882, 560)
+position = Vector2(864, 169)
 
 [node name="BlockBase18" parent="Blocks" instance=ExtResource("2_33al8")]
-position = Vector2(974, 560)
+position = Vector2(956, 169)
 
 [node name="BlockBase4" parent="Blocks" instance=ExtResource("2_33al8")]
 modulate = Color(0.973074, 0.361228, 0.897034, 1)
-position = Vector2(790, 468)
+position = Vector2(772, 77)
 
 [node name="BlockBase5" parent="Blocks" instance=ExtResource("2_33al8")]
 modulate = Color(0.973074, 0.361228, 0.897034, 1)
-position = Vector2(882, 468)
+position = Vector2(864, 77)
 
 [node name="BlockBase6" parent="Blocks" instance=ExtResource("2_33al8")]
 modulate = Color(0.973074, 0.361228, 0.897034, 1)
-position = Vector2(974, 468)
+position = Vector2(956, 77)
 
 [node name="BlockBase7" parent="Blocks" instance=ExtResource("2_33al8")]
 modulate = Color(0.973074, 0.361228, 0.897034, 1)
-position = Vector2(238, 468)
+position = Vector2(220, 77)
 
 [node name="BlockBase8" parent="Blocks" instance=ExtResource("2_33al8")]
 modulate = Color(0.973074, 0.361228, 0.897034, 1)
-position = Vector2(330, 468)
+position = Vector2(312, 77)
 
 [node name="BlockBase9" parent="Blocks" instance=ExtResource("2_33al8")]
 modulate = Color(0.973074, 0.361228, 0.897034, 1)
-position = Vector2(422, 468)
+position = Vector2(404, 77)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Boundary" type="StaticBody2D" parent="."]
 collision_layer = 3
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boundary"]
 polygon = PackedVector2Array(1, -2, 3, 643, 31, 645, 27, 19, 573.772, 18.0068, 1128, 17, 1125, 647, 1153, 649, 1149, 0)
+
+[node name="Cannon" type="Node2D" parent="." node_paths=PackedStringArray("spawn_marker")]
+position = Vector2(595, 627)
+script = ExtResource("4_3ddhe")
+spawn_marker = NodePath("SpawnLocation")
+metadata/_edit_group_ = true
+
+[node name="Dropper" type="Sprite2D" parent="Cannon"]
+rotation = -3.14159
+texture = ExtResource("5_3ddhe")
+
+[node name="SpawnLocation" type="Marker2D" parent="Cannon"]
+position = Vector2(0, -86)

@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1ogb0eean0hi"]
+
+[ext_resource type="Script" uid="uid://g8v5mplg7ui3" path="res://ball_base.gd" id="1_41u45"]
+[ext_resource type="Texture2D" uid="uid://npqjqqeisr6g" path="res://Assets/Round_Pin.png" id="2_41u45"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_utnms"]
+radius = 64.3273
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_41u45"]
+radius = 65.0
+
+[node name="Ball" type="CharacterBody2D"]
+collision_layer = 5
+collision_mask = 2
+script = ExtResource("1_41u45")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.560339, 0.560339)
+texture = ExtResource("2_41u45")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.495807, 0.495807)
+shape = SubResource("CircleShape2D_utnms")
+
+[node name="Hitbox" type="Area2D" parent="."]
+scale = Vector2(0.495807, 0.495807)
+collision_layer = 5
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CircleShape2D_41u45")

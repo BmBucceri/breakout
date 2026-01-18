@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://buyvsud8eecnx"]
 
 [ext_resource type="Script" uid="uid://1yjlqu7i84db" path="res://blockbase.gd" id="1_xfwl5"]
-[ext_resource type="Texture2D" uid="uid://bmrkcdp1krflj" path="res://icon.svg" id="2_5d32t"]
+[ext_resource type="Texture2D" uid="uid://bmrkcdp1krflj" path="res://Assets/icon.svg" id="2_5d32t"]
 [ext_resource type="Script" uid="uid://cxtdhn4hf5pod" path="res://hurtbox.gd" id="2_xfwl5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gho8k"]
