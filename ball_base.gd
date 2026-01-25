@@ -6,15 +6,19 @@ var dir = Vector2.DOWN
 var collision = KinematicCollision2D
 
 func _ready() -> void:
+	GameManager.add_ball(self)
 	InputManager.left_click_pressed.connect(_on_left_click_pressed)
 
 func _on_left_click_pressed():
+	if GameManager.bounces_left > 0:
+		bounce()
+
+func bounce():
 	adjust_velocity(Vector2.UP)
-	pass
+	GameManager.increment_bounces(-1)
 
 func set_direction(new_dir: Vector2):
 	self.velocity = new_dir
-	pass
 
 func _physics_process(delta: float) -> void:
 	
@@ -31,4 +35,8 @@ func _physics_process(delta: float) -> void:
 
 func adjust_velocity(new_vector: Vector2):
 	velocity = velocity.bounce(new_vector)
-	pass
+
+func destroy_ball():
+	GameManager.remove_ball(self)
+	self.queue_free()
+	

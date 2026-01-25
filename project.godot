@@ -20,6 +20,7 @@ config/icon="res://Assets/icon.svg"
 ScoreManager="*res://Autoloads/score_manager.gd"
 MusicManager="*res://Autoloads/MusicManager.tscn"
 InputManager="*res://Autoloads/input_manager.gd"
+GameManager="*res://Autoloads/game_manager.gd"
 
 [layer_names]
 
