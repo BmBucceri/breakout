@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://BlockBase.tscn" id="1_q6aci"]
 
-[node name="BlockSpecial" instance=ExtResource("1_q6aci")]
-block_score = 33.333
+[node name="BlockSpecialA" instance=ExtResource("1_q6aci")]
+block_score = 15.0
 next_brick = ExtResource("1_q6aci")
 
 [node name="Sprite2D" parent="." index="2"]
 modulate = Color(0.463187, 0.307301, 0.0977078, 1)
-flip_v = true
+rotation = 1.5708

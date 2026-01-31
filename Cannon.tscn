@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://naw7he6hb23q"]
+
+[ext_resource type="Script" uid="uid://bdjmj8w35eetb" path="res://cannon.gd" id="1_i175o"]
+[ext_resource type="Texture2D" uid="uid://bp7aipxx8ujmg" path="res://Assets/Dropper.png" id="2_ria0b"]
+
+[node name="Cannon" type="Node2D" node_paths=PackedStringArray("spawn_marker")]
+script = ExtResource("1_i175o")
+spawn_marker = NodePath("SpawnLocation")
+metadata/_edit_group_ = true
+
+[node name="Dropper" type="Sprite2D" parent="."]
+position = Vector2(1.88898e-05, -7.45106)
+rotation = -3.14159
+scale = Vector2(0.698947, 0.751631)
+texture = ExtResource("2_ria0b")
+
+[node name="SpawnLocation" type="Marker2D" parent="."]
+position = Vector2(0, -86)

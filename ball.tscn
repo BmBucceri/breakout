@@ -16,15 +16,15 @@ script = ExtResource("1_41u45")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.560339, 0.560339)
+scale = Vector2(0.389437, 0.389437)
 texture = ExtResource("2_41u45")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(0.495807, 0.495807)
+scale = Vector2(0.344587, 0.344587)
 shape = SubResource("CircleShape2D_utnms")
 
 [node name="Hitbox" type="Area2D" parent="."]
-scale = Vector2(0.495807, 0.495807)
+scale = Vector2(0.344587, 0.344587)
 collision_layer = 5
 collision_mask = 0
 

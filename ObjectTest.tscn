@@ -1,13 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://1eraj5cry3c2"]
+[gd_scene load_steps=12 format=3 uid="uid://1eraj5cry3c2"]
 
 [ext_resource type="Script" uid="uid://b8b32otwwftm1" path="res://score_counter.gd" id="1_33al8"]
 [ext_resource type="Script" uid="uid://b6tlb3o6p10bs" path="res://level.gd" id="1_rv1el"]
 [ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://BlockBase.tscn" id="2_33al8"]
 [ext_resource type="Script" uid="uid://brtvwoww4lon3" path="res://bounces_counter.gd" id="3_aou6q"]
-[ext_resource type="Script" uid="uid://bdjmj8w35eetb" path="res://cannon.gd" id="4_3ddhe"]
-[ext_resource type="Texture2D" uid="uid://bp7aipxx8ujmg" path="res://Assets/Dropper.png" id="5_3ddhe"]
+[ext_resource type="PackedScene" uid="uid://c7y4cotdmurv4" path="res://BlockSpecialB.tscn" id="6_alw64"]
 [ext_resource type="Script" uid="uid://bh12bel430pjr" path="res://killbox.gd" id="6_jus2d"]
-[ext_resource type="PackedScene" uid="uid://b0dac6bf3gfyu" path="res://BlockSpecial.tscn" id="8_sthq8"]
+[ext_resource type="PackedScene" uid="uid://dtyeynkxndagi" path="res://BlockSpecialC.tscn" id="7_0joks"]
+[ext_resource type="PackedScene" uid="uid://naw7he6hb23q" path="res://Cannon.tscn" id="8_alw64"]
+[ext_resource type="PackedScene" uid="uid://b0dac6bf3gfyu" path="res://BlockSpecialA.tscn" id="8_sthq8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ddhe"]
 size = Vector2(1156, 75)
@@ -63,50 +64,184 @@ script = ExtResource("3_aou6q")
 [node name="Blocks" type="Node2D" parent="."]
 
 [node name="BlockBase10" parent="Blocks" instance=ExtResource("2_33al8")]
-position = Vector2(496, 169)
+position = Vector2(496, 276)
 
-[node name="BlockBase11" parent="Blocks" instance=ExtResource("2_33al8")]
-position = Vector2(588, 169)
+[node name="BlockBase28" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(497, 324)
+
+[node name="BlockBase29" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(589, 324)
+
+[node name="BlockBase30" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(681, 324)
+
+[node name="BlockBase31" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(221, 324)
+
+[node name="BlockBase32" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(313, 324)
+
+[node name="BlockBase33" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(405, 324)
+
+[node name="BlockBase34" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(773, 324)
+
+[node name="BlockBase35" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(865, 324)
+
+[node name="BlockBase36" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(957, 324)
 
 [node name="BlockBase12" parent="Blocks" instance=ExtResource("2_33al8")]
-position = Vector2(680, 169)
+position = Vector2(680, 276)
 
 [node name="BlockBase13" parent="Blocks" instance=ExtResource("2_33al8")]
-position = Vector2(220, 169)
-
-[node name="BlockBase14" parent="Blocks" instance=ExtResource("2_33al8")]
-position = Vector2(312, 169)
+position = Vector2(220, 276)
 
 [node name="BlockBase15" parent="Blocks" instance=ExtResource("2_33al8")]
-position = Vector2(404, 169)
+position = Vector2(404, 276)
 
 [node name="BlockBase16" parent="Blocks" instance=ExtResource("2_33al8")]
-position = Vector2(772, 169)
-
-[node name="BlockBase17" parent="Blocks" instance=ExtResource("2_33al8")]
-position = Vector2(864, 169)
+position = Vector2(772, 276)
 
 [node name="BlockBase18" parent="Blocks" instance=ExtResource("2_33al8")]
-position = Vector2(956, 169)
+position = Vector2(956, 276)
+
+[node name="BlockBase19" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(542, 276)
+
+[node name="BlockBase20" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(634, 276)
+
+[node name="BlockBase22" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(266, 276)
+
+[node name="BlockBase23" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(358, 276)
+
+[node name="BlockBase25" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(818, 276)
+
+[node name="BlockBase26" parent="Blocks" instance=ExtResource("2_33al8")]
+position = Vector2(910, 276)
+
+[node name="BlockSpecialA" parent="Blocks" instance=ExtResource("8_sthq8")]
+position = Vector2(220, 80)
+
+[node name="BlockSpecialA2" parent="Blocks" instance=ExtResource("8_sthq8")]
+position = Vector2(312, 80)
+
+[node name="BlockSpecialA3" parent="Blocks" instance=ExtResource("8_sthq8")]
+position = Vector2(404, 80)
+
+[node name="BlockSpecialA4" parent="Blocks" instance=ExtResource("8_sthq8")]
+position = Vector2(496, 80)
+
+[node name="BlockSpecialA5" parent="Blocks" instance=ExtResource("8_sthq8")]
+position = Vector2(588, 80)
+
+[node name="BlockSpecialA6" parent="Blocks" instance=ExtResource("8_sthq8")]
+position = Vector2(680, 80)
+
+[node name="BlockSpecialA7" parent="Blocks" instance=ExtResource("8_sthq8")]
+position = Vector2(772, 80)
+
+[node name="BlockSpecialA8" parent="Blocks" instance=ExtResource("8_sthq8")]
+position = Vector2(864, 80)
+
+[node name="BlockSpecialA9" parent="Blocks" instance=ExtResource("8_sthq8")]
+position = Vector2(956, 80)
+
+[node name="BlockSpecialB" parent="Blocks" instance=ExtResource("6_alw64")]
+position = Vector2(266, 80)
+
+[node name="BlockSpecialB2" parent="Blocks" instance=ExtResource("6_alw64")]
+position = Vector2(358, 80)
+
+[node name="BlockSpecialB3" parent="Blocks" instance=ExtResource("6_alw64")]
+position = Vector2(450, 80)
+
+[node name="BlockSpecialB4" parent="Blocks" instance=ExtResource("6_alw64")]
+position = Vector2(542, 80)
+
+[node name="BlockSpecialB5" parent="Blocks" instance=ExtResource("6_alw64")]
+position = Vector2(634, 80)
+
+[node name="BlockSpecialB6" parent="Blocks" instance=ExtResource("6_alw64")]
+position = Vector2(726, 80)
+
+[node name="BlockSpecialB7" parent="Blocks" instance=ExtResource("6_alw64")]
+position = Vector2(818, 80)
+
+[node name="BlockSpecialB8" parent="Blocks" instance=ExtResource("6_alw64")]
+position = Vector2(910, 80)
+
+[node name="BlockSpecialB9" parent="Blocks" instance=ExtResource("6_alw64")]
+position = Vector2(312, 276)
+
+[node name="BlockSpecialB10" parent="Blocks" instance=ExtResource("6_alw64")]
+position = Vector2(450, 276)
+
+[node name="BlockSpecialB11" parent="Blocks" instance=ExtResource("6_alw64")]
+position = Vector2(588, 276)
+
+[node name="BlockSpecialB12" parent="Blocks" instance=ExtResource("6_alw64")]
+position = Vector2(726, 276)
+
+[node name="BlockSpecialB13" parent="Blocks" instance=ExtResource("6_alw64")]
+position = Vector2(864, 276)
+
+[node name="BlockSpecialC" parent="Blocks" instance=ExtResource("7_0joks")]
+position = Vector2(173, 125)
+
+[node name="BlockSpecialC2" parent="Blocks" instance=ExtResource("7_0joks")]
+position = Vector2(173, 173)
+
+[node name="BlockSpecialC3" parent="Blocks" instance=ExtResource("7_0joks")]
+position = Vector2(173, 221)
+
+[node name="BlockSpecialC4" parent="Blocks" instance=ExtResource("7_0joks")]
+position = Vector2(1005, 125)
+
+[node name="BlockSpecialC5" parent="Blocks" instance=ExtResource("7_0joks")]
+position = Vector2(1005, 173)
+
+[node name="BlockSpecialC6" parent="Blocks" instance=ExtResource("7_0joks")]
+position = Vector2(1005, 221)
+
+[node name="BlockSpecialC7" parent="Blocks" instance=ExtResource("7_0joks")]
+position = Vector2(267, 324)
+
+[node name="BlockSpecialC8" parent="Blocks" instance=ExtResource("7_0joks")]
+position = Vector2(359, 324)
+
+[node name="BlockSpecialC9" parent="Blocks" instance=ExtResource("7_0joks")]
+position = Vector2(635, 324)
+
+[node name="BlockSpecialC10" parent="Blocks" instance=ExtResource("7_0joks")]
+position = Vector2(727, 324)
+
+[node name="BlockSpecialC11" parent="Blocks" instance=ExtResource("7_0joks")]
+position = Vector2(819, 324)
+
+[node name="BlockSpecialC12" parent="Blocks" instance=ExtResource("7_0joks")]
+position = Vector2(911, 324)
+
+[node name="BlockSpecialC13" parent="Blocks" instance=ExtResource("7_0joks")]
+position = Vector2(451, 324)
+
+[node name="BlockSpecialC14" parent="Blocks" instance=ExtResource("7_0joks")]
+position = Vector2(543, 324)
 
 [node name="Boundary" type="StaticBody2D" parent="."]
 collision_layer = 3
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boundary"]
-polygon = PackedVector2Array(1, -2, 3, 643, 31, 645, 27, 19, 573.772, 18.0068, 1128, 17, 1125, 647, 1153, 649, 1149, 0)
+polygon = PackedVector2Array(1, -2, 3, 643, 27, 641, 27, 19, 1128, 19, 1129, 639, 1153, 649, 1149, 0)
 
-[node name="Cannon" type="Node2D" parent="." node_paths=PackedStringArray("spawn_marker")]
+[node name="Cannon" parent="." instance=ExtResource("8_alw64")]
 position = Vector2(595, 627)
-script = ExtResource("4_3ddhe")
-spawn_marker = NodePath("SpawnLocation")
-metadata/_edit_group_ = true
-
-[node name="Dropper" type="Sprite2D" parent="Cannon"]
-rotation = -3.14159
-texture = ExtResource("5_3ddhe")
-
-[node name="SpawnLocation" type="Marker2D" parent="Cannon"]
-position = Vector2(0, -86)
 
 [node name="Killbox" type="Area2D" parent="."]
 position = Vector2(0, 25)
@@ -122,30 +257,3 @@ shape = SubResource("RectangleShape2D_3ddhe")
 wait_time = 3.0
 autostart = true
 script = SubResource("GDScript_aou6q")
-
-[node name="BlockSpecial" parent="." instance=ExtResource("8_sthq8")]
-position = Vector2(220, 80)
-
-[node name="BlockSpecial2" parent="." instance=ExtResource("8_sthq8")]
-position = Vector2(312, 80)
-
-[node name="BlockSpecial3" parent="." instance=ExtResource("8_sthq8")]
-position = Vector2(404, 80)
-
-[node name="BlockSpecial4" parent="." instance=ExtResource("8_sthq8")]
-position = Vector2(496, 80)
-
-[node name="BlockSpecial5" parent="." instance=ExtResource("8_sthq8")]
-position = Vector2(588, 80)
-
-[node name="BlockSpecial6" parent="." instance=ExtResource("8_sthq8")]
-position = Vector2(680, 80)
-
-[node name="BlockSpecial7" parent="." instance=ExtResource("8_sthq8")]
-position = Vector2(772, 80)
-
-[node name="BlockSpecial8" parent="." instance=ExtResource("8_sthq8")]
-position = Vector2(864, 80)
-
-[node name="BlockSpecial9" parent="." instance=ExtResource("8_sthq8")]
-position = Vector2(956, 80)
