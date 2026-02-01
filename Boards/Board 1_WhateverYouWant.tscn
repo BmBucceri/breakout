@@ -1,0 +1,273 @@
+[gd_scene format=3 uid="uid://1eraj5cry3c2"]
+
+[ext_resource type="Script" uid="uid://b8b32otwwftm1" path="res://score_counter.gd" id="1_33al8"]
+[ext_resource type="Script" uid="uid://b6tlb3o6p10bs" path="res://level.gd" id="1_rv1el"]
+[ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://Scenes/BlockBase.tscn" id="2_33al8"]
+[ext_resource type="Script" uid="uid://brtvwoww4lon3" path="res://bounces_counter.gd" id="3_aou6q"]
+[ext_resource type="PackedScene" uid="uid://c7y4cotdmurv4" path="res://Scenes/BlockSpecialB.tscn" id="6_alw64"]
+[ext_resource type="Script" uid="uid://bh12bel430pjr" path="res://killbox.gd" id="6_jus2d"]
+[ext_resource type="PackedScene" uid="uid://dtyeynkxndagi" path="res://Scenes/BlockSpecialC.tscn" id="7_0joks"]
+[ext_resource type="Script" uid="uid://dygu38lw21ygj" path="res://Boards/ball_root.gd" id="8_3mrgh"]
+[ext_resource type="PackedScene" uid="uid://naw7he6hb23q" path="res://Scenes/Cannon.tscn" id="8_alw64"]
+[ext_resource type="PackedScene" uid="uid://b0dac6bf3gfyu" path="res://Scenes/BlockSpecialA.tscn" id="8_sthq8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ddhe"]
+size = Vector2(1156, 75)
+
+[sub_resource type="GDScript" id="GDScript_aou6q"]
+script/source = "extends Timer
+
+func _ready() -> void:
+	self.timeout.connect(_on_timer_timeout)
+	
+func _on_timer_timeout():
+	if GameManager.ricochet_left < GameManager.ricochet_max:
+		GameManager.increment_ricochet(1)
+"
+
+[node name="ROOTLEVEL" type="Node2D" unique_id=1515406294]
+script = ExtResource("1_rv1el")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=918347060]
+
+[node name="Control" type="Control" parent="UI" unique_id=292381040]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+metadata/_edit_lock_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/Control" unique_id=568693195]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Control/MarginContainer" unique_id=1568574095]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ScoreCounter" type="RichTextLabel" parent="UI/Control/MarginContainer/HBoxContainer" unique_id=642266113]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Score tracker"
+script = ExtResource("1_33al8")
+
+[node name="Label" type="Label" parent="UI/Control/MarginContainer/HBoxContainer" unique_id=709888670]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Bounces left"
+horizontal_alignment = 2
+script = ExtResource("3_aou6q")
+
+[node name="Blocks" type="Node2D" parent="." unique_id=1591539969]
+
+[node name="BlockBase10" parent="Blocks" unique_id=1231523853 instance=ExtResource("2_33al8")]
+position = Vector2(496, 276)
+
+[node name="BlockBase28" parent="Blocks" unique_id=2100877379 instance=ExtResource("2_33al8")]
+position = Vector2(497, 324)
+
+[node name="BlockBase29" parent="Blocks" unique_id=1432838963 instance=ExtResource("2_33al8")]
+position = Vector2(589, 324)
+
+[node name="BlockBase30" parent="Blocks" unique_id=593956566 instance=ExtResource("2_33al8")]
+position = Vector2(681, 324)
+
+[node name="BlockBase31" parent="Blocks" unique_id=1522400433 instance=ExtResource("2_33al8")]
+position = Vector2(221, 324)
+
+[node name="BlockBase32" parent="Blocks" unique_id=896925040 instance=ExtResource("2_33al8")]
+position = Vector2(313, 324)
+
+[node name="BlockBase33" parent="Blocks" unique_id=639755801 instance=ExtResource("2_33al8")]
+position = Vector2(405, 324)
+
+[node name="BlockBase34" parent="Blocks" unique_id=1713848278 instance=ExtResource("2_33al8")]
+position = Vector2(773, 324)
+
+[node name="BlockBase35" parent="Blocks" unique_id=107534652 instance=ExtResource("2_33al8")]
+position = Vector2(865, 324)
+
+[node name="BlockBase36" parent="Blocks" unique_id=1860584204 instance=ExtResource("2_33al8")]
+position = Vector2(957, 324)
+
+[node name="BlockBase12" parent="Blocks" unique_id=469422182 instance=ExtResource("2_33al8")]
+position = Vector2(680, 276)
+
+[node name="BlockBase13" parent="Blocks" unique_id=1577083554 instance=ExtResource("2_33al8")]
+position = Vector2(220, 276)
+
+[node name="BlockBase15" parent="Blocks" unique_id=795618628 instance=ExtResource("2_33al8")]
+position = Vector2(404, 276)
+
+[node name="BlockBase16" parent="Blocks" unique_id=2047959769 instance=ExtResource("2_33al8")]
+position = Vector2(772, 276)
+
+[node name="BlockBase18" parent="Blocks" unique_id=939319317 instance=ExtResource("2_33al8")]
+position = Vector2(956, 276)
+
+[node name="BlockBase19" parent="Blocks" unique_id=26600262 instance=ExtResource("2_33al8")]
+position = Vector2(542, 276)
+
+[node name="BlockBase20" parent="Blocks" unique_id=1177055984 instance=ExtResource("2_33al8")]
+position = Vector2(634, 276)
+
+[node name="BlockBase22" parent="Blocks" unique_id=195387344 instance=ExtResource("2_33al8")]
+position = Vector2(266, 276)
+
+[node name="BlockBase23" parent="Blocks" unique_id=1169456071 instance=ExtResource("2_33al8")]
+position = Vector2(358, 276)
+
+[node name="BlockBase25" parent="Blocks" unique_id=90397052 instance=ExtResource("2_33al8")]
+position = Vector2(818, 276)
+
+[node name="BlockBase26" parent="Blocks" unique_id=350373655 instance=ExtResource("2_33al8")]
+position = Vector2(910, 276)
+
+[node name="BlockSpecialA" parent="Blocks" unique_id=198218024 instance=ExtResource("8_sthq8")]
+position = Vector2(220, 80)
+
+[node name="BlockSpecialA2" parent="Blocks" unique_id=1439736078 instance=ExtResource("8_sthq8")]
+position = Vector2(312, 80)
+
+[node name="BlockSpecialA3" parent="Blocks" unique_id=2103587751 instance=ExtResource("8_sthq8")]
+position = Vector2(404, 80)
+
+[node name="BlockSpecialA4" parent="Blocks" unique_id=332805298 instance=ExtResource("8_sthq8")]
+position = Vector2(496, 80)
+
+[node name="BlockSpecialA5" parent="Blocks" unique_id=660087365 instance=ExtResource("8_sthq8")]
+position = Vector2(588, 80)
+
+[node name="BlockSpecialA6" parent="Blocks" unique_id=1831973855 instance=ExtResource("8_sthq8")]
+position = Vector2(680, 80)
+
+[node name="BlockSpecialA7" parent="Blocks" unique_id=374044363 instance=ExtResource("8_sthq8")]
+position = Vector2(772, 80)
+
+[node name="BlockSpecialA8" parent="Blocks" unique_id=383554142 instance=ExtResource("8_sthq8")]
+position = Vector2(864, 80)
+
+[node name="BlockSpecialA9" parent="Blocks" unique_id=693508677 instance=ExtResource("8_sthq8")]
+position = Vector2(956, 80)
+
+[node name="BlockSpecialB" parent="Blocks" unique_id=1400889401 instance=ExtResource("6_alw64")]
+position = Vector2(266, 80)
+
+[node name="BlockSpecialB2" parent="Blocks" unique_id=1708205322 instance=ExtResource("6_alw64")]
+position = Vector2(358, 80)
+
+[node name="BlockSpecialB3" parent="Blocks" unique_id=1173883107 instance=ExtResource("6_alw64")]
+position = Vector2(450, 80)
+
+[node name="BlockSpecialB4" parent="Blocks" unique_id=1613189224 instance=ExtResource("6_alw64")]
+position = Vector2(542, 80)
+
+[node name="BlockSpecialB5" parent="Blocks" unique_id=110830116 instance=ExtResource("6_alw64")]
+position = Vector2(634, 80)
+
+[node name="BlockSpecialB6" parent="Blocks" unique_id=1221883265 instance=ExtResource("6_alw64")]
+position = Vector2(726, 80)
+
+[node name="BlockSpecialB7" parent="Blocks" unique_id=472843086 instance=ExtResource("6_alw64")]
+position = Vector2(818, 80)
+
+[node name="BlockSpecialB8" parent="Blocks" unique_id=642002654 instance=ExtResource("6_alw64")]
+position = Vector2(910, 80)
+
+[node name="BlockSpecialB9" parent="Blocks" unique_id=1117190892 instance=ExtResource("6_alw64")]
+position = Vector2(312, 276)
+
+[node name="BlockSpecialB10" parent="Blocks" unique_id=541190648 instance=ExtResource("6_alw64")]
+position = Vector2(450, 276)
+
+[node name="BlockSpecialB11" parent="Blocks" unique_id=769922686 instance=ExtResource("6_alw64")]
+position = Vector2(588, 276)
+
+[node name="BlockSpecialB12" parent="Blocks" unique_id=1418674192 instance=ExtResource("6_alw64")]
+position = Vector2(726, 276)
+
+[node name="BlockSpecialB13" parent="Blocks" unique_id=625986316 instance=ExtResource("6_alw64")]
+position = Vector2(864, 276)
+
+[node name="BlockSpecialC" parent="Blocks" unique_id=1277117096 instance=ExtResource("7_0joks")]
+position = Vector2(173, 125)
+
+[node name="BlockSpecialC2" parent="Blocks" unique_id=1066950310 instance=ExtResource("7_0joks")]
+position = Vector2(173, 173)
+
+[node name="BlockSpecialC3" parent="Blocks" unique_id=1716577568 instance=ExtResource("7_0joks")]
+position = Vector2(173, 221)
+
+[node name="BlockSpecialC4" parent="Blocks" unique_id=449467698 instance=ExtResource("7_0joks")]
+position = Vector2(1005, 125)
+
+[node name="BlockSpecialC5" parent="Blocks" unique_id=835238203 instance=ExtResource("7_0joks")]
+position = Vector2(1005, 173)
+
+[node name="BlockSpecialC6" parent="Blocks" unique_id=1346707732 instance=ExtResource("7_0joks")]
+position = Vector2(1005, 221)
+
+[node name="BlockSpecialC7" parent="Blocks" unique_id=811098885 instance=ExtResource("7_0joks")]
+position = Vector2(267, 324)
+
+[node name="BlockSpecialC8" parent="Blocks" unique_id=1792815843 instance=ExtResource("7_0joks")]
+position = Vector2(359, 324)
+
+[node name="BlockSpecialC9" parent="Blocks" unique_id=902662505 instance=ExtResource("7_0joks")]
+position = Vector2(635, 324)
+
+[node name="BlockSpecialC10" parent="Blocks" unique_id=1789002963 instance=ExtResource("7_0joks")]
+position = Vector2(727, 324)
+
+[node name="BlockSpecialC11" parent="Blocks" unique_id=454138979 instance=ExtResource("7_0joks")]
+position = Vector2(819, 324)
+
+[node name="BlockSpecialC12" parent="Blocks" unique_id=1278252839 instance=ExtResource("7_0joks")]
+position = Vector2(911, 324)
+
+[node name="BlockSpecialC13" parent="Blocks" unique_id=956615873 instance=ExtResource("7_0joks")]
+position = Vector2(451, 324)
+
+[node name="BlockSpecialC14" parent="Blocks" unique_id=825056374 instance=ExtResource("7_0joks")]
+position = Vector2(543, 324)
+
+[node name="Boundary" type="StaticBody2D" parent="." unique_id=1943351621]
+collision_layer = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boundary" unique_id=460050043]
+polygon = PackedVector2Array(1, -2, 3, 643, 27, 641, 27, 19, 1128, 19, 1129, 639, 1153, 649, 1149, 0)
+
+[node name="BallRoot" type="Node2D" parent="." unique_id=233957837]
+script = ExtResource("8_3mrgh")
+
+[node name="Cannon" parent="." unique_id=750428695 instance=ExtResource("8_alw64")]
+position = Vector2(595, 627)
+
+[node name="Killbox" type="Area2D" parent="." unique_id=1162349343]
+position = Vector2(0, 25)
+collision_layer = 0
+collision_mask = 5
+script = ExtResource("6_jus2d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killbox" unique_id=113753005]
+position = Vector2(576, 653)
+shape = SubResource("RectangleShape2D_3ddhe")
+
+[node name="Timer" type="Timer" parent="." unique_id=1399520966]
+wait_time = 3.0
+autostart = true
+script = SubResource("GDScript_aou6q")

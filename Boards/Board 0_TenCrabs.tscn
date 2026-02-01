@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://dhk5o3xnsb27b"]
+
+[ext_resource type="Script" uid="uid://b6tlb3o6p10bs" path="res://level.gd" id="1_ov4da"]
+[ext_resource type="Script" uid="uid://b8b32otwwftm1" path="res://score_counter.gd" id="2_d1vl4"]
+[ext_resource type="Script" uid="uid://brtvwoww4lon3" path="res://bounces_counter.gd" id="3_35v1m"]
+[ext_resource type="PackedScene" uid="uid://naw7he6hb23q" path="res://Scenes/Cannon.tscn" id="4_btpav"]
+[ext_resource type="Script" uid="uid://bh12bel430pjr" path="res://killbox.gd" id="5_nopit"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ddhe"]
+size = Vector2(1156, 75)
+
+[sub_resource type="GDScript" id="GDScript_aou6q"]
+script/source = "extends Timer
+
+func _ready() -> void:
+	self.timeout.connect(_on_timer_timeout)
+	
+func _on_timer_timeout():
+	if GameManager.bounces_left < GameManager.bounces_max:
+		GameManager.increment_bounces(1)
+"
+
+[node name="ROOTLEVEL" type="Node2D" unique_id=2092706571]
+script = ExtResource("1_ov4da")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=250973160]
+
+[node name="Control" type="Control" parent="UI" unique_id=672559586]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+metadata/_edit_lock_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Control" unique_id=1781723064]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 60.0
+grow_horizontal = 2
+
+[node name="ScoreCounter" type="RichTextLabel" parent="UI/Control/HBoxContainer" unique_id=7332796]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Score tracker"
+horizontal_alignment = 1
+script = ExtResource("2_d1vl4")
+
+[node name="Label" type="Label" parent="UI/Control/HBoxContainer" unique_id=1027332538]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Bounces left"
+script = ExtResource("3_35v1m")
+
+[node name="Blocks" type="Node2D" parent="." unique_id=478575280]
+
+[node name="Boundary" type="StaticBody2D" parent="." unique_id=473959091]
+collision_layer = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boundary" unique_id=1912718149]
+polygon = PackedVector2Array(1, -2, 3, 643, 27, 641, 27, 19, 1128, 19, 1129, 639, 1153, 649, 1149, 0)
+
+[node name="Cannon" parent="." unique_id=1596192139 instance=ExtResource("4_btpav")]
+position = Vector2(595, 627)
+
+[node name="Killbox" type="Area2D" parent="." unique_id=1412606446]
+position = Vector2(0, 25)
+collision_layer = 0
+collision_mask = 5
+script = ExtResource("5_nopit")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killbox" unique_id=569387756]
+position = Vector2(576, 653)
+shape = SubResource("RectangleShape2D_3ddhe")
+
+[node name="Timer" type="Timer" parent="." unique_id=336005166]
+wait_time = 3.0
+autostart = true
+script = SubResource("GDScript_aou6q")

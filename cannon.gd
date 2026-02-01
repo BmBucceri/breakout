@@ -27,7 +27,9 @@ func shoot_ball():
 	new_ball.global_position = spawn_marker.global_position
 	
 	var fire_direction = Vector2.UP.rotated(self.global_rotation)
+	#ball inherits the angle of the cannon
 	new_ball.set_direction(fire_direction * new_ball.speed)
-	#new_ball.set_direction(Vector2((self.global_rotation),10))
-	spawn_marker.add_child(new_ball)
+	#spawn_marker.add_child(new_ball)
+	GameManager.ball_root.add_child(new_ball)
+	
 	new_ball.top_level = true

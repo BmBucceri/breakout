@@ -20,6 +20,6 @@ func _on_hit():
 		var new_brick = next_brick.instantiate()
 		
 		add_sibling(new_brick)
-		print("are you on phone")
+		#print("are you on phone")
 		new_brick.global_position = global_position
 		destroy_brick()
