@@ -1,7 +1,7 @@
 extends Area2D
 
 #@onready var block_base: BlockBase = $".."
-@export var block_base: BlockBase
+@export var block_base: Block
 
 
 func _ready() -> void:

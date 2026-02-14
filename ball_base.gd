@@ -5,6 +5,7 @@ class_name Ball
 @export var sprite_2d: Sprite2D
 const TRAIL_2D = preload("uid://6bd6r2wmtxl5")
 const RICOCHET_PARTICLES = preload("uid://bywffmt2v53jh")
+@onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
 
 var direction: Vector2
 var current_direction: Vector2
@@ -13,6 +14,7 @@ var offset: float = deg_to_rad(90)
 var increase_speed_percent: float = .05
 var squash_and_stretch_tween: Tween
 var default_sprite_scale: Vector2
+var new_trail: Line2D
 
 func _ready() -> void:
 	GameManager.add_ball(self)
@@ -21,9 +23,9 @@ func _ready() -> void:
 	_add_trail()
 
 func _add_trail():
-	var _new_trail = TRAIL_2D.instantiate()
-	_new_trail._assign_ball(self)
-	add_sibling(_new_trail)
+	new_trail = TRAIL_2D.instantiate()
+	new_trail._assign_ball(self)
+	add_sibling(new_trail)
 	
 	pass
 
@@ -47,6 +49,8 @@ func _ball_bounce():
 	velocity = velocity.bounce(collision.get_normal())
 	_increase_speed(increase_speed_percent)
 	_squash_and_stretch()
+	GameManager.emit_camera_trauma(1)
+	audio_stream_player.play()
 
 func _squash_and_stretch():
 	if squash_and_stretch_tween != null:
@@ -86,5 +90,6 @@ func _adjust_velocity(new_vector: Vector2):
 
 func destroy_ball():
 	GameManager.remove_ball(self)
+	new_trail.destroy_trail()
 	self.queue_free()
 	

@@ -1,13 +1,18 @@
 extends StaticBody2D
-class_name BlockBase
+class_name Block
 
 @export var block_score: float = 10
 @export var next_brick: PackedScene
 var special_score: float = 50
 
+func _ready() -> void:
+	GameManager.add_block(self)
+
 func destroy_brick():
 	ScoreManager.increment_score(block_score)
+	GameManager.remove_block(self)
 	self.queue_free()
+
 
 
 func _on_hit():

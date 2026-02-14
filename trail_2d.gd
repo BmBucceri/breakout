@@ -20,3 +20,10 @@ func _process(delta: float) -> void:
 	add_point(_start_point)
 	while get_point_count()>trail_length:
 		remove_point(0)
+
+func destroy_trail():
+	var new_tween = get_tree().create_tween()
+	new_tween.tween_property(self,"modulate:a",0,1)
+	await new_tween.finished
+	self.queue_free()
+	

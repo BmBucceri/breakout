@@ -10,9 +10,13 @@
 [ext_resource type="Script" uid="uid://dygu38lw21ygj" path="res://Boards/ball_root.gd" id="8_3mrgh"]
 [ext_resource type="PackedScene" uid="uid://naw7he6hb23q" path="res://Scenes/Cannon.tscn" id="8_alw64"]
 [ext_resource type="PackedScene" uid="uid://b0dac6bf3gfyu" path="res://Scenes/BlockSpecialA.tscn" id="8_sthq8"]
+[ext_resource type="Script" uid="uid://uwsl4p8sccco" path="res://Boards/camera_2d.gd" id="11_lnyyr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ddhe"]
 size = Vector2(1156, 75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3mrgh"]
+size = Vector2(63, 708)
 
 [sub_resource type="GDScript" id="GDScript_aou6q"]
 script/source = "extends Timer
@@ -264,10 +268,26 @@ collision_mask = 5
 script = ExtResource("6_jus2d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killbox" unique_id=113753005]
-position = Vector2(576, 653)
+position = Vector2(576, 672)
 shape = SubResource("RectangleShape2D_3ddhe")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Killbox" unique_id=1570178760]
+position = Vector2(576, -64)
+shape = SubResource("RectangleShape2D_3ddhe")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Killbox" unique_id=1510897235]
+position = Vector2(-46, 299)
+shape = SubResource("RectangleShape2D_3mrgh")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Killbox" unique_id=1377668504]
+position = Vector2(1194, 299)
+shape = SubResource("RectangleShape2D_3mrgh")
 
 [node name="Timer" type="Timer" parent="." unique_id=1399520966]
 wait_time = 3.0
 autostart = true
 script = SubResource("GDScript_aou6q")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1810002274]
+position = Vector2(578, 323)
+script = ExtResource("11_lnyyr")
