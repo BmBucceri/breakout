@@ -12,7 +12,6 @@ var ricochet_cooldown: float = 3
 signal camera_trauma(amount: float)
 signal on_game_win
 
-
 func _ready() -> void:
 	ricochet_left = ricochet_max
 
@@ -47,6 +46,6 @@ func emit_camera_trauma(amount: float):
 
 func _check_block_status():
 	if block_array.size() == 0:
-		print("you winner")
+		print("you'r winner")
 		on_game_win.emit()
 	pass

@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://b6tlb3o6p10bs" path="res://level.gd" id="1_rv1el"]
 [ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://Scenes/BlockBase.tscn" id="2_33al8"]
 [ext_resource type="Script" uid="uid://brtvwoww4lon3" path="res://bounces_counter.gd" id="3_aou6q"]
+[ext_resource type="Script" uid="uid://csgqo872ljmts" path="res://Boards/speedodometer.gd" id="3_cgnay"]
 [ext_resource type="PackedScene" uid="uid://c7y4cotdmurv4" path="res://Scenes/BlockSpecialB.tscn" id="6_alw64"]
 [ext_resource type="Script" uid="uid://bh12bel430pjr" path="res://killbox.gd" id="6_jus2d"]
 [ext_resource type="PackedScene" uid="uid://dtyeynkxndagi" path="res://Scenes/BlockSpecialC.tscn" id="7_0joks"]
@@ -67,6 +68,19 @@ layout_mode = 2
 size_flags_horizontal = 3
 text = "Score tracker"
 script = ExtResource("1_33al8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Control/MarginContainer/HBoxContainer/ScoreCounter" unique_id=1426433269]
+layout_mode = 0
+offset_top = 44.0
+offset_right = 253.0
+offset_bottom = 119.0
+size_flags_horizontal = 3
+
+[node name="Speedodometer" type="RichTextLabel" parent="UI/Control/MarginContainer/HBoxContainer/ScoreCounter/VBoxContainer" unique_id=490824237]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Speedodometer"
+script = ExtResource("3_cgnay")
 
 [node name="Label" type="Label" parent="UI/Control/MarginContainer/HBoxContainer" unique_id=709888670]
 layout_mode = 2

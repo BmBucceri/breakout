@@ -7,6 +7,8 @@ const TRAIL_2D = preload("uid://6bd6r2wmtxl5")
 const RICOCHET_PARTICLES = preload("uid://bywffmt2v53jh")
 @onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
 
+
+
 var direction: Vector2
 var current_direction: Vector2
 var collision = KinematicCollision2D
@@ -26,8 +28,7 @@ func _add_trail():
 	new_trail = TRAIL_2D.instantiate()
 	new_trail._assign_ball(self)
 	add_sibling(new_trail)
-	
-	pass
+
 
 func _physics_process(delta: float) -> void:
 	_move_and_rotate(delta)
