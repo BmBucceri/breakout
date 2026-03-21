@@ -78,6 +78,8 @@ func _ricochet():
 	GameManager.increment_ricochet(-1)
 
 func _increase_speed(value: float):
+	if speed > 7000:
+		return
 	speed += speed * value
 	velocity = velocity.normalized() * speed
 	print(speed)

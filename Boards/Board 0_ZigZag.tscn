@@ -10,14 +10,16 @@
 [ext_resource type="PackedScene" uid="uid://dtyeynkxndagi" path="res://Scenes/BlockSpecialC.tscn" id="8_yrqra"]
 [ext_resource type="Script" uid="uid://dygu38lw21ygj" path="res://Boards/ball_root.gd" id="9_6q8cn"]
 [ext_resource type="PackedScene" uid="uid://naw7he6hb23q" path="res://Scenes/Cannon.tscn" id="10_50obl"]
+[ext_resource type="Script" uid="uid://co2jcs3je3qd4" path="res://Boards/polygon_match_shape.gd" id="10_e3vk3"]
 [ext_resource type="Script" uid="uid://bh12bel430pjr" path="res://killbox.gd" id="11_d8svm"]
 [ext_resource type="Script" uid="uid://uwsl4p8sccco" path="res://Boards/camera_2d.gd" id="12_uyxgc"]
+[ext_resource type="PackedScene" uid="uid://bpl83p74gdrxu" path="res://Scenes/game_over.tscn" id="14_rxtm3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ddhe"]
 size = Vector2(1156, 75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3mrgh"]
-size = Vector2(63, 708)
+size = Vector2(71.5, 725)
 
 [sub_resource type="GDScript" id="GDScript_aou6q"]
 script/source = "extends Timer
@@ -314,37 +316,33 @@ position = Vector2(999, 59)
 
 [node name="Boundary" type="StaticBody2D" parent="." unique_id=1943351621]
 collision_layer = 3
+collision_priority = 100.0
 
 [node name="Boundaries" type="CollisionPolygon2D" parent="Boundary" unique_id=460050043]
 polygon = PackedVector2Array(1, -2, 3, 643, 27, 642, 27, 19, 1128, 19, 1129, 639, 1153, 649, 1149, 0)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Boundary" unique_id=685928008]
-modulate = Color(0.69584465, 0.025858535, 0.8461502, 1)
-top_level = true
-position = Vector2(103, 306)
+[node name="Polygon2D" type="Polygon2D" parent="Boundary" unique_id=1225300954]
+position = Vector2(317, 347.00003)
 scale = Vector2(0.72776675, 0.74295723)
-polygon = PackedVector2Array(0, 0, 134, 192, 247, 192, 100, -1)
+polygon = PackedVector2Array(32.977676, 9.421814, 130.53632, 161.51663, 212.98035, 161.51663, 115.42163, 9.421814)
+script = ExtResource("10_e3vk3")
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Boundary" unique_id=510185456]
-modulate = Color(0.69584465, 0.025858535, 0.8461502, 1)
-top_level = true
-position = Vector2(341, 306)
-scale = Vector2(0.72776675, 0.74295723)
-polygon = PackedVector2Array(2.748108, 0, 134, 192, 247, 192, 111.29944, -1)
+[node name="PolygonMatchShape" type="Polygon2D" parent="Boundary" unique_id=1038354945]
+position = Vector2(-155, -1)
+polygon = PackedVector2Array(344, 494, 419, 494, 338, 349, 260, 349)
+script = ExtResource("10_e3vk3")
+metadata/_custom_type_script = "uid://co2jcs3je3qd4"
 
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Boundary" unique_id=1476696392]
-modulate = Color(0.69584465, 0.025858535, 0.8461502, 1)
-top_level = true
-position = Vector2(678, 306)
-scale = Vector2(0.72776675, 0.74295723)
-polygon = PackedVector2Array(2.748108, 0, 134, 192, 247, 192, 111.29944, -1)
+[node name="PolygonMatchShape3" type="Polygon2D" parent="Boundary" unique_id=1208414850]
+position = Vector2(225, 7)
+polygon = PackedVector2Array(703, 355, 780, 355, 725, 505, 654, 505)
+script = ExtResource("10_e3vk3")
+metadata/_custom_type_script = "uid://co2jcs3je3qd4"
 
-[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Boundary" unique_id=1244437693]
-modulate = Color(0.69584465, 0.025858535, 0.8461502, 1)
-top_level = true
-position = Vector2(903, 306)
-scale = Vector2(0.72776675, 0.74295723)
-polygon = PackedVector2Array(2.748108, 0, 134, 192, 247, 192, 111.29944, -1)
+[node name="PolygonMatchShape2" type="Polygon2D" parent="Boundary" unique_id=621782494]
+polygon = PackedVector2Array(726, 355, 780, 355, 738, 465, 681, 465)
+script = ExtResource("10_e3vk3")
+metadata/_custom_type_script = "uid://co2jcs3je3qd4"
 
 [node name="BallRoot" type="Node2D" parent="." unique_id=233957837]
 script = ExtResource("9_6q8cn")
@@ -367,7 +365,7 @@ position = Vector2(576, -64)
 shape = SubResource("RectangleShape2D_3ddhe")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Killbox" unique_id=1510897235]
-position = Vector2(-46, 299)
+position = Vector2(-41.75, 290.5)
 shape = SubResource("RectangleShape2D_3mrgh")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Killbox" unique_id=1377668504]
@@ -378,3 +376,5 @@ shape = SubResource("RectangleShape2D_3mrgh")
 wait_time = 3.0
 autostart = true
 script = SubResource("GDScript_aou6q")
+
+[node name="Game Over" parent="." unique_id=514898533 instance=ExtResource("14_rxtm3")]

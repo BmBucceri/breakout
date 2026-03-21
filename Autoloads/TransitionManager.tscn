@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c2pcpyk7dnba8"]
+
+[ext_resource type="Script" uid="uid://fienc616a0b2" path="res://Autoloads/transition_manager.gd" id="1_rnlgy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j6qar"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=2159965]
+layer = 10
+script = ExtResource("1_rnlgy")
+
+[node name="Panel" type="Panel" parent="." unique_id=1179755071]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j6qar")
