@@ -2,16 +2,17 @@
 
 [ext_resource type="Script" uid="uid://b8b32otwwftm1" path="res://score_counter.gd" id="1_33al8"]
 [ext_resource type="Script" uid="uid://b6tlb3o6p10bs" path="res://level.gd" id="1_rv1el"]
-[ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://Scenes/BlockBase.tscn" id="2_33al8"]
+[ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://Scenes/Blocks/BlockBase.tscn" id="2_33al8"]
 [ext_resource type="Script" uid="uid://brtvwoww4lon3" path="res://bounces_counter.gd" id="3_aou6q"]
 [ext_resource type="Script" uid="uid://csgqo872ljmts" path="res://Boards/speedodometer.gd" id="3_cgnay"]
-[ext_resource type="PackedScene" uid="uid://c7y4cotdmurv4" path="res://Scenes/BlockSpecialB.tscn" id="6_alw64"]
+[ext_resource type="PackedScene" uid="uid://c7y4cotdmurv4" path="res://Scenes/Blocks/BlockSpecialB.tscn" id="6_alw64"]
 [ext_resource type="Script" uid="uid://bh12bel430pjr" path="res://killbox.gd" id="6_jus2d"]
-[ext_resource type="PackedScene" uid="uid://dtyeynkxndagi" path="res://Scenes/BlockSpecialC.tscn" id="7_0joks"]
+[ext_resource type="PackedScene" uid="uid://dtyeynkxndagi" path="res://Scenes/Blocks/BlockSpecialC.tscn" id="7_0joks"]
 [ext_resource type="Script" uid="uid://dygu38lw21ygj" path="res://Boards/ball_root.gd" id="8_3mrgh"]
 [ext_resource type="PackedScene" uid="uid://naw7he6hb23q" path="res://Scenes/Cannon.tscn" id="8_alw64"]
-[ext_resource type="PackedScene" uid="uid://b0dac6bf3gfyu" path="res://Scenes/BlockSpecialA.tscn" id="8_sthq8"]
-[ext_resource type="Script" uid="uid://uwsl4p8sccco" path="res://Boards/camera_2d.gd" id="11_lnyyr"]
+[ext_resource type="PackedScene" uid="uid://b0dac6bf3gfyu" path="res://Scenes/Blocks/BlockSpecialA.tscn" id="8_sthq8"]
+[ext_resource type="Script" uid="uid://uwsl4p8sccco" path="res://Boards/camera_2d.gd" id="12_aukym"]
+[ext_resource type="PackedScene" uid="uid://bpl83p74gdrxu" path="res://Scenes/game_over.tscn" id="13_bid03"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ddhe"]
 size = Vector2(1156, 75)
@@ -268,6 +269,7 @@ collision_layer = 3
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boundary" unique_id=460050043]
 polygon = PackedVector2Array(1, -2, 3, 643, 27, 641, 27, 19, 1128, 19, 1129, 639, 1153, 649, 1149, 0)
+metadata/_edit_lock_ = true
 
 [node name="BallRoot" type="Node2D" parent="." unique_id=233957837]
 script = ExtResource("8_3mrgh")
@@ -304,4 +306,6 @@ script = SubResource("GDScript_aou6q")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1810002274]
 position = Vector2(578, 323)
-script = ExtResource("11_lnyyr")
+script = ExtResource("12_aukym")
+
+[node name="Game Over" parent="." unique_id=514898533 instance=ExtResource("13_bid03")]

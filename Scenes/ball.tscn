@@ -3,6 +3,12 @@
 [ext_resource type="Script" uid="uid://g8v5mplg7ui3" path="res://ball_base.gd" id="1_ij5cq"]
 [ext_resource type="Texture2D" uid="uid://npqjqqeisr6g" path="res://Assets/Round_Pin.png" id="2_376qj"]
 [ext_resource type="AudioStream" uid="uid://dsqoujji87wyf" path="res://Audio/SFX/MetalPing.wav" id="3_376qj"]
+[ext_resource type="Script" uid="uid://b10f2d50ri2of" path="res://Scenes/ball_hitbox.gd" id="3_yk4cr"]
+
+[sub_resource type="Curve" id="Curve_376qj"]
+_limits = [1.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 2.7685397, 0, 0, Vector2(1, 3), 0.16758706, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_utnms"]
 radius = 64.3273
@@ -20,22 +26,25 @@ collision_layer = 5
 collision_mask = 2
 script = ExtResource("1_ij5cq")
 sprite_2d = NodePath("Sprite2D")
+pitch_curve = SubResource("Curve_376qj")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=807473465]
-scale = Vector2(0.389437, 0.389437)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_376qj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2139179205]
-scale = Vector2(0.344587, 0.344587)
+scale = Vector2(0.25, 0.25)
 shape = SubResource("CircleShape2D_utnms")
 
-[node name="Hitbox" type="Area2D" parent="." unique_id=23496110]
-scale = Vector2(0.344587, 0.344587)
+[node name="BallHitbox" type="Area2D" parent="." unique_id=23496110 node_paths=PackedStringArray("ball")]
+scale = Vector2(0.25, 0.25)
 collision_layer = 5
 collision_mask = 0
+script = ExtResource("3_yk4cr")
+ball = NodePath("..")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1642861076]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BallHitbox" unique_id=1642861076]
 shape = SubResource("CircleShape2D_41u45")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2111822896]

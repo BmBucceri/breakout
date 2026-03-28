@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Breakout"
-run/main_scene="uid://1eraj5cry3c2"
+run/main_scene="uid://crap7x0n62h7p"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 

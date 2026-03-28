@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://kg25nce5clud" path="res://Autoloads/music_manager.gd" id="1_v20jb"]
 [ext_resource type="AudioStream" uid="uid://bjvkujwr8x24p" path="res://Audio/Music/Louie Zong - RAT TAXI - 08 RECESS.mp3" id="2_jvbw4"]
 [ext_resource type="AudioStream" uid="uid://dm3jwap4b4k1k" path="res://Audio/Music/Louie Zong - RAT TAXI - 02 CHEEZY STREET (feat. DANTE NK).mp3" id="3_jvbw4"]
+[ext_resource type="AudioStream" uid="uid://c11epvwajapsd" path="res://Audio/Music/Louie Zong - RAT TAXI - 05 RUSH HOUR.mp3" id="4_pxyc6"]
 
 [node name="MusicManager" type="Node" unique_id=1663748207]
 script = ExtResource("1_v20jb")
@@ -13,10 +14,17 @@ unique_name_in_owner = true
 [node name="CheesyStreet" type="AudioStreamPlayer" parent="Tracks" unique_id=57822176]
 unique_name_in_owner = true
 stream = ExtResource("3_jvbw4")
-volume_db = -19.033
+volume_db = -20.0
+parameters/looping = true
 
 [node name="Recess" type="AudioStreamPlayer" parent="Tracks" unique_id=1479390923]
 unique_name_in_owner = true
 stream = ExtResource("2_jvbw4")
+volume_db = -20.0
+parameters/looping = true
+
+[node name="RushHour" type="AudioStreamPlayer" parent="Tracks" unique_id=449320926]
+unique_name_in_owner = true
+stream = ExtResource("4_pxyc6")
 volume_db = -20.0
 parameters/looping = true

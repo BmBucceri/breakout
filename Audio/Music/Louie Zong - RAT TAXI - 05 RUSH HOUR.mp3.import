@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c11epvwajapsd"
+path="res://.godot/imported/Louie Zong - RAT TAXI - 05 RUSH HOUR.mp3-36e8045827e29347d78b4dd687e683ea.mp3str"
+
+[deps]
+
+source_file="res://Audio/Music/Louie Zong - RAT TAXI - 05 RUSH HOUR.mp3"
+dest_files=["res://.godot/imported/Louie Zong - RAT TAXI - 05 RUSH HOUR.mp3-36e8045827e29347d78b4dd687e683ea.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

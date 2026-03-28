@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b8ps3wt8s5vpp"]
+
+[ext_resource type="SpriteFrames" uid="uid://bpcywiy8ewk0r" path="res://Assets/KillboxBoom/KillboxBoom.tres" id="1_x8t73"]
+
+[sub_resource type="GDScript" id="GDScript_x8t73"]
+script/source = "extends AnimatedSprite2D
+
+func _ready() -> void:
+	play()
+	await animation_finished
+	queue_free()
+"
+
+[node name="Node2D" type="Node2D" unique_id=268127879]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1781063989]
+scale = Vector2(0.25396797, 0.25396797)
+sprite_frames = ExtResource("1_x8t73")
+script = SubResource("GDScript_x8t73")

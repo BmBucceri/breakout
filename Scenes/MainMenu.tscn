@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://crap7x0n62h7p"]
 
 [ext_resource type="Script" uid="uid://coxsat4udgwk2" path="res://Scenes/transition_button.gd" id="1_tt5f1"]
+[ext_resource type="Texture2D" uid="uid://b6k0b2j7qflgx" path="res://Assets/THEBEAST.png" id="2_853f1"]
 
 [node name="MainMenu" type="Node2D" unique_id=1851213399]
 
@@ -31,9 +32,9 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 180.0
-offset_top = -55.0
+offset_top = 23.5
 offset_right = -180.0
-offset_bottom = 280.5
+offset_bottom = 229.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -56,3 +57,8 @@ theme_override_font_sizes/font_size = 32
 text = "big button for big boys ;3"
 script = ExtResource("1_tt5f1")
 path = "uid://1eraj5cry3c2"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=837942275]
+position = Vector2(576, 324.25)
+scale = Vector2(1.125, 0.94802344)
+texture = ExtResource("2_853f1")

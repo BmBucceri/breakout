@@ -1,9 +1,10 @@
 extends StaticBody2D
 class_name Block
 
+@export var min_break_speed: float
 @export var block_score: float = 10
 @export var next_brick: PackedScene
-var special_score: float = 50
+var special_score: float = 1
 
 func _ready() -> void:
 	GameManager.add_block(self)
@@ -14,8 +15,10 @@ func destroy_brick():
 	self.queue_free()
 
 
-
-func _on_hit():
+func on_hit(speed: float):
+	if speed < min_break_speed:
+		return
+	
 	if next_brick == null:
 		destroy_brick()
 		

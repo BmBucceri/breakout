@@ -6,6 +6,7 @@ var ball_root: BallRoot
 
 var block_array: Array[Block]
 
+var ball_speed: float
 var ricochet_max: int = 3
 var ricochet_left: int
 var ricochet_cooldown: float = 3

@@ -3,10 +3,11 @@ class_name Ball
 
 @export var speed: float = 200
 @export var sprite_2d: Sprite2D
+@export var speed_cap: float = 7000
+@export var pitch_curve: Curve
+@onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
 const TRAIL_2D = preload("uid://6bd6r2wmtxl5")
 const RICOCHET_PARTICLES = preload("uid://bywffmt2v53jh")
-@onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
-
 
 
 var direction: Vector2
@@ -32,6 +33,7 @@ func _add_trail():
 
 func _physics_process(delta: float) -> void:
 	_move_and_rotate(delta)
+	GameManager.ball_speed = speed - 200
 	
 func _move_and_rotate(delta: float):
 	collision = move_and_collide(velocity * delta)
@@ -51,7 +53,12 @@ func _ball_bounce():
 	_increase_speed(increase_speed_percent)
 	_squash_and_stretch()
 	GameManager.emit_camera_trauma(1)
+	adjust_sfx_pitch()
 	audio_stream_player.play()
+
+func adjust_sfx_pitch():
+	var curve_sample:float = pitch_curve.sample(speed / speed_cap)
+	audio_stream_player.pitch_scale = curve_sample
 
 func _squash_and_stretch():
 	if squash_and_stretch_tween != null:
@@ -78,11 +85,12 @@ func _ricochet():
 	GameManager.increment_ricochet(-1)
 
 func _increase_speed(value: float):
-	if speed > 7000:
+	if speed > speed_cap:
 		return
 	speed += speed * value
 	velocity = velocity.normalized() * speed
-	print(speed)
+	
+	#print(speed)
 
 # called by cannon
 func set_direction(new_direction: Vector2):
