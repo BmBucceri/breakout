@@ -47,9 +47,18 @@ size_flags_vertical = 3
 theme_override_font_sizes/font_size = 32
 text = "press this button or im gonna scream so loud"
 script = ExtResource("1_tt5f1")
-path = "uid://wn56nkom33le"
+path = "uid://dt00th4b8utvc"
 
 [node name="Button2" type="Button" parent="CanvasLayer/Panel/VBoxContainer" unique_id=2089112224]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "Level Select"
+script = ExtResource("1_tt5f1")
+path = "uid://dx1se2c6apm1d"
+
+[node name="Button3" type="Button" parent="CanvasLayer/Panel/VBoxContainer" unique_id=456800398]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -58,7 +67,17 @@ text = "big button for big boys ;3"
 script = ExtResource("1_tt5f1")
 path = "uid://1eraj5cry3c2"
 
+[node name="Button4" type="Button" parent="CanvasLayer/Panel/VBoxContainer" unique_id=289091247]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "Options (derogatory)"
+script = ExtResource("1_tt5f1")
+path = "uid://1eraj5cry3c2"
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=837942275]
 position = Vector2(576, 324.25)
 scale = Vector2(1.125, 0.94802344)
 texture = ExtResource("2_853f1")
+metadata/_edit_lock_ = true

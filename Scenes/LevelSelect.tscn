@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://dx1se2c6apm1d"]
+
+[ext_resource type="Script" uid="uid://coxsat4udgwk2" path="res://Scenes/transition_button.gd" id="1_chbko"]
+
+[node name="Node2D" type="Node2D" unique_id=849811843]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1959644526]
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1024281355]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BoxContainer" type="BoxContainer" parent="CanvasLayer/Panel" unique_id=1971417602]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel/BoxContainer" unique_id=1051048010]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer" unique_id=676442216]
+layout_mode = 2
+theme_override_constants/margin_top = 100
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer" unique_id=832299606]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 85
+alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer/HBoxContainer" unique_id=1438021291]
+layout_mode = 2
+text = "Level One
+Yeah, Whatever Cop"
+script = ExtResource("1_chbko")
+path = "uid://dt00th4b8utvc"
+
+[node name="Button2" type="Button" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer/HBoxContainer" unique_id=973902072]
+layout_mode = 2
+text = "Level Two
+Crabbin in tha Big City"
+script = ExtResource("1_chbko")
+path = "uid://coivw1qfolpl3"
+
+[node name="Button3" type="Button" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer/HBoxContainer" unique_id=950733028]
+layout_mode = 2
+text = "Level Three
+Zig Zag
+Bayyyyyybaeeeeee"
+script = ExtResource("1_chbko")
+path = "uid://lpdjyvd8wulw"
+
+[node name="Button4" type="Button" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer/HBoxContainer" unique_id=865478922]
+layout_mode = 2
+text = "Level Four
+SPROOONGUS"
+script = ExtResource("1_chbko")
+path = "uid://cfidyogtjo45s"
+
+[node name="Button5" type="Button" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer/HBoxContainer" unique_id=1109179158]
+layout_mode = 2
+text = "Placeholder Name"
+script = ExtResource("1_chbko")
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer" unique_id=1282309451]
+layout_mode = 2
+theme_override_constants/margin_top = 100
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer" unique_id=1883013937]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 85
+alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer/HBoxContainer2" unique_id=1556080183]
+layout_mode = 2
+text = "Placeholder Name"
+script = ExtResource("1_chbko")
+
+[node name="Button2" type="Button" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer/HBoxContainer2" unique_id=1822415380]
+layout_mode = 2
+text = "Placeholder Name"
+script = ExtResource("1_chbko")
+
+[node name="Button3" type="Button" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer/HBoxContainer2" unique_id=390102847]
+layout_mode = 2
+text = "Placeholder Name"
+script = ExtResource("1_chbko")
+
+[node name="Button4" type="Button" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer/HBoxContainer2" unique_id=2045305293]
+layout_mode = 2
+text = "Placeholder Name"
+script = ExtResource("1_chbko")
+
+[node name="Button5" type="Button" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer/HBoxContainer2" unique_id=1726419773]
+layout_mode = 2
+text = "Placeholder Name"
+script = ExtResource("1_chbko")
+
+[node name="MarginContainer3" type="MarginContainer" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer" unique_id=495700706]
+layout_mode = 2
+theme_override_constants/margin_top = 100

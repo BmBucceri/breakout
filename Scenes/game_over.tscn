@@ -10,8 +10,8 @@ script = ExtResource("1_8fo1c")
 modulate = Color(1, 1, 0.23529412, 1)
 offset_left = -5.0
 offset_top = -4.0
-offset_right = 1158.0
-offset_bottom = 666.0
+offset_right = 1155.0
+offset_bottom = 654.0
 
 [node name="Label" type="Label" parent="Panel" unique_id=727300344]
 layout_mode = 1
@@ -29,19 +29,29 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 65
 text = "Your winnar
 chicn dindedr"
+horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="." unique_id=412469269]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -98.0
-offset_top = -131.0
-offset_right = 132.0
-offset_bottom = -76.0
-grow_horizontal = 2
-grow_vertical = 0
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1606375817]
+offset_left = 438.0
+offset_top = 437.0
+offset_right = 701.0
+offset_bottom = 538.0
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=412469269]
+layout_mode = 2
 text = "Go to the next one if you dare"
 script = ExtResource("2_ek8ke")
 path = "uid://1eraj5cry3c2"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=920816041]
+layout_mode = 2
+text = "I require the Full Menu, Quanqail"
+script = ExtResource("2_ek8ke")
+path = "uid://dx1se2c6apm1d"
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=215092902]
+layout_mode = 2
+text = "quit like a little BABY COWARD"
+script = ExtResource("2_ek8ke")
+path = "uid://crap7x0n62h7p"

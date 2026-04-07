@@ -4,11 +4,38 @@
 [ext_resource type="Script" uid="uid://b8b32otwwftm1" path="res://score_counter.gd" id="2_ifb0j"]
 [ext_resource type="Script" uid="uid://csgqo872ljmts" path="res://Boards/speedodometer.gd" id="3_8ju24"]
 [ext_resource type="Script" uid="uid://brtvwoww4lon3" path="res://bounces_counter.gd" id="4_20iil"]
+[ext_resource type="Texture2D" uid="uid://06gale2dip5w" path="res://Assets/Sprites/Zero.png" id="5_8ju24"]
+[ext_resource type="Texture2D" uid="uid://dnkjr2thp41mk" path="res://Assets/Sprites/One.png" id="6_20iil"]
+[ext_resource type="Script" uid="uid://bji3ucgy8q4ae" path="res://Boards/CountdownBounceSprite.gd" id="6_m44s3"]
+[ext_resource type="Texture2D" uid="uid://vogo02nb7jdi" path="res://Assets/Sprites/Two.png" id="7_xf2ir"]
+[ext_resource type="Texture2D" uid="uid://dg5mqhs50w32h" path="res://Assets/Sprites/Three.png" id="8_c0ur6"]
 [ext_resource type="Script" uid="uid://co2jcs3je3qd4" path="res://Boards/polygon_match_shape.gd" id="8_xc236"]
 [ext_resource type="Script" uid="uid://dygu38lw21ygj" path="res://Boards/ball_root.gd" id="9_ac8ps"]
 [ext_resource type="PackedScene" uid="uid://naw7he6hb23q" path="res://Scenes/Cannon.tscn" id="10_b72y1"]
 [ext_resource type="Script" uid="uid://bh12bel430pjr" path="res://killbox.gd" id="11_hx4y6"]
 [ext_resource type="Script" uid="uid://uwsl4p8sccco" path="res://Boards/camera_2d.gd" id="12_hlflf"]
+[ext_resource type="PackedScene" uid="uid://bpl83p74gdrxu" path="res://Scenes/game_over.tscn" id="15_3pq72"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uinc6"]
+resource_name = "CountdownBounceUI"
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_8ju24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_20iil")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xf2ir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_c0ur6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ddhe"]
 size = Vector2(1156, 75)
@@ -28,7 +55,10 @@ func _on_timer_timeout():
 "
 
 [node name="ROOTLEVEL" type="Node2D" unique_id=1515406294]
+position = Vector2(-2, -1)
 script = ExtResource("1_4e1jp")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=918347060]
 
@@ -87,6 +117,21 @@ text = "Bounces left"
 horizontal_alignment = 2
 script = ExtResource("4_20iil")
 
+[node name="CountdownCanvasLayer" type="CanvasLayer" parent="UI/Control/MarginContainer/HBoxContainer" unique_id=656124029]
+layer = -25
+
+[node name="CountdownBounceSprite2D" type="AnimatedSprite2D" parent="UI/Control/MarginContainer/HBoxContainer/CountdownCanvasLayer" unique_id=1059208540 node_paths=PackedStringArray("countdown_bounce_sprite_2d")]
+self_modulate = Color(0, 0.34901962, 1, 1)
+visibility_layer = 512
+z_index = -100
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(580, 346)
+scale = Vector2(1.3856255, 1.3856255)
+sprite_frames = SubResource("SpriteFrames_uinc6")
+script = ExtResource("6_m44s3")
+countdown_bounce_sprite_2d = NodePath(".")
+
 [node name="Blocks" type="Node2D" parent="." unique_id=1591539969]
 
 [node name="Boundary" type="StaticBody2D" parent="." unique_id=1943351621]
@@ -99,7 +144,27 @@ polygon = PackedVector2Array(1, -2, 3, 643, 27, 641, 27, 19, 1128, 19, 1129, 639
 script = ExtResource("9_ac8ps")
 
 [node name="Cannon" parent="." unique_id=750428695 instance=ExtResource("10_b72y1")]
+y_sort_enabled = true
 position = Vector2(576, 627)
+
+[node name="Gutters" type="StaticBody2D" parent="." unique_id=839812713]
+position = Vector2(-32, 0)
+collision_layer = 6
+collision_mask = 0
+
+[node name="PolygonMatchShape2" type="Polygon2D" parent="Gutters" unique_id=146361951]
+position = Vector2(0, -1)
+polygon = PackedVector2Array(16, 592, 448, 648, 448, 672, 16, 672)
+script = ExtResource("8_xc236")
+metadata/_custom_type_script = "uid://co2jcs3je3qd4"
+
+[node name="PolygonMatchShape" type="Polygon2D" parent="Gutters" unique_id=599467329]
+position = Vector2(1216, -1)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(16, 592, 448, 648, 448, 672, 16, 672)
+script = ExtResource("8_xc236")
+metadata/_custom_type_script = "uid://co2jcs3je3qd4"
 
 [node name="Killbox" type="Area2D" parent="." unique_id=1162349343]
 position = Vector2(0, 25)
@@ -128,24 +193,9 @@ wait_time = 3.0
 autostart = true
 script = SubResource("GDScript_aou6q")
 
-[node name="Gutters" type="StaticBody2D" parent="Timer" unique_id=839812713]
-position = Vector2(-32, 0)
-collision_layer = 6
-collision_mask = 0
-
-[node name="PolygonMatchShape2" type="Polygon2D" parent="Timer/Gutters" unique_id=146361951]
-polygon = PackedVector2Array(16, 592, 448, 648, 448, 672, 16, 672)
-script = ExtResource("8_xc236")
-metadata/_custom_type_script = "uid://co2jcs3je3qd4"
-
-[node name="PolygonMatchShape" type="Polygon2D" parent="Timer/Gutters" unique_id=599467329]
-position = Vector2(1216, 0)
-rotation = 3.1415927
-scale = Vector2(1, -1)
-polygon = PackedVector2Array(16, 592, 448, 648, 448, 672, 16, 672)
-script = ExtResource("8_xc236")
-metadata/_custom_type_script = "uid://co2jcs3je3qd4"
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1810002274]
 position = Vector2(578, 323)
 script = ExtResource("12_hlflf")
+
+[node name="Game Over" parent="." unique_id=514898533 instance=ExtResource("15_3pq72")]
+visible = false

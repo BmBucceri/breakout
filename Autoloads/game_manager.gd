@@ -39,6 +39,7 @@ func remove_block(block_to_remove: Block):
 		block_array.remove_at(block_to_remove_index)
 	_check_block_status()
 
+
 func increment_ricochet(value:int):
 	ricochet_left += value
 
