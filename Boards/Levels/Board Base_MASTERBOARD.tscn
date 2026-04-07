@@ -54,8 +54,9 @@ func _on_timer_timeout():
 		GameManager.increment_ricochet(1)
 "
 
-[node name="ROOTLEVEL" type="Node2D" unique_id=1515406294]
+[node name="ROOTLEVEL" type="Node2D" unique_id=1515406294 node_paths=PackedStringArray("killbox")]
 script = ExtResource("1_4e1jp")
+killbox = NodePath("Killbox")
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
