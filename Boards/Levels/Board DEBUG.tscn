@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://3pf27qpa76hn"]
+
+[ext_resource type="PackedScene" uid="uid://co443mxrablr3" path="res://Boards/Levels/Board Base_MASTERBOARD.tscn" id="1_k1cvn"]
+[ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://Scenes/Blocks/BlockBase.tscn" id="2_tf51u"]
+[ext_resource type="Script" uid="uid://uwsl4p8sccco" path="res://Boards/camera_2d.gd" id="6_nnjbk"]
+
+[node name="ROOTLEVEL" unique_id=1515406294 instance=ExtResource("1_k1cvn")]
+
+[node name="MarginContainer" parent="UI/Control" parent_id_path=PackedInt32Array(292381040) index="0" unique_id=568693195]
+metadata/_edit_lock_ = true
+
+[node name="CountdownBounceSprite2D" parent="UI/Control/MarginContainer/HBoxContainer/CountdownCanvasLayer" parent_id_path=PackedInt32Array(656124029) index="0" unique_id=1059208540]
+metadata/_edit_lock_ = true
+
+[node name="BlockBase29" parent="Blocks" parent_id_path=PackedInt32Array(1591539969) index="0" unique_id=958769116 instance=ExtResource("2_tf51u")]
+position = Vector2(589, 324)
+
+[node name="Camera2D2" type="Camera2D" parent="Blocks" parent_id_path=PackedInt32Array(1591539969) index="1" unique_id=1035968252]
+position = Vector2(578, 323)
+script = ExtResource("6_nnjbk")

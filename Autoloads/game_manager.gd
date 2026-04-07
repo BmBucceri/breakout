@@ -50,4 +50,8 @@ func _check_block_status():
 	if block_array.size() == 0:
 		print("you'r winner")
 		on_game_win.emit()
-	pass
+	
+func reset_level():
+	ball_array = []
+	block_array = []
+	

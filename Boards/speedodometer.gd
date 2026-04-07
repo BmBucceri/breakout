@@ -1,6 +1,6 @@
 extends RichTextLabel
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	update_speed()
 	
 func update_speed():

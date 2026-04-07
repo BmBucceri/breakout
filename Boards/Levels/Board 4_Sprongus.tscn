@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://Scenes/Blocks/BlockBase.tscn" id="5_4iebc"]
 
 [node name="ROOTLEVEL" unique_id=1515406294 instance=ExtResource("1_bm24u")]
+position = Vector2(0, 0)
 
 [node name="MarginContainer" parent="UI/Control" parent_id_path=PackedInt32Array(292381040) index="0" unique_id=568693195]
 metadata/_edit_lock_ = true

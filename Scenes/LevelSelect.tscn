@@ -37,37 +37,48 @@ theme_override_constants/separation = 85
 alignment = 1
 
 [node name="Button" type="Button" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer/HBoxContainer" unique_id=1438021291]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 text = "Level One
 Yeah, Whatever Cop"
+autowrap_mode = 3
 script = ExtResource("1_chbko")
 path = "uid://dt00th4b8utvc"
 
 [node name="Button2" type="Button" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer/HBoxContainer" unique_id=973902072]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 text = "Level Two
-Crabbin in tha Big City"
+Crabbin in tha 
+Big City"
+autowrap_mode = 3
 script = ExtResource("1_chbko")
 path = "uid://coivw1qfolpl3"
 
 [node name="Button3" type="Button" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer/HBoxContainer" unique_id=950733028]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 text = "Level Three
 Zig Zag
 Bayyyyyybaeeeeee"
+autowrap_mode = 3
 script = ExtResource("1_chbko")
 path = "uid://lpdjyvd8wulw"
 
 [node name="Button4" type="Button" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer/HBoxContainer" unique_id=865478922]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 text = "Level Four
-SPROOONGUS"
+Regular SPRONGUS"
+autowrap_mode = 3
 script = ExtResource("1_chbko")
 path = "uid://cfidyogtjo45s"
 
 [node name="Button5" type="Button" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer/HBoxContainer" unique_id=1109179158]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 text = "Placeholder Name"
+autowrap_mode = 3
 script = ExtResource("1_chbko")
 
 [node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer" unique_id=1282309451]
@@ -82,30 +93,55 @@ theme_override_constants/separation = 85
 alignment = 1
 
 [node name="Button" type="Button" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer/HBoxContainer2" unique_id=1556080183]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 text = "Placeholder Name"
+autowrap_mode = 3
 script = ExtResource("1_chbko")
 
 [node name="Button2" type="Button" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer/HBoxContainer2" unique_id=1822415380]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 text = "Placeholder Name"
+autowrap_mode = 3
 script = ExtResource("1_chbko")
 
 [node name="Button3" type="Button" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer/HBoxContainer2" unique_id=390102847]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 text = "Placeholder Name"
+autowrap_mode = 3
 script = ExtResource("1_chbko")
 
 [node name="Button4" type="Button" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer/HBoxContainer2" unique_id=2045305293]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 text = "Placeholder Name"
+autowrap_mode = 3
 script = ExtResource("1_chbko")
 
 [node name="Button5" type="Button" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer/HBoxContainer2" unique_id=1726419773]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 text = "Placeholder Name"
+autowrap_mode = 3
 script = ExtResource("1_chbko")
 
 [node name="MarginContainer3" type="MarginContainer" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer" unique_id=495700706]
 layout_mode = 2
 theme_override_constants/margin_top = 100
+
+[node name="Button" type="Button" parent="CanvasLayer/Panel" unique_id=1112411259]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -989.0
+offset_bottom = -588.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Back to main menu"
+script = ExtResource("1_chbko")
+path = "uid://crap7x0n62h7p"

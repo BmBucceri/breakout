@@ -11,4 +11,5 @@ func _ready() -> void:
 
 func game_start():
 	MusicManager.play_track(music_to_play)
+	GameManager.reset_level()
 	

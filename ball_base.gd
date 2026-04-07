@@ -19,6 +19,8 @@ var squash_and_stretch_tween: Tween
 var default_sprite_scale: Vector2
 var new_trail: Line2D
 
+signal ball_destroyed
+
 func _ready() -> void:
 	GameManager.add_ball(self)
 	InputManager.left_click_pressed.connect(_try_ricochet)
@@ -102,5 +104,6 @@ func _adjust_velocity(new_vector: Vector2):
 func destroy_ball():
 	GameManager.remove_ball(self)
 	new_trail.destroy_trail()
+	ball_destroyed.emit()
 	self.queue_free()
 	

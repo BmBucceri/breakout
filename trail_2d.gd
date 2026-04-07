@@ -9,7 +9,7 @@ func _assign_ball(new_ball: Ball):
 	ball = new_ball
 	#_ball_assigned = true
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if ball == null:
 		
 		return

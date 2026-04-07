@@ -9,6 +9,9 @@
 
 [node name="ROOTLEVEL" unique_id=1515406294 instance=ExtResource("1_c7foh")]
 
+[node name="MarginContainer" parent="UI/Control" parent_id_path=PackedInt32Array(292381040) index="0" unique_id=568693195]
+metadata/_edit_lock_ = true
+
 [node name="BlockBase10" parent="Blocks" parent_id_path=PackedInt32Array(1591539969) index="0" unique_id=1282541942 instance=ExtResource("2_mhapq")]
 position = Vector2(496, 276)
 

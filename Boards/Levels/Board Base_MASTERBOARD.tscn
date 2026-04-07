@@ -55,7 +55,6 @@ func _on_timer_timeout():
 "
 
 [node name="ROOTLEVEL" type="Node2D" unique_id=1515406294]
-position = Vector2(-2, -1)
 script = ExtResource("1_4e1jp")
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true

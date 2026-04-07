@@ -3,7 +3,7 @@ class_name CountdownLabel
 
 @export var countdown_bounce_sprite_2d: AnimatedSprite2D
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	ricochet_update()
 	pass
 

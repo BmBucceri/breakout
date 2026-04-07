@@ -6,7 +6,11 @@ class_name Block
 @export var next_brick: PackedScene
 var special_score: float = 1
 
+
 func _ready() -> void:
+	call_deferred("_deferred_ready")
+
+func _deferred_ready():
 	GameManager.add_block(self)
 
 func destroy_brick():
