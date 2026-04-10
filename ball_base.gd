@@ -37,6 +37,7 @@ func _physics_process(delta: float) -> void:
 	_move_and_rotate(delta)
 	GameManager.ball_speed = speed - 200
 	
+	
 func _move_and_rotate(delta: float):
 	collision = move_and_collide(velocity * delta)
 	

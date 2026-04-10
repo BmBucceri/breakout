@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://uwsl4p8sccco" path="res://Boards/camera_2d.gd" id="6_nnjbk"]
 
 [node name="ROOTLEVEL" unique_id=1515406294 instance=ExtResource("1_k1cvn")]
+music_to_play = 4
 
 [node name="MarginContainer" parent="UI/Control" parent_id_path=PackedInt32Array(292381040) index="0" unique_id=568693195]
 metadata/_edit_lock_ = true
@@ -18,3 +19,8 @@ position = Vector2(589, 324)
 [node name="Camera2D2" type="Camera2D" parent="Blocks" parent_id_path=PackedInt32Array(1591539969) index="1" unique_id=1035968252]
 position = Vector2(578, 323)
 script = ExtResource("6_nnjbk")
+
+[node name="Cannon" parent="." index="4" unique_id=750428695]
+rotation_offset = null
+total_balls_can_shoot = null
+block_base = ExtResource("2_tf51u")

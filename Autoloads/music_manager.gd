@@ -3,16 +3,19 @@ extends Node
 @onready var recess: AudioStreamPlayer = %Recess
 @onready var cheesy_street: AudioStreamPlayer = %CheesyStreet
 @onready var rush_hour: AudioStreamPlayer = %RushHour
-
+@onready var traffic_jam: AudioStreamPlayer = $Tracks/TrafficJam
+@onready var bug_club: AudioStreamPlayer = $Tracks/BugClub
 
 @onready var tracks: Node = %Tracks
 @onready var song_map: Dictionary = {
 	available_songs.RECESS : recess,
 	available_songs.CHEESYSTREET : cheesy_street,
 	available_songs.RUSHHOUR: rush_hour,
+	available_songs.TRAFFICJAM: traffic_jam,
+	available_songs.BUGCLUB: bug_club,
 
 }  
-enum available_songs {RECESS, CHEESYSTREET, RUSHHOUR}
+enum available_songs {RECESS, CHEESYSTREET, RUSHHOUR, TRAFFICJAM, BUGCLUB}
 
 
 #func play_recess():

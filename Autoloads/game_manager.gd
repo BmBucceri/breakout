@@ -6,6 +6,7 @@ var ball_root: BallRoot
 
 var block_array: Array[Block]
 
+
 var ball_speed: float
 var ricochet_max: int = 3
 var ricochet_left: int
@@ -57,5 +58,5 @@ func reset_level():
 	block_array = []
 
 func emit_on_game_lose():
-	print_debug("haha you suck lmaooooooooooooooooooooooooooo")
 	on_game_lose.emit()
+	print_debug("haha you suck lmaooooooooooooooooooooooooooo")

@@ -5,7 +5,7 @@ extends CanvasLayer
 var tween: Tween
 
 func _ready() -> void:
-	#tween = get_tree().create_tween()
+	# set tween to transparent
 	panel.modulate.a = 0
 
 
@@ -32,7 +32,5 @@ func _fade_out():
 	if tween:
 		tween.kill()
 	tween = create_tween()
-
 	tween.tween_property(panel, "modulate:a", 0, 1)
-	
 	await tween.finished

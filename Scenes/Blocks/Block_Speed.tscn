@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://Scenes/Blocks/BlockBase.tscn" id="1_xmrr2"]
 
 [node name="BlockSpeed" unique_id=1282541942 instance=ExtResource("1_xmrr2")]
-min_break_speed = 500.0
+min_break_speed = 700.0
 block_score = 1000.0
 
 [node name="Sprite2D" parent="." index="2" unique_id=938027310]

@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://cyoixg7484f5d"]
+
+[ext_resource type="Script" uid="uid://1yjlqu7i84db" path="res://block_base.gd" id="1_jmkaj"]
+[ext_resource type="Script" uid="uid://cxtdhn4hf5pod" path="res://hurtbox.gd" id="2_egqwl"]
+[ext_resource type="Texture2D" uid="uid://cqfgm6ebniw0l" path="res://Assets/ParryIcon.svg" id="3_jmkaj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gho8k"]
+size = Vector2(88, 88)
+
+[node name="BlockParry" type="StaticBody2D" unique_id=1282541942]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_jmkaj")
+min_break_speed = 999999999.0
+block_score = 0.0
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1279717239 node_paths=PackedStringArray("block_base")]
+scale = Vector2(0.518989, 0.518989)
+collision_layer = 3
+collision_mask = 4
+script = ExtResource("2_egqwl")
+block_base = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1996971191]
+shape = SubResource("RectangleShape2D_gho8k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1853781668]
+scale = Vector2(0.518989, 0.518989)
+shape = SubResource("RectangleShape2D_gho8k")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=938027310]
+light_mask = 3
+scale = Vector2(0.356805, 0.356805)
+texture = ExtResource("3_jmkaj")

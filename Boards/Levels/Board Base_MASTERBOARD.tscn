@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b6tlb3o6p10bs" path="res://level.gd" id="1_4e1jp"]
 [ext_resource type="Script" uid="uid://b8b32otwwftm1" path="res://score_counter.gd" id="2_ifb0j"]
-[ext_resource type="Script" uid="uid://csgqo872ljmts" path="res://Boards/speedodometer.gd" id="3_8ju24"]
+[ext_resource type="Script" uid="uid://csgqo872ljmts" path="res://Boards/speedometer.gd" id="3_8ju24"]
 [ext_resource type="Script" uid="uid://brtvwoww4lon3" path="res://bounces_counter.gd" id="4_20iil"]
 [ext_resource type="Texture2D" uid="uid://06gale2dip5w" path="res://Assets/Sprites/Zero.png" id="5_8ju24"]
 [ext_resource type="Texture2D" uid="uid://dnkjr2thp41mk" path="res://Assets/Sprites/One.png" id="6_20iil"]
@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://naw7he6hb23q" path="res://Scenes/Cannon.tscn" id="10_b72y1"]
 [ext_resource type="Script" uid="uid://bh12bel430pjr" path="res://killbox.gd" id="11_hx4y6"]
 [ext_resource type="Script" uid="uid://uwsl4p8sccco" path="res://Boards/camera_2d.gd" id="12_hlflf"]
-[ext_resource type="PackedScene" uid="uid://bpl83p74gdrxu" path="res://Scenes/game_over.tscn" id="15_3pq72"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uinc6"]
 resource_name = "CountdownBounceUI"
@@ -71,7 +70,6 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-metadata/_edit_lock_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="UI/Control" unique_id=568693195]
 layout_mode = 1
@@ -103,7 +101,7 @@ offset_right = 253.0
 offset_bottom = 119.0
 size_flags_horizontal = 3
 
-[node name="Speedodometer" type="RichTextLabel" parent="UI/Control/MarginContainer/HBoxContainer/ScoreCounter/VBoxContainer" unique_id=490824237]
+[node name="Speedometer" type="RichTextLabel" parent="UI/Control/MarginContainer/HBoxContainer/ScoreCounter/VBoxContainer" unique_id=490824237]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Speedodometer"
@@ -196,6 +194,3 @@ script = SubResource("GDScript_aou6q")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1810002274]
 position = Vector2(578, 323)
 script = ExtResource("12_hlflf")
-
-[node name="Game Over" parent="." unique_id=514898533 instance=ExtResource("15_3pq72")]
-visible = false

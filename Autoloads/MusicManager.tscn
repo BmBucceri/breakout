@@ -4,6 +4,8 @@
 [ext_resource type="AudioStream" uid="uid://bjvkujwr8x24p" path="res://Audio/Music/Louie Zong - RAT TAXI - 08 RECESS.mp3" id="2_jvbw4"]
 [ext_resource type="AudioStream" uid="uid://dm3jwap4b4k1k" path="res://Audio/Music/Louie Zong - RAT TAXI - 02 CHEEZY STREET (feat. DANTE NK).mp3" id="3_jvbw4"]
 [ext_resource type="AudioStream" uid="uid://c11epvwajapsd" path="res://Audio/Music/Louie Zong - RAT TAXI - 05 RUSH HOUR.mp3" id="4_pxyc6"]
+[ext_resource type="AudioStream" uid="uid://b8djqp0yo3y0d" path="res://Audio/Music/Louie Zong - RAT TAXI - 01 TRAFFIC JAM.mp3" id="5_86vv3"]
+[ext_resource type="AudioStream" uid="uid://bb7yv1ce3dyww" path="res://Audio/Music/Louie Zong - DANTS - 06 Bug Club.mp3" id="6_kiu0j"]
 
 [node name="MusicManager" type="Node" unique_id=1663748207]
 script = ExtResource("1_v20jb")
@@ -28,3 +30,15 @@ unique_name_in_owner = true
 stream = ExtResource("4_pxyc6")
 volume_db = -20.0
 parameters/looping = true
+
+[node name="TrafficJam" type="AudioStreamPlayer" parent="Tracks" unique_id=136815672]
+unique_name_in_owner = true
+stream = ExtResource("5_86vv3")
+volume_db = -20.0
+parameters/looping = false
+
+[node name="BugClub" type="AudioStreamPlayer" parent="Tracks" unique_id=86342321]
+unique_name_in_owner = true
+stream = ExtResource("6_kiu0j")
+volume_db = -15.0
+parameters/looping = false

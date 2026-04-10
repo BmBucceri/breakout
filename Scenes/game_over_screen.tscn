@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://bpl83p74gdrxu"]
+
+[ext_resource type="Script" uid="uid://dan4m14new860" path="res://Boards/game_over.gd" id="1_jb6in"]
+[ext_resource type="Script" uid="uid://coxsat4udgwk2" path="res://Scenes/transition_button.gd" id="2_y8man"]
+
+[node name="GameOverRoot" type="Node" unique_id=1760825076 node_paths=PackedStringArray("game_over_win", "game_over_lose")]
+script = ExtResource("1_jb6in")
+game_over_win = NodePath("Game Over Win")
+game_over_lose = NodePath("Game Over Lose")
+
+[node name="Game Over Win" type="CanvasLayer" parent="." unique_id=514898533]
+
+[node name="Panel" type="Panel" parent="Game Over Win" unique_id=321717128]
+modulate = Color(1, 1, 0.23529412, 1)
+offset_left = -5.0
+offset_top = -4.0
+offset_right = 1155.0
+offset_bottom = 654.0
+
+[node name="Label" type="Label" parent="Game Over Win/Panel" unique_id=727300344]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -214.0
+offset_top = -91.5
+offset_right = 214.0
+offset_bottom = 91.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 65
+text = "Your winnar
+chicn dindedr"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Game Over Win" unique_id=1606375817]
+offset_left = 438.0
+offset_top = 437.0
+offset_right = 701.0
+offset_bottom = 538.0
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Game Over Win/VBoxContainer" unique_id=412469269]
+layout_mode = 2
+text = "Go to the next one if you dare"
+script = ExtResource("2_y8man")
+path = "uid://1eraj5cry3c2"
+
+[node name="Button2" type="Button" parent="Game Over Win/VBoxContainer" unique_id=920816041]
+layout_mode = 2
+text = "I require the Full Menu, Quanqail"
+script = ExtResource("2_y8man")
+path = "uid://dx1se2c6apm1d"
+
+[node name="Button3" type="Button" parent="Game Over Win/VBoxContainer" unique_id=215092902]
+layout_mode = 2
+text = "quit like a little BABY COWARD"
+script = ExtResource("2_y8man")
+path = "uid://crap7x0n62h7p"
+
+[node name="Game Over Lose" type="CanvasLayer" parent="." unique_id=1849021156]
+
+[node name="Panel" type="Panel" parent="Game Over Lose" unique_id=1101164102]
+modulate = Color(1, 1, 0.23529412, 1)
+offset_left = -5.0
+offset_top = -4.0
+offset_right = 1155.0
+offset_bottom = 654.0
+
+[node name="Label" type="Label" parent="Game Over Lose/Panel" unique_id=395401351]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -302.5
+offset_top = -179.0
+offset_right = 302.5
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 65
+text = "Your bad
+BUT you can 
+alwayes be not bad:"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Game Over Lose" unique_id=547020982]
+offset_left = 438.0
+offset_top = 437.0
+offset_right = 701.0
+offset_bottom = 538.0
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Game Over Lose/VBoxContainer" unique_id=1628626639]
+layout_mode = 2
+text = "Try again?"
+script = ExtResource("2_y8man")
+path = "uid://1eraj5cry3c2"
+
+[node name="Button2" type="Button" parent="Game Over Lose/VBoxContainer" unique_id=1626474820]
+layout_mode = 2
+text = "I require the Full Menu, Quanqail"
+script = ExtResource("2_y8man")
+path = "uid://dx1se2c6apm1d"
+
+[node name="Button3" type="Button" parent="Game Over Lose/VBoxContainer" unique_id=1421568203]
+layout_mode = 2
+text = "quit like a little BABY COWARD"
+script = ExtResource("2_y8man")
+path = "uid://crap7x0n62h7p"
