@@ -5,11 +5,15 @@
 [ext_resource type="PackedScene" uid="uid://hl5qbnf4ocx5" path="res://Scenes/Blocks/Block_Speed.tscn" id="3_ndym4"]
 [ext_resource type="PackedScene" uid="uid://dtyeynkxndagi" path="res://Scenes/Blocks/BlockSpecialC.tscn" id="4_0fpe0"]
 [ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://Scenes/Blocks/BlockBase.tscn" id="5_4iebc"]
+[ext_resource type="PackedScene" uid="uid://m7ejcqlv54cj" path="res://Scenes/Blocks/Block_Gutter.tscn" id="6_4iebc"]
 
 [node name="ROOTLEVEL" unique_id=1515406294 instance=ExtResource("1_bm24u")]
 music_to_play = 3
 
-[node name="MarginContainer" parent="UI/Control" parent_id_path=PackedInt32Array(292381040) index="0" unique_id=568693195]
+[node name="Control" parent="UI" parent_id_path=PackedInt32Array(918347060) index="0" unique_id=292381040]
+metadata/_edit_lock_ = true
+
+[node name="MarginContainer" parent="UI/Control" index="0" unique_id=568693195]
 metadata/_edit_lock_ = true
 
 [node name="CountdownBounceSprite2D" parent="UI/Control/MarginContainer/HBoxContainer/CountdownCanvasLayer" parent_id_path=PackedInt32Array(656124029) index="0" unique_id=1059208540]
@@ -92,121 +96,137 @@ position = Vector2(693, 234)
 
 [node name="BlockSpeed" parent="Blocks" index="24" unique_id=1282541942 instance=ExtResource("3_ndym4")]
 position = Vector2(463, 326)
+min_break_speed = 500.0
 
 [node name="BlockSpeed2" parent="Blocks" index="25" unique_id=1788184508 instance=ExtResource("3_ndym4")]
 position = Vector2(509, 372)
+min_break_speed = 500.0
 
 [node name="BlockSpeed3" parent="Blocks" index="26" unique_id=1902521211 instance=ExtResource("3_ndym4")]
 position = Vector2(647, 372)
+min_break_speed = 500.0
 
 [node name="BlockSpeed4" parent="Blocks" index="27" unique_id=929754743 instance=ExtResource("3_ndym4")]
 position = Vector2(555, 418)
+min_break_speed = 500.0
 
 [node name="BlockSpeed5" parent="Blocks" index="28" unique_id=1014091669 instance=ExtResource("3_ndym4")]
 position = Vector2(601, 418)
+min_break_speed = 500.0
 
 [node name="BlockSpeed6" parent="Blocks" index="29" unique_id=1679166230 instance=ExtResource("3_ndym4")]
 position = Vector2(693, 326)
+min_break_speed = 500.0
 
 [node name="BlockSpeed7" parent="Blocks" index="30" unique_id=1355838834 instance=ExtResource("3_ndym4")]
 position = Vector2(739, 280)
+min_break_speed = 500.0
 
 [node name="BlockSpeed8" parent="Blocks" index="31" unique_id=628162389 instance=ExtResource("3_ndym4")]
 position = Vector2(739, 234)
+min_break_speed = 500.0
 
 [node name="BlockSpeed9" parent="Blocks" index="32" unique_id=56494600 instance=ExtResource("3_ndym4")]
 position = Vector2(693, 188)
+min_break_speed = 500.0
 
 [node name="BlockSpeed10" parent="Blocks" index="33" unique_id=2030822806 instance=ExtResource("3_ndym4")]
 position = Vector2(647, 142)
+min_break_speed = 500.0
 
 [node name="BlockSpeed11" parent="Blocks" index="34" unique_id=1563055149 instance=ExtResource("3_ndym4")]
 position = Vector2(601, 96)
+min_break_speed = 500.0
 
 [node name="BlockSpeed12" parent="Blocks" index="35" unique_id=1296628123 instance=ExtResource("3_ndym4")]
 position = Vector2(555, 96)
+min_break_speed = 500.0
 
 [node name="BlockSpeed13" parent="Blocks" index="36" unique_id=633638076 instance=ExtResource("3_ndym4")]
 position = Vector2(509, 142)
+min_break_speed = 500.0
 
 [node name="BlockSpeed14" parent="Blocks" index="37" unique_id=940844249 instance=ExtResource("3_ndym4")]
 position = Vector2(463, 188)
+min_break_speed = 500.0
 
 [node name="BlockSpeed15" parent="Blocks" index="38" unique_id=990074231 instance=ExtResource("3_ndym4")]
 position = Vector2(417, 234)
+min_break_speed = 500.0
 
 [node name="BlockSpeed16" parent="Blocks" index="39" unique_id=1348699646 instance=ExtResource("3_ndym4")]
 position = Vector2(417, 280)
+min_break_speed = 500.0
 
 [node name="BlockSpeed17" parent="Blocks" index="40" unique_id=2017858329 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
 position = Vector2(235, 234)
-min_break_speed = 1200.0
+min_break_speed = 1000.0
 
 [node name="BlockSpeed18" parent="Blocks" index="41" unique_id=1256967388 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
 position = Vector2(212, 280)
-min_break_speed = 1200.0
+min_break_speed = 1000.0
 
 [node name="BlockSpeed19" parent="Blocks" index="42" unique_id=975617370 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
 position = Vector2(188, 326)
-min_break_speed = 1200.0
+min_break_speed = 1000.0
 
 [node name="BlockSpeed20" parent="Blocks" index="43" unique_id=1879529646 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
 position = Vector2(164, 372)
-min_break_speed = 1200.0
+min_break_speed = 1000.0
 
 [node name="BlockSpeed21" parent="Blocks" index="44" unique_id=26936966 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
 position = Vector2(188, 418)
-min_break_speed = 1200.0
+min_break_speed = 1000.0
 
 [node name="BlockSpeed22" parent="Blocks" index="45" unique_id=446871349 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
 position = Vector2(923, 234)
-min_break_speed = 1200.0
+min_break_speed = 1000.0
 
 [node name="BlockSpeed23" parent="Blocks" index="46" unique_id=707786943 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
 position = Vector2(947, 280)
-min_break_speed = 1200.0
+min_break_speed = 1000.0
 
 [node name="BlockSpeed24" parent="Blocks" index="47" unique_id=172502444 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
 position = Vector2(971, 326)
-min_break_speed = 1200.0
+min_break_speed = 1000.0
 
 [node name="BlockSpeed25" parent="Blocks" index="48" unique_id=860608838 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
 position = Vector2(995, 372)
-min_break_speed = 1200.0
+min_break_speed = 1000.0
 
 [node name="BlockSpeed26" parent="Blocks" index="49" unique_id=695533763 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
 position = Vector2(971, 418)
-min_break_speed = 1200.0
+min_break_speed = 1000.0
 
 [node name="BlockSpeed27" parent="Blocks" index="50" unique_id=716824753 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
 position = Vector2(211, 464)
-min_break_speed = 1200.0
+min_break_speed = 1000.0
 
 [node name="BlockSpeed28" parent="Blocks" index="51" unique_id=149287507 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
 position = Vector2(234, 510)
-min_break_speed = 1200.0
+min_break_speed = 1000.0
 
 [node name="BlockSpeed29" parent="Blocks" index="52" unique_id=850912970 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
 position = Vector2(947, 464)
-min_break_speed = 1200.0
+min_break_speed = 1000.0
 
 [node name="BlockSpeed30" parent="Blocks" index="53" unique_id=1537888681 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
 position = Vector2(923, 510)
-min_break_speed = 1200.0
+min_break_speed = 1000.0
 
 [node name="BlockSpecialC" parent="Blocks" index="54" unique_id=1031332413 instance=ExtResource("4_0fpe0")]
 position = Vector2(163.71596, 464.89746)
@@ -253,48 +273,51 @@ position = Vector2(187.52919, 234.45258)
 scale = Vector2(0.9922179, 1.001934)
 
 [node name="BlockSpecialC8" parent="Blocks" index="65" unique_id=750288384 instance=ExtResource("4_0fpe0")]
-position = Vector2(985.2724, 464.89746)
+position = Vector2(993.21014, 464.8975)
 scale = Vector2(0.9922179, 1.001934)
 
 [node name="BlockSpecialC9" parent="Blocks" index="66" unique_id=399063903 instance=ExtResource("4_0fpe0")]
-position = Vector2(1054.7277, 418.80844)
+position = Vector2(1062.6653, 418.8084)
 scale = Vector2(0.9922179, 1.001934)
 
 [node name="BlockSpecialC10" parent="Blocks" index="67" unique_id=1176696529 instance=ExtResource("4_0fpe0")]
-position = Vector2(1032.8988, 372.7195)
+position = Vector2(1040.8367, 372.71948)
 scale = Vector2(0.9922179, 1.001934)
 
 [node name="BlockSpecialC11" parent="Blocks" index="68" unique_id=1093872788 instance=ExtResource("4_0fpe0")]
-position = Vector2(1054.7277, 326.63055)
+position = Vector2(1062.6653, 326.63058)
 scale = Vector2(0.9922179, 1.001934)
 
 [node name="BlockSpecialC12" parent="Blocks" index="69" unique_id=645503053 instance=ExtResource("4_0fpe0")]
-position = Vector2(984.28015, 280.54156)
+position = Vector2(992.21783, 280.5416)
 scale = Vector2(0.9922179, 1.001934)
 
 [node name="BlockSpecialC13" parent="Blocks" index="70" unique_id=246028260 instance=ExtResource("4_0fpe0")]
-position = Vector2(1009.08563, 418.80844)
+position = Vector2(1017.0234, 418.8084)
 scale = Vector2(0.9922179, 1.001934)
 
 [node name="BlockSpecialC14" parent="Blocks" index="71" unique_id=758645134 instance=ExtResource("4_0fpe0")]
-position = Vector2(1009.08563, 326.63055)
+position = Vector2(1017.0234, 326.63058)
 scale = Vector2(0.9922179, 1.001934)
 
 [node name="BlockSpecialB27" parent="Blocks" index="72" unique_id=592836550 instance=ExtResource("2_8s7tp")]
-position = Vector2(1031.9066, 464.89746)
+position = Vector2(1039.8442, 464.8975)
 scale = Vector2(0.9922179, 1.001934)
 
 [node name="BlockSpecialB28" parent="Blocks" index="73" unique_id=2117083741 instance=ExtResource("2_8s7tp")]
-position = Vector2(1029.9221, 280.54156)
+position = Vector2(1037.8596, 280.5416)
 scale = Vector2(0.9922179, 1.001934)
 
 [node name="BlockBase3" parent="Blocks" index="74" unique_id=653087912 instance=ExtResource("5_4iebc")]
-position = Vector2(961.45917, 510.9864)
+position = Vector2(969.3969, 510.98636)
 scale = Vector2(0.9922179, 1.001934)
 
 [node name="BlockBase4" parent="Blocks" index="75" unique_id=888986749 instance=ExtResource("5_4iebc")]
-position = Vector2(961.45917, 234.45258)
+position = Vector2(969.3968, 234.45258)
 scale = Vector2(0.9922179, 1.001934)
 
 [node name="Camera2D" parent="." index="8" unique_id=1810002274]
 metadata/_edit_lock_ = true
+
+[node name="BlockBase" parent="." index="9" unique_id=1586051036 instance=ExtResource("6_4iebc")]
+position = Vector2(576, 640)

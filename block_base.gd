@@ -20,7 +20,8 @@ func destroy_brick():
 
 
 func on_hit(speed: float):
-	if speed < min_break_speed:
+	#speed gate is modified to compensate for starting speed (200)
+	if speed < min_break_speed + Ball.starting_speed:
 		return
 	
 	if next_brick == null:

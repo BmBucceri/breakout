@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://m7ejcqlv54cj"]
+
+[ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://Scenes/Blocks/BlockBase.tscn" id="1_q0o0m"]
+
+[node name="BlockGutter" unique_id=1282541942 instance=ExtResource("1_q0o0m")]
+min_break_speed = 800.0
+block_score = 0.0
+
+[node name="Hurtbox" parent="." index="0" unique_id=1279717239]
+scale = Vector2(2.7989895, 0.23898941)
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=1853781668]
+scale = Vector2(2.7989895, 0.23898941)
+
+[node name="Sprite2D" parent="." index="2" unique_id=938027310]
+scale = Vector2(1.9243053, 0.16430521)

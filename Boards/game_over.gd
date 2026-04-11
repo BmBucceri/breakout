@@ -17,10 +17,9 @@ func deferred_ready():
 
 func reveal_game_win():
 	game_over_win.show()
-	game_over_lose.hide()
-	#self.show()
+	#game_over_lose.hide()
+
 
 func reveal_game_lose():
 	game_over_lose.show()
-	game_over_win.hide()
-	pass
+	#game_over_win.hide()

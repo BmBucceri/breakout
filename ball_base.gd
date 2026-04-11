@@ -6,6 +6,9 @@ class_name Ball
 @export var speed_cap: float = 7000
 @export var pitch_curve: Curve
 @onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
+
+static var starting_speed = 200
+
 const TRAIL_2D = preload("uid://6bd6r2wmtxl5")
 const RICOCHET_PARTICLES = preload("uid://bywffmt2v53jh")
 
@@ -42,7 +45,7 @@ func _move_and_rotate(delta: float):
 	collision = move_and_collide(velocity * delta)
 	
 	if collision:
-		_ball_bounce()
+		_wall_bounce()
 
 	## Safety code, IGNORE
 	#if(velocity.y > 0 and velocity.y < 100):
@@ -51,8 +54,12 @@ func _move_and_rotate(delta: float):
 		#velocity.x = -200
 	self.rotation =velocity.angle() + offset
 
-func _ball_bounce():
-	velocity = velocity.bounce(collision.get_normal())
+func _wall_bounce():
+	var wall_velocity: Vector2 = velocity.bounce(collision.get_normal())
+	ball_bounce(wall_velocity)
+
+func ball_bounce(new_velocity: Vector2):
+	velocity = new_velocity
 	_increase_speed(increase_speed_percent)
 	_squash_and_stretch()
 	GameManager.emit_camera_trauma(1)

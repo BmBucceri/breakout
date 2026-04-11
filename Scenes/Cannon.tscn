@@ -16,3 +16,5 @@ texture = ExtResource("2_ria0b")
 
 [node name="SpawnLocation" type="Marker2D" parent="." unique_id=1613448872]
 position = Vector2(0, -86)
+
+[node name="Node2D" type="Node2D" parent="SpawnLocation" unique_id=1884346377]

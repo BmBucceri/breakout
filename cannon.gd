@@ -8,7 +8,6 @@ class_name Cannon
 
 var total_balls_onscreen : int = 0
 var can_shoot: bool = true
-var parry
 var parry_active: bool = false
 
 
@@ -22,6 +21,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	look_at(get_global_mouse_position())
 	self.rotation_degrees += rotation_offset
+	#parry_tracking()
 
 func shoot_ball():
 	#if can_shoot == false:
@@ -47,14 +47,17 @@ func ball_is_destroyed():
 
 
 func parry_activate():
-	parry = BLOCK.instantiate()
-	parry.top_level = true
+	
+	var parry: Area2D = BLOCK.instantiate()
 	print("made")
-	parry.global_position = spawn_marker.global_position
-	#add_child(parry)
-	GameManager.add_child(parry)
+	spawn_marker.add_child(parry)
 	
-	
-	await get_tree().create_timer(.5).timeout
-	print_debug("unmade")
+	await get_tree().create_timer(.2,).timeout
 	parry.queue_free()
+	print_debug("unmade")
+
+
+#func parry_tracking():
+	## function for process function to call every frame to keep the Parry cube attached to the Spawn Marker
+	##parry.global_position = spawn_marker.global_position
+	#pass

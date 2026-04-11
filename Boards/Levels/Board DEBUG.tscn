@@ -21,6 +21,4 @@ position = Vector2(578, 323)
 script = ExtResource("6_nnjbk")
 
 [node name="Cannon" parent="." index="4" unique_id=750428695]
-rotation_offset = null
-total_balls_can_shoot = null
 block_base = ExtResource("2_tf51u")
