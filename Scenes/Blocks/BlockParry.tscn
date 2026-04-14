@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cqfgm6ebniw0l" path="res://Assets/ParryIcon.svg" id="3_jmkaj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gho8k"]
-size = Vector2(88, 88)
+size = Vector2(102.69978, 134.24376)
 
 [node name="BlockParry" type="Area2D" unique_id=783385433]
 collision_layer = 2
@@ -19,5 +19,5 @@ shape = SubResource("RectangleShape2D_gho8k")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=938027310]
 light_mask = 3
 position = Vector2(0, -0.16447926)
-scale = Vector2(1.0443059, 0.356805)
+scale = Vector2(1.25, 0.57555497)
 texture = ExtResource("3_jmkaj")

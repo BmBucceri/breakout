@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://hl5qbnf4ocx5" path="res://Scenes/Blocks/Block_Speed.tscn" id="3_ndym4"]
 [ext_resource type="PackedScene" uid="uid://dtyeynkxndagi" path="res://Scenes/Blocks/BlockSpecialC.tscn" id="4_0fpe0"]
 [ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://Scenes/Blocks/BlockBase.tscn" id="5_4iebc"]
-[ext_resource type="PackedScene" uid="uid://m7ejcqlv54cj" path="res://Scenes/Blocks/Block_Gutter.tscn" id="6_4iebc"]
 
 [node name="ROOTLEVEL" unique_id=1515406294 instance=ExtResource("1_bm24u")]
 music_to_play = 3
@@ -318,6 +317,3 @@ scale = Vector2(0.9922179, 1.001934)
 
 [node name="Camera2D" parent="." index="8" unique_id=1810002274]
 metadata/_edit_lock_ = true
-
-[node name="BlockBase" parent="." index="9" unique_id=1586051036 instance=ExtResource("6_4iebc")]
-position = Vector2(576, 640)

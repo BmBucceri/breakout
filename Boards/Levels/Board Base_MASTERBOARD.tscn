@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://dygu38lw21ygj" path="res://Boards/ball_root.gd" id="9_ac8ps"]
 [ext_resource type="PackedScene" uid="uid://naw7he6hb23q" path="res://Scenes/Cannon.tscn" id="10_b72y1"]
 [ext_resource type="Script" uid="uid://bh12bel430pjr" path="res://killbox.gd" id="11_hx4y6"]
+[ext_resource type="Script" uid="uid://dqlermoajjfjp" path="res://Boards/Levels/gutters.gd" id="12_3pq72"]
 [ext_resource type="Script" uid="uid://uwsl4p8sccco" path="res://Boards/camera_2d.gd" id="12_hlflf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uinc6"]
@@ -53,9 +54,10 @@ func _on_timer_timeout():
 		GameManager.increment_ricochet(1)
 "
 
-[node name="ROOTLEVEL" type="Node2D" unique_id=1515406294 node_paths=PackedStringArray("killbox")]
+[node name="ROOTLEVEL" type="Node2D" unique_id=1515406294 node_paths=PackedStringArray("killbox", "gutters")]
 script = ExtResource("1_4e1jp")
 killbox = NodePath("Killbox")
+gutters = NodePath("Gutters")
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -145,10 +147,13 @@ script = ExtResource("9_ac8ps")
 y_sort_enabled = true
 position = Vector2(576, 627)
 
-[node name="Gutters" type="StaticBody2D" parent="." unique_id=839812713]
+[node name="Gutters" type="StaticBody2D" parent="." unique_id=1724943246 node_paths=PackedStringArray("gutter_spawn_marker")]
 position = Vector2(-32, 0)
 collision_layer = 6
 collision_mask = 0
+script = ExtResource("12_3pq72")
+gutter_spawn_marker = NodePath("GutterSpawnMarker")
+metadata/_custom_type_script = "uid://dqlermoajjfjp"
 
 [node name="PolygonMatchShape2" type="Polygon2D" parent="Gutters" unique_id=146361951]
 position = Vector2(0, -1)
@@ -158,11 +163,14 @@ metadata/_custom_type_script = "uid://co2jcs3je3qd4"
 
 [node name="PolygonMatchShape" type="Polygon2D" parent="Gutters" unique_id=599467329]
 position = Vector2(1216, -1)
-rotation = 3.1415927
+rotation = -3.1415925
 scale = Vector2(1, -1)
 polygon = PackedVector2Array(16, 592, 448, 648, 448, 672, 16, 672)
 script = ExtResource("8_xc236")
 metadata/_custom_type_script = "uid://co2jcs3je3qd4"
+
+[node name="GutterSpawnMarker" type="Marker2D" parent="Gutters" unique_id=2021807883]
+position = Vector2(608, 641)
 
 [node name="Killbox" type="Area2D" parent="." unique_id=1162349343]
 position = Vector2(0, 25)

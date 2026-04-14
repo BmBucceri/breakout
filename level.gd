@@ -5,6 +5,7 @@ class_name Level
 @export var autoplay_music: bool = false
 @export var music_to_play: MusicManager.available_songs
 @export var killbox: Killbox
+@export var gutters: Gutters
 
 var current_lives: int
 
@@ -21,6 +22,7 @@ func game_start():
 #called by the killbox
 func _on_life_lost():
 	current_lives -= 1
+	gutters.spawn_block_gutter()
 	print("current lives: " +str(current_lives))
 	if current_lives <= 0:
 		out_of_lives()
