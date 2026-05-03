@@ -3,15 +3,18 @@
 [ext_resource type="Script" uid="uid://dan4m14new860" path="res://Boards/game_over.gd" id="1_jb6in"]
 [ext_resource type="Script" uid="uid://coxsat4udgwk2" path="res://Scenes/transition_button.gd" id="2_y8man"]
 
-[node name="GameOverRoot" type="Node" unique_id=1760825076 node_paths=PackedStringArray("game_over_win", "game_over_lose")]
+[node name="GameOverRoot" type="CanvasLayer" unique_id=1925449658 node_paths=PackedStringArray("game_over_win", "game_over_lose")]
 script = ExtResource("1_jb6in")
 game_over_win = NodePath("Game Over Win")
 game_over_lose = NodePath("Game Over Lose")
 
-[node name="Game Over Win" type="CanvasLayer" parent="." unique_id=514898533]
+[node name="Game Over Win" type="Control" parent="." unique_id=2017297727]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="Panel" type="Panel" parent="Game Over Win" unique_id=321717128]
 modulate = Color(1, 1, 0.23529412, 1)
+layout_mode = 0
 offset_left = -5.0
 offset_top = -4.0
 offset_right = 1155.0
@@ -36,6 +39,7 @@ chicn dindedr"
 horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Game Over Win" unique_id=1606375817]
+layout_mode = 0
 offset_left = 438.0
 offset_top = 437.0
 offset_right = 701.0
@@ -60,10 +64,13 @@ text = "quit like a little BABY COWARD"
 script = ExtResource("2_y8man")
 path = "uid://crap7x0n62h7p"
 
-[node name="Game Over Lose" type="CanvasLayer" parent="." unique_id=1849021156]
+[node name="Game Over Lose" type="Control" parent="." unique_id=861476940]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="Panel" type="Panel" parent="Game Over Lose" unique_id=1101164102]
 modulate = Color(1, 1, 0.23529412, 1)
+layout_mode = 0
 offset_left = -5.0
 offset_top = -4.0
 offset_right = 1155.0
@@ -89,6 +96,7 @@ alwayes be not bad:"
 horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Game Over Lose" unique_id=547020982]
+layout_mode = 0
 offset_left = 438.0
 offset_top = 437.0
 offset_right = 701.0

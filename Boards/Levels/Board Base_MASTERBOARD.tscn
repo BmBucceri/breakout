@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://bh12bel430pjr" path="res://killbox.gd" id="11_hx4y6"]
 [ext_resource type="Script" uid="uid://dqlermoajjfjp" path="res://Boards/Levels/gutters.gd" id="12_3pq72"]
 [ext_resource type="Script" uid="uid://uwsl4p8sccco" path="res://Boards/camera_2d.gd" id="12_hlflf"]
+[ext_resource type="PackedScene" uid="uid://bpl83p74gdrxu" path="res://Scenes/game_over_screen.tscn" id="16_jseu4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uinc6"]
 resource_name = "CountdownBounceUI"
@@ -152,6 +153,7 @@ position = Vector2(-32, 0)
 collision_layer = 6
 collision_mask = 0
 script = ExtResource("12_3pq72")
+has_gutter_block = true
 gutter_spawn_marker = NodePath("GutterSpawnMarker")
 metadata/_custom_type_script = "uid://dqlermoajjfjp"
 
@@ -202,3 +204,5 @@ script = SubResource("GDScript_aou6q")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1810002274]
 position = Vector2(578, 323)
 script = ExtResource("12_hlflf")
+
+[node name="GameOverRoot" parent="." unique_id=1760825076 instance=ExtResource("16_jseu4")]

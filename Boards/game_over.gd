@@ -1,8 +1,8 @@
 extends Node
 class_name GameOverState
 
-@export var game_over_win: CanvasLayer
-@export var game_over_lose: CanvasLayer
+@export var game_over_win: Control
+@export var game_over_lose: Control
 @export var visible: bool = false
 
 func _ready() -> void:
