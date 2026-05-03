@@ -6,9 +6,11 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Ball:
-		var bounce_normal = Vector2.UP.rotated(global_rotation)
-		body.ball_bounce(bounce_normal)
+		var bounce_direction = Vector2.UP.rotated(global_rotation)
+		var new_velocity = bounce_direction * body.speed
+		
+		body.ball_bounce(new_velocity)
 
 func destroy():
-	await get_tree().create_timer(.5).timeout
+	await get_tree().create_timer(1).timeout
 	queue_free()

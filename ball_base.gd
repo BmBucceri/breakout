@@ -38,6 +38,7 @@ func _add_trail():
 
 func _physics_process(delta: float) -> void:
 	_move_and_rotate(delta)
+	print(speed,velocity)
 	GameManager.ball_speed = speed - 200
 	
 	
@@ -47,11 +48,13 @@ func _move_and_rotate(delta: float):
 	if collision:
 		_wall_bounce()
 
-	## Safety code, IGNORE
-	#if(velocity.y > 0 and velocity.y < 100):
-		#velocity.y = -200
-	#if velocity.x == 0:
-		#velocity.x = -200
+	# Safety code, IGNORE
+	if(velocity.y > 0 and velocity.y < 100):
+		velocity.y = -200
+	if velocity.x == 0:
+		velocity.x = -200
+		
+		
 	self.rotation =velocity.angle() + offset
 
 func _wall_bounce():

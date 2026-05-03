@@ -9,8 +9,8 @@ func _ready() -> void:
 	call_deferred("deferred_ready")
 
 func deferred_ready():
-	GameManager.on_game_win.connect(reveal_game_win)
-	GameManager.on_game_lose.connect(reveal_game_lose)
+	SignalManager.on_game_win.connect(reveal_game_win)
+	SignalManager.on_game_lose.connect(reveal_game_lose)
 	print("connected!")
 	game_over_win.hide()
 	game_over_lose.hide()

@@ -26,6 +26,7 @@ MusicManager="*res://Autoloads/MusicManager.tscn"
 InputManager="*res://Autoloads/input_manager.gd"
 GameManager="*res://Autoloads/game_manager.gd"
 TransitionManager="*uid://c2pcpyk7dnba8"
+SignalManager="*uid://bnoa1kr4jti8u"
 
 [input]
 

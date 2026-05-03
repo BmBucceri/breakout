@@ -1,5 +1,13 @@
 [gd_scene format=3 uid="uid://cjc6cykvd5el5"]
 
 [ext_resource type="PackedScene" uid="uid://co443mxrablr3" path="res://Boards/Levels/Board Base_MASTERBOARD.tscn" id="1_g02os"]
+[ext_resource type="PackedScene" uid="uid://dtyeynkxndagi" path="res://Scenes/Blocks/BlockSpecialC.tscn" id="2_gc3yy"]
 
 [node name="ROOTLEVEL" unique_id=1515406294 instance=ExtResource("1_g02os")]
+score_target = 60
+
+[node name="BlockSpecialC" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="0" unique_id=1204270669 instance=ExtResource("2_gc3yy")]
+position = Vector2(578, 465)
+
+[node name="Killbox" parent="." index="6" unique_id=1162349343]
+visible = false

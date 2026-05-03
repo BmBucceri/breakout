@@ -12,10 +12,33 @@
 [ext_resource type="Script" uid="uid://co2jcs3je3qd4" path="res://Boards/polygon_match_shape.gd" id="8_xc236"]
 [ext_resource type="Script" uid="uid://dygu38lw21ygj" path="res://Boards/ball_root.gd" id="9_ac8ps"]
 [ext_resource type="PackedScene" uid="uid://naw7he6hb23q" path="res://Scenes/Cannon.tscn" id="10_b72y1"]
+[ext_resource type="Script" uid="uid://buh6efwnnt4oi" path="res://Boards/Levels/block_root.gd" id="10_bn856"]
 [ext_resource type="Script" uid="uid://bh12bel430pjr" path="res://killbox.gd" id="11_hx4y6"]
 [ext_resource type="Script" uid="uid://dqlermoajjfjp" path="res://Boards/Levels/gutters.gd" id="12_3pq72"]
 [ext_resource type="Script" uid="uid://uwsl4p8sccco" path="res://Boards/camera_2d.gd" id="12_hlflf"]
 [ext_resource type="PackedScene" uid="uid://bpl83p74gdrxu" path="res://Scenes/game_over_screen.tscn" id="16_jseu4"]
+
+[sub_resource type="GDScript" id="GDScript_bn856"]
+script/source = "extends Label
+@export var rootlevel: Level
+
+func _ready() -> void:
+	self.text = (\"Score Target: \" +str(rootlevel.score_target))
+	
+"
+
+[sub_resource type="GDScript" id="GDScript_gac28"]
+script/source = "extends Label
+@export var rootlevel: Level
+
+
+func _ready() -> void:
+	rootlevel.on_lives_changed.connect(update_text)
+	update_text.call_deferred()
+
+func update_text():
+	self.text = (\"Lives: \" +str(rootlevel.current_lives))
+"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uinc6"]
 resource_name = "CountdownBounceUI"
@@ -91,32 +114,47 @@ custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="ScoreCounter" type="RichTextLabel" parent="UI/Control/MarginContainer/HBoxContainer" unique_id=642266113]
+[node name="Left UI" type="VBoxContainer" parent="UI/Control/MarginContainer/HBoxContainer" unique_id=1426433269]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="ScoreCounter" type="RichTextLabel" parent="UI/Control/MarginContainer/HBoxContainer/Left UI" unique_id=642266113 node_paths=PackedStringArray("rootlevel")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 text = "Score tracker"
 script = ExtResource("2_ifb0j")
+rootlevel = NodePath("../../../../../..")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/Control/MarginContainer/HBoxContainer/ScoreCounter" unique_id=1426433269]
-layout_mode = 0
-offset_top = 44.0
-offset_right = 253.0
-offset_bottom = 119.0
-size_flags_horizontal = 3
-
-[node name="Speedometer" type="RichTextLabel" parent="UI/Control/MarginContainer/HBoxContainer/ScoreCounter/VBoxContainer" unique_id=490824237]
+[node name="Speedometer" type="RichTextLabel" parent="UI/Control/MarginContainer/HBoxContainer/Left UI" unique_id=490824237]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Speedodometer"
 script = ExtResource("3_8ju24")
 
-[node name="Label" type="Label" parent="UI/Control/MarginContainer/HBoxContainer" unique_id=709888670]
+[node name="Right UI" type="VBoxContainer" parent="UI/Control/MarginContainer/HBoxContainer" unique_id=870658274]
+layout_mode = 2
+
+[node name="BounceCounter" type="Label" parent="UI/Control/MarginContainer/HBoxContainer/Right UI" unique_id=709888670]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 text = "Bounces left"
 horizontal_alignment = 2
 script = ExtResource("4_20iil")
+
+[node name="ScoreGoal" type="Label" parent="UI/Control/MarginContainer/HBoxContainer/Right UI" unique_id=1298948610 node_paths=PackedStringArray("rootlevel")]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Score Goal"
+script = SubResource("GDScript_bn856")
+rootlevel = NodePath("../../../../../..")
+
+[node name="LivesLeft" type="Label" parent="UI/Control/MarginContainer/HBoxContainer/Right UI" unique_id=1845268779 node_paths=PackedStringArray("rootlevel")]
+layout_mode = 2
+text = "Lives Left"
+script = SubResource("GDScript_gac28")
+rootlevel = NodePath("../../../../../..")
 
 [node name="CountdownCanvasLayer" type="CanvasLayer" parent="UI/Control/MarginContainer/HBoxContainer" unique_id=656124029]
 layer = -25
@@ -133,7 +171,9 @@ sprite_frames = SubResource("SpriteFrames_uinc6")
 script = ExtResource("6_m44s3")
 countdown_bounce_sprite_2d = NodePath(".")
 
-[node name="Blocks" type="Node2D" parent="." unique_id=1591539969]
+[node name="BlockRoot" type="Node2D" parent="." unique_id=1591539969 node_paths=PackedStringArray("rootlevel")]
+script = ExtResource("10_bn856")
+rootlevel = NodePath("..")
 
 [node name="Boundary" type="StaticBody2D" parent="." unique_id=1943351621]
 collision_layer = 3
@@ -153,7 +193,6 @@ position = Vector2(-32, 0)
 collision_layer = 6
 collision_mask = 0
 script = ExtResource("12_3pq72")
-has_gutter_block = true
 gutter_spawn_marker = NodePath("GutterSpawnMarker")
 metadata/_custom_type_script = "uid://dqlermoajjfjp"
 

@@ -18,302 +18,356 @@ metadata/_edit_lock_ = true
 [node name="CountdownBounceSprite2D" parent="UI/Control/MarginContainer/HBoxContainer/CountdownCanvasLayer" parent_id_path=PackedInt32Array(656124029) index="0" unique_id=1059208540]
 metadata/_edit_lock_ = true
 
-[node name="Blocks" parent="." index="1" unique_id=1591539969]
+[node name="BlockRoot" parent="." index="1" unique_id=1591539969]
 scale = Vector2(1.0078431, 0.9980695)
 
-[node name="BlockSpecialB" parent="Blocks" index="0" unique_id=1276775921 instance=ExtResource("2_8s7tp")]
-position = Vector2(509, 280)
+[node name="Blocks#BlockSpecialB" parent="BlockRoot" index="0" unique_id=1276775921 instance=ExtResource("2_8s7tp")]
+position = Vector2(505.0389, 280.54156)
+scale = Vector2(0.9922179, 1.0019342)
 
-[node name="BlockSpecialB2" parent="Blocks" index="1" unique_id=581244416 instance=ExtResource("2_8s7tp")]
-position = Vector2(509, 326)
+[node name="Blocks#BlockSpecialB2" parent="BlockRoot" index="1" unique_id=581244416 instance=ExtResource("2_8s7tp")]
+position = Vector2(505.0389, 326.63055)
+scale = Vector2(0.9922179, 1.0019342)
 
-[node name="BlockSpecialB3" parent="Blocks" index="2" unique_id=1178699331 instance=ExtResource("2_8s7tp")]
-position = Vector2(509, 188)
+[node name="Blocks#BlockSpecialB3" parent="BlockRoot" index="2" unique_id=1178699331 instance=ExtResource("2_8s7tp")]
+position = Vector2(505.0389, 188.36362)
+scale = Vector2(0.9922179, 1.0019342)
 
-[node name="BlockSpecialB4" parent="Blocks" index="3" unique_id=1676091390 instance=ExtResource("2_8s7tp")]
-position = Vector2(509, 234)
+[node name="Blocks#BlockSpecialB4" parent="BlockRoot" index="3" unique_id=1676091390 instance=ExtResource("2_8s7tp")]
+position = Vector2(505.0389, 234.45259)
+scale = Vector2(0.9922179, 1.0019342)
 
-[node name="BlockSpecialB21" parent="Blocks" index="4" unique_id=2106324639 instance=ExtResource("2_8s7tp")]
-position = Vector2(463, 280)
+[node name="Blocks#BlockSpecialB21" parent="BlockRoot" index="4" unique_id=2106324639 instance=ExtResource("2_8s7tp")]
+position = Vector2(459.39688, 280.54156)
+scale = Vector2(0.9922179, 1.0019342)
 
-[node name="BlockSpecialB22" parent="Blocks" index="5" unique_id=935983443 instance=ExtResource("2_8s7tp")]
-position = Vector2(463, 234)
+[node name="Blocks#BlockSpecialB22" parent="BlockRoot" index="5" unique_id=935983443 instance=ExtResource("2_8s7tp")]
+position = Vector2(459.39688, 234.45259)
+scale = Vector2(0.9922179, 1.0019342)
 
-[node name="BlockSpecialB5" parent="Blocks" index="6" unique_id=1913962796 instance=ExtResource("2_8s7tp")]
-position = Vector2(555, 280)
+[node name="Blocks#BlockSpecialB5" parent="BlockRoot" index="6" unique_id=1913962796 instance=ExtResource("2_8s7tp")]
+position = Vector2(550.6809, 280.54156)
+scale = Vector2(0.9922179, 1.0019342)
 
-[node name="BlockSpecialB6" parent="Blocks" index="7" unique_id=1835118578 instance=ExtResource("2_8s7tp")]
-position = Vector2(555, 326)
+[node name="Blocks#BlockSpecialB6" parent="BlockRoot" index="7" unique_id=1835118578 instance=ExtResource("2_8s7tp")]
+position = Vector2(550.6809, 326.63055)
+scale = Vector2(0.9922179, 1.0019342)
 
-[node name="BlockSpecialB7" parent="Blocks" index="8" unique_id=426531848 instance=ExtResource("2_8s7tp")]
-position = Vector2(555, 188)
+[node name="Blocks#BlockSpecialB7" parent="BlockRoot" index="8" unique_id=426531848 instance=ExtResource("2_8s7tp")]
+position = Vector2(550.6809, 188.36362)
+scale = Vector2(0.9922179, 1.0019342)
 
-[node name="BlockSpecialB8" parent="Blocks" index="9" unique_id=1785681295 instance=ExtResource("2_8s7tp")]
-position = Vector2(555, 234)
+[node name="Blocks#BlockSpecialB8" parent="BlockRoot" index="9" unique_id=1785681295 instance=ExtResource("2_8s7tp")]
+position = Vector2(550.6809, 234.45259)
+scale = Vector2(0.9922179, 1.0019342)
 
-[node name="BlockSpecialB9" parent="Blocks" index="10" unique_id=1976253180 instance=ExtResource("2_8s7tp")]
-position = Vector2(601, 280)
+[node name="Blocks#BlockSpecialB9" parent="BlockRoot" index="10" unique_id=1976253180 instance=ExtResource("2_8s7tp")]
+position = Vector2(596.32294, 280.54156)
+scale = Vector2(0.9922179, 1.0019342)
 
-[node name="BlockSpecialB10" parent="Blocks" index="11" unique_id=1112421346 instance=ExtResource("2_8s7tp")]
-position = Vector2(601, 326)
+[node name="Blocks#BlockSpecialB10" parent="BlockRoot" index="11" unique_id=1112421346 instance=ExtResource("2_8s7tp")]
+position = Vector2(596.32294, 326.63055)
+scale = Vector2(0.9922179, 1.0019342)
 
-[node name="BlockSpecialB19" parent="Blocks" index="12" unique_id=1520281934 instance=ExtResource("2_8s7tp")]
-position = Vector2(555, 372)
+[node name="Blocks#BlockSpecialB19" parent="BlockRoot" index="12" unique_id=1520281934 instance=ExtResource("2_8s7tp")]
+position = Vector2(550.6809, 372.7195)
+scale = Vector2(0.9922179, 1.0019342)
 
-[node name="BlockSpecialB20" parent="Blocks" index="13" unique_id=22664017 instance=ExtResource("2_8s7tp")]
-position = Vector2(601, 372)
+[node name="Blocks#BlockSpecialB20" parent="BlockRoot" index="13" unique_id=22664017 instance=ExtResource("2_8s7tp")]
+position = Vector2(596.32294, 372.7195)
+scale = Vector2(0.9922179, 1.0019342)
 
-[node name="BlockSpecialB11" parent="Blocks" index="14" unique_id=1521016377 instance=ExtResource("2_8s7tp")]
-position = Vector2(601, 188)
+[node name="Blocks#BlockSpecialB11" parent="BlockRoot" index="14" unique_id=1521016377 instance=ExtResource("2_8s7tp")]
+position = Vector2(596.32294, 188.36362)
+scale = Vector2(0.9922179, 1.0019342)
 
-[node name="BlockSpecialB17" parent="Blocks" index="15" unique_id=1991909363 instance=ExtResource("2_8s7tp")]
-position = Vector2(555, 142)
+[node name="Blocks#BlockSpecialB17" parent="BlockRoot" index="15" unique_id=1991909363 instance=ExtResource("2_8s7tp")]
+position = Vector2(550.6809, 142.27466)
+scale = Vector2(0.9922179, 1.0019342)
 
-[node name="BlockSpecialB18" parent="Blocks" index="16" unique_id=1673319110 instance=ExtResource("2_8s7tp")]
-position = Vector2(601, 142)
+[node name="Blocks#BlockSpecialB18" parent="BlockRoot" index="16" unique_id=1673319110 instance=ExtResource("2_8s7tp")]
+position = Vector2(596.32294, 142.27466)
+scale = Vector2(0.9922179, 1.0019342)
 
-[node name="BlockSpecialB12" parent="Blocks" index="17" unique_id=105967514 instance=ExtResource("2_8s7tp")]
-position = Vector2(601, 234)
+[node name="Blocks#BlockSpecialB12" parent="BlockRoot" index="17" unique_id=105967514 instance=ExtResource("2_8s7tp")]
+position = Vector2(596.32294, 234.45259)
+scale = Vector2(0.9922179, 1.0019342)
 
-[node name="BlockSpecialB13" parent="Blocks" index="18" unique_id=16785398 instance=ExtResource("2_8s7tp")]
-position = Vector2(647, 280)
+[node name="Blocks#BlockSpecialB13" parent="BlockRoot" index="18" unique_id=16785398 instance=ExtResource("2_8s7tp")]
+position = Vector2(641.96497, 280.54156)
+scale = Vector2(0.9922179, 1.0019342)
 
-[node name="BlockSpecialB14" parent="Blocks" index="19" unique_id=463777875 instance=ExtResource("2_8s7tp")]
-position = Vector2(647, 326)
+[node name="Blocks#BlockSpecialB14" parent="BlockRoot" index="19" unique_id=463777875 instance=ExtResource("2_8s7tp")]
+position = Vector2(641.96497, 326.63055)
+scale = Vector2(0.9922179, 1.0019342)
 
-[node name="BlockSpecialB15" parent="Blocks" index="20" unique_id=54889200 instance=ExtResource("2_8s7tp")]
-position = Vector2(647, 188)
+[node name="Blocks#BlockSpecialB15" parent="BlockRoot" index="20" unique_id=54889200 instance=ExtResource("2_8s7tp")]
+position = Vector2(641.96497, 188.36362)
+scale = Vector2(0.9922179, 1.0019342)
 
-[node name="BlockSpecialB16" parent="Blocks" index="21" unique_id=1496608445 instance=ExtResource("2_8s7tp")]
-position = Vector2(647, 234)
+[node name="Blocks#BlockSpecialB16" parent="BlockRoot" index="21" unique_id=1496608445 instance=ExtResource("2_8s7tp")]
+position = Vector2(641.96497, 234.45259)
+scale = Vector2(0.9922179, 1.0019342)
 
-[node name="BlockSpecialB23" parent="Blocks" index="22" unique_id=1380336367 instance=ExtResource("2_8s7tp")]
-position = Vector2(693, 280)
+[node name="Blocks#BlockSpecialB23" parent="BlockRoot" index="22" unique_id=1380336367 instance=ExtResource("2_8s7tp")]
+position = Vector2(687.607, 280.54156)
+scale = Vector2(0.9922179, 1.0019342)
 
-[node name="BlockSpecialB24" parent="Blocks" index="23" unique_id=1594516995 instance=ExtResource("2_8s7tp")]
-position = Vector2(693, 234)
+[node name="Blocks#BlockSpecialB24" parent="BlockRoot" index="23" unique_id=1594516995 instance=ExtResource("2_8s7tp")]
+position = Vector2(687.607, 234.45259)
+scale = Vector2(0.9922179, 1.0019342)
 
-[node name="BlockSpeed" parent="Blocks" index="24" unique_id=1282541942 instance=ExtResource("3_ndym4")]
-position = Vector2(463, 326)
+[node name="Blocks#BlockSpeed" parent="BlockRoot" index="24" unique_id=1282541942 instance=ExtResource("3_ndym4")]
+position = Vector2(459.39688, 326.63055)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 500.0
 
-[node name="BlockSpeed2" parent="Blocks" index="25" unique_id=1788184508 instance=ExtResource("3_ndym4")]
-position = Vector2(509, 372)
+[node name="Blocks#BlockSpeed2" parent="BlockRoot" index="25" unique_id=1788184508 instance=ExtResource("3_ndym4")]
+position = Vector2(505.0389, 372.7195)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 500.0
 
-[node name="BlockSpeed3" parent="Blocks" index="26" unique_id=1902521211 instance=ExtResource("3_ndym4")]
-position = Vector2(647, 372)
+[node name="Blocks#BlockSpeed3" parent="BlockRoot" index="26" unique_id=1902521211 instance=ExtResource("3_ndym4")]
+position = Vector2(641.96497, 372.7195)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 500.0
 
-[node name="BlockSpeed4" parent="Blocks" index="27" unique_id=929754743 instance=ExtResource("3_ndym4")]
-position = Vector2(555, 418)
+[node name="Blocks#BlockSpeed4" parent="BlockRoot" index="27" unique_id=929754743 instance=ExtResource("3_ndym4")]
+position = Vector2(550.6809, 418.80847)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 500.0
 
-[node name="BlockSpeed5" parent="Blocks" index="28" unique_id=1014091669 instance=ExtResource("3_ndym4")]
-position = Vector2(601, 418)
+[node name="Blocks#BlockSpeed5" parent="BlockRoot" index="28" unique_id=1014091669 instance=ExtResource("3_ndym4")]
+position = Vector2(596.32294, 418.80847)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 500.0
 
-[node name="BlockSpeed6" parent="Blocks" index="29" unique_id=1679166230 instance=ExtResource("3_ndym4")]
-position = Vector2(693, 326)
+[node name="Blocks#BlockSpeed6" parent="BlockRoot" index="29" unique_id=1679166230 instance=ExtResource("3_ndym4")]
+position = Vector2(687.607, 326.63055)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 500.0
 
-[node name="BlockSpeed7" parent="Blocks" index="30" unique_id=1355838834 instance=ExtResource("3_ndym4")]
-position = Vector2(739, 280)
+[node name="Blocks#BlockSpeed7" parent="BlockRoot" index="30" unique_id=1355838834 instance=ExtResource("3_ndym4")]
+position = Vector2(733.249, 280.54156)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 500.0
 
-[node name="BlockSpeed8" parent="Blocks" index="31" unique_id=628162389 instance=ExtResource("3_ndym4")]
-position = Vector2(739, 234)
+[node name="Blocks#BlockSpeed8" parent="BlockRoot" index="31" unique_id=628162389 instance=ExtResource("3_ndym4")]
+position = Vector2(733.249, 234.45259)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 500.0
 
-[node name="BlockSpeed9" parent="Blocks" index="32" unique_id=56494600 instance=ExtResource("3_ndym4")]
-position = Vector2(693, 188)
+[node name="Blocks#BlockSpeed9" parent="BlockRoot" index="32" unique_id=56494600 instance=ExtResource("3_ndym4")]
+position = Vector2(687.607, 188.36362)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 500.0
 
-[node name="BlockSpeed10" parent="Blocks" index="33" unique_id=2030822806 instance=ExtResource("3_ndym4")]
-position = Vector2(647, 142)
+[node name="Blocks#BlockSpeed10" parent="BlockRoot" index="33" unique_id=2030822806 instance=ExtResource("3_ndym4")]
+position = Vector2(641.96497, 142.27466)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 500.0
 
-[node name="BlockSpeed11" parent="Blocks" index="34" unique_id=1563055149 instance=ExtResource("3_ndym4")]
-position = Vector2(601, 96)
+[node name="Blocks#BlockSpeed11" parent="BlockRoot" index="34" unique_id=1563055149 instance=ExtResource("3_ndym4")]
+position = Vector2(596.32294, 96.185684)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 500.0
 
-[node name="BlockSpeed12" parent="Blocks" index="35" unique_id=1296628123 instance=ExtResource("3_ndym4")]
-position = Vector2(555, 96)
+[node name="Blocks#BlockSpeed12" parent="BlockRoot" index="35" unique_id=1296628123 instance=ExtResource("3_ndym4")]
+position = Vector2(550.6809, 96.185684)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 500.0
 
-[node name="BlockSpeed13" parent="Blocks" index="36" unique_id=633638076 instance=ExtResource("3_ndym4")]
-position = Vector2(509, 142)
+[node name="Blocks#BlockSpeed13" parent="BlockRoot" index="36" unique_id=633638076 instance=ExtResource("3_ndym4")]
+position = Vector2(505.0389, 142.27466)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 500.0
 
-[node name="BlockSpeed14" parent="Blocks" index="37" unique_id=940844249 instance=ExtResource("3_ndym4")]
-position = Vector2(463, 188)
+[node name="Blocks#BlockSpeed14" parent="BlockRoot" index="37" unique_id=940844249 instance=ExtResource("3_ndym4")]
+position = Vector2(459.39688, 188.36362)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 500.0
 
-[node name="BlockSpeed15" parent="Blocks" index="38" unique_id=990074231 instance=ExtResource("3_ndym4")]
-position = Vector2(417, 234)
+[node name="Blocks#BlockSpeed15" parent="BlockRoot" index="38" unique_id=990074231 instance=ExtResource("3_ndym4")]
+position = Vector2(413.75485, 234.45259)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 500.0
 
-[node name="BlockSpeed16" parent="Blocks" index="39" unique_id=1348699646 instance=ExtResource("3_ndym4")]
-position = Vector2(417, 280)
+[node name="Blocks#BlockSpeed16" parent="BlockRoot" index="39" unique_id=1348699646 instance=ExtResource("3_ndym4")]
+position = Vector2(413.75485, 280.54156)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 500.0
 
-[node name="BlockSpeed17" parent="Blocks" index="40" unique_id=2017858329 instance=ExtResource("3_ndym4")]
+[node name="Blocks#BlockSpeed17" parent="BlockRoot" index="40" unique_id=2017858329 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
-position = Vector2(235, 234)
+position = Vector2(233.1712, 234.45259)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 1000.0
 
-[node name="BlockSpeed18" parent="Blocks" index="41" unique_id=1256967388 instance=ExtResource("3_ndym4")]
+[node name="Blocks#BlockSpeed18" parent="BlockRoot" index="41" unique_id=1256967388 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
-position = Vector2(212, 280)
+position = Vector2(210.35019, 280.54156)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 1000.0
 
-[node name="BlockSpeed19" parent="Blocks" index="42" unique_id=975617370 instance=ExtResource("3_ndym4")]
+[node name="Blocks#BlockSpeed19" parent="BlockRoot" index="42" unique_id=975617370 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
-position = Vector2(188, 326)
+position = Vector2(186.53697, 326.63055)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 1000.0
 
-[node name="BlockSpeed20" parent="Blocks" index="43" unique_id=1879529646 instance=ExtResource("3_ndym4")]
+[node name="Blocks#BlockSpeed20" parent="BlockRoot" index="43" unique_id=1879529646 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
-position = Vector2(164, 372)
+position = Vector2(162.72374, 372.7195)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 1000.0
 
-[node name="BlockSpeed21" parent="Blocks" index="44" unique_id=26936966 instance=ExtResource("3_ndym4")]
+[node name="Blocks#BlockSpeed21" parent="BlockRoot" index="44" unique_id=26936966 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
-position = Vector2(188, 418)
+position = Vector2(186.53697, 418.80847)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 1000.0
 
-[node name="BlockSpeed22" parent="Blocks" index="45" unique_id=446871349 instance=ExtResource("3_ndym4")]
+[node name="Blocks#BlockSpeed22" parent="BlockRoot" index="45" unique_id=446871349 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
-position = Vector2(923, 234)
+position = Vector2(915.81714, 234.45259)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 1000.0
 
-[node name="BlockSpeed23" parent="Blocks" index="46" unique_id=707786943 instance=ExtResource("3_ndym4")]
+[node name="Blocks#BlockSpeed23" parent="BlockRoot" index="46" unique_id=707786943 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
-position = Vector2(947, 280)
+position = Vector2(939.6304, 280.54156)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 1000.0
 
-[node name="BlockSpeed24" parent="Blocks" index="47" unique_id=172502444 instance=ExtResource("3_ndym4")]
+[node name="Blocks#BlockSpeed24" parent="BlockRoot" index="47" unique_id=172502444 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
-position = Vector2(971, 326)
+position = Vector2(963.4436, 326.63055)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 1000.0
 
-[node name="BlockSpeed25" parent="Blocks" index="48" unique_id=860608838 instance=ExtResource("3_ndym4")]
+[node name="Blocks#BlockSpeed25" parent="BlockRoot" index="48" unique_id=860608838 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
-position = Vector2(995, 372)
+position = Vector2(987.25684, 372.7195)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 1000.0
 
-[node name="BlockSpeed26" parent="Blocks" index="49" unique_id=695533763 instance=ExtResource("3_ndym4")]
+[node name="Blocks#BlockSpeed26" parent="BlockRoot" index="49" unique_id=695533763 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
-position = Vector2(971, 418)
+position = Vector2(963.4436, 418.80847)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 1000.0
 
-[node name="BlockSpeed27" parent="Blocks" index="50" unique_id=716824753 instance=ExtResource("3_ndym4")]
+[node name="Blocks#BlockSpeed27" parent="BlockRoot" index="50" unique_id=716824753 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
-position = Vector2(211, 464)
+position = Vector2(209.35797, 464.89746)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 1000.0
 
-[node name="BlockSpeed28" parent="Blocks" index="51" unique_id=149287507 instance=ExtResource("3_ndym4")]
+[node name="Blocks#BlockSpeed28" parent="BlockRoot" index="51" unique_id=149287507 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
-position = Vector2(234, 510)
+position = Vector2(232.17899, 510.98642)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 1000.0
 
-[node name="BlockSpeed29" parent="Blocks" index="52" unique_id=850912970 instance=ExtResource("3_ndym4")]
+[node name="Blocks#BlockSpeed29" parent="BlockRoot" index="52" unique_id=850912970 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
-position = Vector2(947, 464)
+position = Vector2(939.6304, 464.89746)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 1000.0
 
-[node name="BlockSpeed30" parent="Blocks" index="53" unique_id=1537888681 instance=ExtResource("3_ndym4")]
+[node name="Blocks#BlockSpeed30" parent="BlockRoot" index="53" unique_id=1537888681 instance=ExtResource("3_ndym4")]
 modulate = Color(0.600171, 0.330951, 0.01388601, 1)
-position = Vector2(923, 510)
+position = Vector2(915.81714, 510.98642)
+scale = Vector2(0.9922179, 1.0019342)
 min_break_speed = 1000.0
 
-[node name="BlockSpecialC" parent="Blocks" index="54" unique_id=1031332413 instance=ExtResource("4_0fpe0")]
-position = Vector2(163.71596, 464.89746)
-scale = Vector2(0.9922179, 1.001934)
+[node name="Blocks#BlockSpecialC" parent="BlockRoot" index="54" unique_id=1031332413 instance=ExtResource("4_0fpe0")]
+position = Vector2(162.44191, 465.79666)
+scale = Vector2(0.98449636, 1.0038719)
 
-[node name="BlockSpecialC2" parent="Blocks" index="55" unique_id=1906748242 instance=ExtResource("4_0fpe0")]
-position = Vector2(140.89494, 418.80844)
-scale = Vector2(0.9922179, 1.001934)
+[node name="Blocks#BlockSpecialC2" parent="BlockRoot" index="55" unique_id=1906748242 instance=ExtResource("4_0fpe0")]
+position = Vector2(139.79848, 419.6185)
+scale = Vector2(0.98449636, 1.0038719)
 
-[node name="BlockSpecialC3" parent="Blocks" index="56" unique_id=937143540 instance=ExtResource("4_0fpe0")]
-position = Vector2(117.08171, 372.7195)
-scale = Vector2(0.9922179, 1.001934)
+[node name="Blocks#BlockSpecialC3" parent="BlockRoot" index="56" unique_id=937143540 instance=ExtResource("4_0fpe0")]
+position = Vector2(116.17057, 373.44043)
+scale = Vector2(0.98449636, 1.0038719)
 
-[node name="BlockSpecialC4" parent="Blocks" index="57" unique_id=991348197 instance=ExtResource("4_0fpe0")]
-position = Vector2(140.89494, 326.63055)
-scale = Vector2(0.9922179, 1.001934)
+[node name="Blocks#BlockSpecialC4" parent="BlockRoot" index="57" unique_id=991348197 instance=ExtResource("4_0fpe0")]
+position = Vector2(139.79848, 327.2623)
+scale = Vector2(0.98449636, 1.0038719)
 
-[node name="BlockSpecialC5" parent="Blocks" index="58" unique_id=242683688 instance=ExtResource("4_0fpe0")]
-position = Vector2(164.70818, 280.54156)
-scale = Vector2(0.9922179, 1.001934)
+[node name="Blocks#BlockSpecialC5" parent="BlockRoot" index="58" unique_id=242683688 instance=ExtResource("4_0fpe0")]
+position = Vector2(163.4264, 281.08417)
+scale = Vector2(0.98449636, 1.0038719)
 
-[node name="BlockSpecialC6" parent="Blocks" index="59" unique_id=1655543921 instance=ExtResource("4_0fpe0")]
-position = Vector2(95.252914, 418.80844)
-scale = Vector2(0.9922179, 1.001934)
+[node name="Blocks#BlockSpecialC6" parent="BlockRoot" index="59" unique_id=1655543921 instance=ExtResource("4_0fpe0")]
+position = Vector2(94.51165, 419.6185)
+scale = Vector2(0.98449636, 1.0038719)
 
-[node name="BlockSpecialC7" parent="Blocks" index="60" unique_id=286686102 instance=ExtResource("4_0fpe0")]
-position = Vector2(95.252914, 326.63055)
-scale = Vector2(0.9922179, 1.001934)
+[node name="Blocks#BlockSpecialC7" parent="BlockRoot" index="60" unique_id=286686102 instance=ExtResource("4_0fpe0")]
+position = Vector2(94.51165, 327.2623)
+scale = Vector2(0.98449636, 1.0038719)
 
-[node name="BlockSpecialB25" parent="Blocks" index="61" unique_id=2033545811 instance=ExtResource("2_8s7tp")]
-position = Vector2(118.07393, 464.89746)
-scale = Vector2(0.9922179, 1.001934)
+[node name="Blocks#BlockSpecialB25" parent="BlockRoot" index="61" unique_id=2033545811 instance=ExtResource("2_8s7tp")]
+position = Vector2(117.15507, 465.79666)
+scale = Vector2(0.98449636, 1.0038719)
 
-[node name="BlockSpecialB26" parent="Blocks" index="62" unique_id=116593234 instance=ExtResource("2_8s7tp")]
-position = Vector2(119.06615, 280.54156)
-scale = Vector2(0.9922179, 1.001934)
+[node name="Blocks#BlockSpecialB26" parent="BlockRoot" index="62" unique_id=116593234 instance=ExtResource("2_8s7tp")]
+position = Vector2(118.139565, 281.08417)
+scale = Vector2(0.98449636, 1.0038719)
 
-[node name="BlockBase" parent="Blocks" index="63" unique_id=77328625 instance=ExtResource("5_4iebc")]
-position = Vector2(186.53697, 510.9864)
-scale = Vector2(0.9922179, 1.001934)
+[node name="Blocks#BlockBase" parent="BlockRoot" index="63" unique_id=77328625 instance=ExtResource("5_4iebc")]
+position = Vector2(185.08533, 511.97473)
+scale = Vector2(0.98449636, 1.0038719)
 
-[node name="BlockBase2" parent="Blocks" index="64" unique_id=1901820404 instance=ExtResource("5_4iebc")]
-position = Vector2(187.52919, 234.45258)
-scale = Vector2(0.9922179, 1.001934)
+[node name="Blocks#BlockBase2" parent="BlockRoot" index="64" unique_id=1901820404 instance=ExtResource("5_4iebc")]
+position = Vector2(186.06982, 234.90605)
+scale = Vector2(0.98449636, 1.0038719)
 
-[node name="BlockSpecialC8" parent="Blocks" index="65" unique_id=750288384 instance=ExtResource("4_0fpe0")]
-position = Vector2(993.21014, 464.8975)
-scale = Vector2(0.9922179, 1.001934)
+[node name="Blocks#BlockSpecialC8" parent="BlockRoot" index="65" unique_id=750288384 instance=ExtResource("4_0fpe0")]
+position = Vector2(985.4809, 465.7967)
+scale = Vector2(0.98449636, 1.0038719)
 
-[node name="BlockSpecialC9" parent="Blocks" index="66" unique_id=399063903 instance=ExtResource("4_0fpe0")]
-position = Vector2(1062.6653, 418.8084)
-scale = Vector2(0.9922179, 1.001934)
+[node name="Blocks#BlockSpecialC9" parent="BlockRoot" index="66" unique_id=399063903 instance=ExtResource("4_0fpe0")]
+position = Vector2(1054.3955, 419.61847)
+scale = Vector2(0.98449636, 1.0038719)
 
-[node name="BlockSpecialC10" parent="Blocks" index="67" unique_id=1176696529 instance=ExtResource("4_0fpe0")]
-position = Vector2(1040.8367, 372.71948)
-scale = Vector2(0.9922179, 1.001934)
+[node name="Blocks#BlockSpecialC10" parent="BlockRoot" index="67" unique_id=1176696529 instance=ExtResource("4_0fpe0")]
+position = Vector2(1032.7368, 373.4404)
+scale = Vector2(0.98449636, 1.0038719)
 
-[node name="BlockSpecialC11" parent="Blocks" index="68" unique_id=1093872788 instance=ExtResource("4_0fpe0")]
-position = Vector2(1062.6653, 326.63058)
-scale = Vector2(0.9922179, 1.001934)
+[node name="Blocks#BlockSpecialC11" parent="BlockRoot" index="68" unique_id=1093872788 instance=ExtResource("4_0fpe0")]
+position = Vector2(1054.3955, 327.26233)
+scale = Vector2(0.98449636, 1.0038719)
 
-[node name="BlockSpecialC12" parent="Blocks" index="69" unique_id=645503053 instance=ExtResource("4_0fpe0")]
-position = Vector2(992.21783, 280.5416)
-scale = Vector2(0.9922179, 1.001934)
+[node name="Blocks#BlockSpecialC12" parent="BlockRoot" index="69" unique_id=645503053 instance=ExtResource("4_0fpe0")]
+position = Vector2(984.4963, 281.0842)
+scale = Vector2(0.98449636, 1.0038719)
 
-[node name="BlockSpecialC13" parent="Blocks" index="70" unique_id=246028260 instance=ExtResource("4_0fpe0")]
-position = Vector2(1017.0234, 418.8084)
-scale = Vector2(0.9922179, 1.001934)
+[node name="Blocks#BlockSpecialC13" parent="BlockRoot" index="70" unique_id=246028260 instance=ExtResource("4_0fpe0")]
+position = Vector2(1009.1088, 419.61847)
+scale = Vector2(0.98449636, 1.0038719)
 
-[node name="BlockSpecialC14" parent="Blocks" index="71" unique_id=758645134 instance=ExtResource("4_0fpe0")]
-position = Vector2(1017.0234, 326.63058)
-scale = Vector2(0.9922179, 1.001934)
+[node name="Blocks#BlockSpecialC14" parent="BlockRoot" index="71" unique_id=758645134 instance=ExtResource("4_0fpe0")]
+position = Vector2(1009.1088, 327.26233)
+scale = Vector2(0.98449636, 1.0038719)
 
-[node name="BlockSpecialB27" parent="Blocks" index="72" unique_id=592836550 instance=ExtResource("2_8s7tp")]
-position = Vector2(1039.8442, 464.8975)
-scale = Vector2(0.9922179, 1.001934)
+[node name="Blocks#BlockSpecialB27" parent="BlockRoot" index="72" unique_id=592836550 instance=ExtResource("2_8s7tp")]
+position = Vector2(1031.7521, 465.7967)
+scale = Vector2(0.98449636, 1.0038719)
 
-[node name="BlockSpecialB28" parent="Blocks" index="73" unique_id=2117083741 instance=ExtResource("2_8s7tp")]
-position = Vector2(1037.8596, 280.5416)
-scale = Vector2(0.9922179, 1.001934)
+[node name="Blocks#BlockSpecialB28" parent="BlockRoot" index="73" unique_id=2117083741 instance=ExtResource("2_8s7tp")]
+position = Vector2(1029.7828, 281.0842)
+scale = Vector2(0.98449636, 1.0038719)
 
-[node name="BlockBase3" parent="Blocks" index="74" unique_id=653087912 instance=ExtResource("5_4iebc")]
-position = Vector2(969.3969, 510.98636)
-scale = Vector2(0.9922179, 1.001934)
+[node name="Blocks#BlockBase3" parent="BlockRoot" index="74" unique_id=653087912 instance=ExtResource("5_4iebc")]
+position = Vector2(961.85297, 511.9747)
+scale = Vector2(0.98449636, 1.0038719)
 
-[node name="BlockBase4" parent="Blocks" index="75" unique_id=888986749 instance=ExtResource("5_4iebc")]
-position = Vector2(969.3968, 234.45258)
-scale = Vector2(0.9922179, 1.001934)
+[node name="Blocks#BlockBase4" parent="BlockRoot" index="75" unique_id=888986749 instance=ExtResource("5_4iebc")]
+position = Vector2(961.85284, 234.90605)
+scale = Vector2(0.98449636, 1.0038719)
 
 [node name="Camera2D" parent="." index="8" unique_id=1810002274]
 metadata/_edit_lock_ = true

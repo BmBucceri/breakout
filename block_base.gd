@@ -6,18 +6,18 @@ class_name Block
 @export var next_brick: PackedScene
 var special_score: float = 1
 
-signal block_destroyed
+signal block_destroyed(score: int)
 
-func _ready() -> void:
-	call_deferred("_deferred_ready")
-
-func _deferred_ready():
-	GameManager.add_block(self)
+#func _ready() -> void:
+	#call_deferred("_deferred_ready")
+#
+#func _deferred_ready():
+	#GameManager.add_block(self)
 
 func destroy_brick():
-	ScoreManager.increment_score(block_score)
-	GameManager.remove_block(self)
-	block_destroyed.emit()
+	#SignalManager.increment_score(block_score)
+	#GameManager.remove_block(self)
+	block_destroyed.emit(block_score)
 	self.queue_free()
 
 
