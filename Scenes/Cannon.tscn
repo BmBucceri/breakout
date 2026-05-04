@@ -2,10 +2,15 @@
 
 [ext_resource type="Script" uid="uid://bdjmj8w35eetb" path="res://cannon.gd" id="1_i175o"]
 [ext_resource type="Texture2D" uid="uid://bp7aipxx8ujmg" path="res://Assets/Dropper.png" id="2_ria0b"]
+[ext_resource type="PackedScene" uid="uid://cyoixg7484f5d" path="res://Scenes/Blocks/BlockParry.tscn" id="3_iyehq"]
 
-[node name="Cannon" type="Node2D" unique_id=1891693759 node_paths=PackedStringArray("spawn_marker")]
+[node name="Cannon" type="Node2D" unique_id=1891693759 node_paths=PackedStringArray("spawn_marker", "block_parry")]
 script = ExtResource("1_i175o")
+parry_meter = null
+rotation_offset = null
+total_balls_can_shoot = null
 spawn_marker = NodePath("SpawnLocation")
+block_parry = NodePath("BlockParry")
 metadata/_edit_group_ = true
 
 [node name="Dropper" type="Sprite2D" parent="." unique_id=1631933186]
@@ -14,7 +19,8 @@ rotation = -3.14159
 scale = Vector2(0.698947, 0.751631)
 texture = ExtResource("2_ria0b")
 
-[node name="SpawnLocation" type="Marker2D" parent="." unique_id=1613448872]
+[node name="BlockParry" parent="." unique_id=783385433 instance=ExtResource("3_iyehq")]
 position = Vector2(0, -121)
 
-[node name="Node2D" type="Node2D" parent="SpawnLocation" unique_id=1884346377]
+[node name="SpawnLocation" type="Marker2D" parent="." unique_id=1613448872]
+position = Vector2(0, -121)

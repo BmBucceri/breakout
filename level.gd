@@ -11,7 +11,6 @@ class_name Level
 @export var gutters: Gutters
 
 var current_lives: int
-
 var current_score: float = 0
 signal score_update
 signal on_lives_changed(remaining: int)

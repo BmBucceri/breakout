@@ -61,6 +61,34 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bn856"]
+bg_color = Color(0.7662899, 0.55164, 0.29964283, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.99999994, 0.22953573, 0.17418528, 1)
+corner_radius_top_left = 16
+corner_radius_bottom_right = 53
+expand_margin_top = 12.0
+expand_margin_bottom = 11.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kei6b"]
+bg_color = Color(0.69612366, 0.091188766, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gac28"]
+bg_color = Color(0.7645044, 0.019060427, 9.62615e-08, 1)
+
+[sub_resource type="GDScript" id="GDScript_kei6b"]
+script/source = "extends HSlider
+
+@export var cannon: Cannon
+
+
+func _process(delta: float) -> void:
+	value = cannon.parry_meter
+"
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ddhe"]
 size = Vector2(1156, 75)
 
@@ -171,6 +199,30 @@ sprite_frames = SubResource("SpriteFrames_uinc6")
 script = ExtResource("6_m44s3")
 countdown_bounce_sprite_2d = NodePath(".")
 
+[node name="ParryMeter" type="HSlider" parent="UI/Control" unique_id=1341055045 node_paths=PackedStringArray("cannon")]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 423.0
+offset_top = 255.0
+offset_right = -423.0
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(416, -80)
+theme_override_styles/slider = SubResource("StyleBoxFlat_bn856")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_kei6b")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_gac28")
+max_value = 1.0
+step = 0.0
+editable = false
+scrollable = false
+tick_count = 1
+script = SubResource("GDScript_kei6b")
+cannon = NodePath("../../../Cannon")
+
 [node name="BlockRoot" type="Node2D" parent="." unique_id=1591539969 node_paths=PackedStringArray("rootlevel")]
 script = ExtResource("10_bn856")
 rootlevel = NodePath("..")
@@ -184,15 +236,20 @@ polygon = PackedVector2Array(1, -2, 3, 643, 27, 641, 27, 19, 1128, 19, 1129, 639
 [node name="BallRoot" type="Node2D" parent="." unique_id=233957837]
 script = ExtResource("9_ac8ps")
 
-[node name="Cannon" parent="." unique_id=750428695 instance=ExtResource("10_b72y1")]
+[node name="Cannon" parent="." unique_id=750428695 node_paths=PackedStringArray("rootlevel") instance=ExtResource("10_b72y1")]
 y_sort_enabled = true
 position = Vector2(576, 627)
+parry_meter = 1.0
+rotation_offset = 90.0
+total_balls_can_shoot = 1
+rootlevel = NodePath("..")
 
-[node name="Gutters" type="StaticBody2D" parent="." unique_id=1724943246 node_paths=PackedStringArray("gutter_spawn_marker")]
+[node name="Gutters" type="StaticBody2D" parent="." unique_id=1724943246 node_paths=PackedStringArray("rootlevel", "gutter_spawn_marker")]
 position = Vector2(-32, 0)
 collision_layer = 6
 collision_mask = 0
 script = ExtResource("12_3pq72")
+rootlevel = NodePath("..")
 gutter_spawn_marker = NodePath("GutterSpawnMarker")
 metadata/_custom_type_script = "uid://dqlermoajjfjp"
 

@@ -1,14 +1,15 @@
 extends StaticBody2D
 class_name Gutters
 
+@export var rootlevel: Level
 @export var has_gutter_block: bool = false
 
 const BLOCK_GUTTER = preload("uid://m7ejcqlv54cj")
 @export var gutter_spawn_marker: Marker2D
 
 func _ready() -> void:
+	rootlevel.on_lives_changed.connect(spawn_block_gutter)
 	spawn_block_gutter()
-
 
 func spawn_block_gutter():
 	if has_gutter_block: 

@@ -1,31 +1,52 @@
 extends Node2D
 class_name Cannon
 
-@export var spawn_marker: Marker2D
+@export_range(0.0,1.0) var parry_meter: float = 1.0
 @export var rotation_offset: float = 90
 @export var total_balls_can_shoot: int = 1
-@export var block_base: PackedScene
+@export_group("References")
+@export var spawn_marker: Marker2D
+@export var block_parry: Parry
+@export var rootlevel: Level
 
 var total_balls_onscreen : int = 0
 var can_shoot: bool = true
 var parry_active: bool = false
-
+var parry_drain: float = .5
+var parry_refill: float = .35
 
 const BALL = preload("uid://d1ogb0eean0hi")
 const BLOCK = preload("uid://cyoixg7484f5d")
 
 func _ready() -> void:
-	InputManager.left_click_pressed.connect(shoot_ball)
-	InputManager.right_click_pressed.connect(parry_activate)
+	InputManager.shoot_ball.connect(_on_shoot_ball)
+	InputManager.parry_start.connect(attempt_parry)
+	InputManager.parry_end.connect(parry_toggle)
 
-func _process(_delta: float) -> void:
+#func _input(event: InputEvent) -> void:
+	#if event.is_action_pressed("Input_Cannon_Interact"):
+		#_on_shoot_ball()
+	#elif event.is_action_pressed("Input_Cannon_Parry"):
+		#attempt_parry()
+	#elif event.is_action_released("Input_Cannon_Parry"):
+		#parry_toggle(false)
+
+func _process(delta: float) -> void:
 	look_at(get_global_mouse_position())
 	self.rotation_degrees += rotation_offset
-	#parry_tracking()
+	if parry_active == true:
+		if parry_meter <= 0:
+			parry_toggle(false)
+			return
+		parry_meter -= (parry_drain * delta)
+			
+		print_debug(parry_meter)
+	else:
+		if parry_meter >= 1:
+			return
+		parry_meter += (parry_refill * delta)
 
-func shoot_ball():
-	#if can_shoot == false:
-		#return
+func _on_shoot_ball():
 #Check for total balls on screen
 	if total_balls_onscreen >= total_balls_can_shoot:
 		return
@@ -38,7 +59,6 @@ func shoot_ball():
 	var fire_direction = Vector2.UP.rotated(self.global_rotation)
 	#ball inherits the angle of the cannon
 	new_ball.set_direction(fire_direction * new_ball.speed)
-	#spawn_marker.add_child(new_ball)
 	GameManager.ball_root.add_child(new_ball)
 	new_ball.top_level = true
 	
@@ -46,15 +66,25 @@ func ball_is_destroyed():
 		total_balls_onscreen -= 1
 
 
-func parry_activate():
-	
-	var parry: Area2D = BLOCK.instantiate()
-	print("made")
-	spawn_marker.add_child(parry)
-	
-	await get_tree().create_timer(.2,).timeout
-	parry.queue_free()
-	print_debug("unmade")
+#func parry_activate():
+	#block_parry.toggle_parry(true)
+	#pass
+	##var parry: Area2D = BLOCK.instantiate()
+	##print("made")
+	##spawn_marker.add_child(parry)
+	##await get_tree().create_timer(.2,).timeout
+	##parry.queue_free()
+	##print_debug("unmade")
+
+
+func parry_toggle(value: bool):
+	parry_active = value
+	block_parry.toggle_parry(value)
+
+func attempt_parry():
+	if parry_meter > 0.2:
+		parry_toggle(true)
+	pass
 
 
 #func parry_tracking():

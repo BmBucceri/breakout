@@ -26,7 +26,7 @@ signal ball_destroyed
 
 func _ready() -> void:
 	GameManager.add_ball(self)
-	InputManager.left_click_pressed.connect(_try_ricochet)
+	InputManager.flip.connect(_try_ricochet)
 	default_sprite_scale = sprite_2d.scale
 	_add_trail()
 
@@ -38,7 +38,7 @@ func _add_trail():
 
 func _physics_process(delta: float) -> void:
 	_move_and_rotate(delta)
-	print(speed,velocity)
+	
 	GameManager.ball_speed = speed - 200
 	
 	
@@ -102,8 +102,6 @@ func _increase_speed(value: float):
 		return
 	speed += speed * value
 	velocity = velocity.normalized() * speed
-	
-	#print(speed)
 
 # called by cannon
 func set_direction(new_direction: Vector2):
