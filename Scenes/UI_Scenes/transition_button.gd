@@ -13,4 +13,5 @@ func _on_button_pressed():
 func restart():
 	#send queue to start the board youre currently on again
 	#TransitionManager.change_to_scene(self)
+	#Error.reload_sce
 	pass

@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bpl83p74gdrxu"]
 
-[ext_resource type="Script" uid="uid://dan4m14new860" path="res://Boards/game_over.gd" id="1_jb6in"]
-[ext_resource type="Script" uid="uid://coxsat4udgwk2" path="res://Scenes/transition_button.gd" id="2_y8man"]
+[ext_resource type="Script" uid="uid://dan4m14new860" path="res://Boards/game_over.gd" id="1_mnqjf"]
+[ext_resource type="Script" uid="uid://coxsat4udgwk2" path="res://Scenes/UI_Scenes/transition_button.gd" id="2_qlibr"]
 
 [node name="GameOverRoot" type="CanvasLayer" unique_id=1925449658 node_paths=PackedStringArray("game_over_win", "game_over_lose")]
-script = ExtResource("1_jb6in")
+script = ExtResource("1_mnqjf")
 game_over_win = NodePath("Game Over Win")
 game_over_lose = NodePath("Game Over Lose")
 
@@ -49,19 +49,19 @@ metadata/_edit_group_ = true
 [node name="Button" type="Button" parent="Game Over Win/VBoxContainer" unique_id=412469269]
 layout_mode = 2
 text = "Go to the next one if you dare"
-script = ExtResource("2_y8man")
+script = ExtResource("2_qlibr")
 path = "uid://1eraj5cry3c2"
 
 [node name="Button2" type="Button" parent="Game Over Win/VBoxContainer" unique_id=920816041]
 layout_mode = 2
 text = "I require the Full Menu, Quanqail"
-script = ExtResource("2_y8man")
+script = ExtResource("2_qlibr")
 path = "uid://dx1se2c6apm1d"
 
 [node name="Button3" type="Button" parent="Game Over Win/VBoxContainer" unique_id=215092902]
 layout_mode = 2
 text = "quit like a little BABY COWARD"
-script = ExtResource("2_y8man")
+script = ExtResource("2_qlibr")
 path = "uid://crap7x0n62h7p"
 
 [node name="Game Over Lose" type="Control" parent="." unique_id=861476940]
@@ -106,17 +106,17 @@ metadata/_edit_group_ = true
 [node name="Button" type="Button" parent="Game Over Lose/VBoxContainer" unique_id=1628626639]
 layout_mode = 2
 text = "Try again?"
-script = ExtResource("2_y8man")
+script = ExtResource("2_qlibr")
 path = "uid://1eraj5cry3c2"
 
 [node name="Button2" type="Button" parent="Game Over Lose/VBoxContainer" unique_id=1626474820]
 layout_mode = 2
 text = "I require the Full Menu, Quanqail"
-script = ExtResource("2_y8man")
+script = ExtResource("2_qlibr")
 path = "uid://dx1se2c6apm1d"
 
 [node name="Button3" type="Button" parent="Game Over Lose/VBoxContainer" unique_id=1421568203]
 layout_mode = 2
 text = "quit like a little BABY COWARD"
-script = ExtResource("2_y8man")
+script = ExtResource("2_qlibr")
 path = "uid://crap7x0n62h7p"

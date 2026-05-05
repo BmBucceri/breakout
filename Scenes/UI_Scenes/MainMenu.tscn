@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://crap7x0n62h7p"]
 
-[ext_resource type="Script" uid="uid://coxsat4udgwk2" path="res://Scenes/transition_button.gd" id="1_tt5f1"]
+[ext_resource type="Script" uid="uid://coxsat4udgwk2" path="res://Scenes/UI_Scenes/transition_button.gd" id="1_tt5f1"]
 [ext_resource type="Texture2D" uid="uid://b6k0b2j7qflgx" path="res://Assets/THEBEAST.png" id="2_853f1"]
 
 [node name="MainMenu" type="Node2D" unique_id=1851213399]

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://co443mxrablr3"]
 
 [ext_resource type="Script" uid="uid://b6tlb3o6p10bs" path="res://level.gd" id="1_4e1jp"]
-[ext_resource type="Script" uid="uid://b8b32otwwftm1" path="res://score_counter.gd" id="2_ifb0j"]
+[ext_resource type="Script" uid="uid://b8b32otwwftm1" path="res://Scenes/UI_Scenes/score_counter.gd" id="2_ifb0j"]
 [ext_resource type="Script" uid="uid://csgqo872ljmts" path="res://Boards/speedometer.gd" id="3_8ju24"]
-[ext_resource type="Script" uid="uid://brtvwoww4lon3" path="res://bounces_counter.gd" id="4_20iil"]
+[ext_resource type="Script" uid="uid://brtvwoww4lon3" path="res://Scenes/UI_Scenes/bounces_counter.gd" id="4_20iil"]
 [ext_resource type="Texture2D" uid="uid://06gale2dip5w" path="res://Assets/Sprites/Zero.png" id="5_8ju24"]
 [ext_resource type="Texture2D" uid="uid://dnkjr2thp41mk" path="res://Assets/Sprites/One.png" id="6_20iil"]
 [ext_resource type="Script" uid="uid://bji3ucgy8q4ae" path="res://Boards/CountdownBounceSprite.gd" id="6_m44s3"]
@@ -13,10 +13,10 @@
 [ext_resource type="Script" uid="uid://dygu38lw21ygj" path="res://Boards/ball_root.gd" id="9_ac8ps"]
 [ext_resource type="PackedScene" uid="uid://naw7he6hb23q" path="res://Scenes/Cannon.tscn" id="10_b72y1"]
 [ext_resource type="Script" uid="uid://buh6efwnnt4oi" path="res://Boards/Levels/block_root.gd" id="10_bn856"]
-[ext_resource type="Script" uid="uid://bh12bel430pjr" path="res://killbox.gd" id="11_hx4y6"]
+[ext_resource type="Script" uid="uid://bh12bel430pjr" path="res://Scenes/UI_Scenes/killbox.gd" id="11_hx4y6"]
 [ext_resource type="Script" uid="uid://dqlermoajjfjp" path="res://Boards/Levels/gutters.gd" id="12_3pq72"]
 [ext_resource type="Script" uid="uid://uwsl4p8sccco" path="res://Boards/camera_2d.gd" id="12_hlflf"]
-[ext_resource type="PackedScene" uid="uid://bpl83p74gdrxu" path="res://Scenes/game_over_screen.tscn" id="16_jseu4"]
+[ext_resource type="PackedScene" uid="uid://bpl83p74gdrxu" path="res://Scenes/UI_Scenes/game_over_screen.tscn" id="16_jseu4"]
 
 [sub_resource type="GDScript" id="GDScript_bn856"]
 script/source = "extends Label
@@ -61,33 +61,36 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bn856"]
-bg_color = Color(0.7662899, 0.55164, 0.29964283, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p7fse"]
+corner_radius_top_left = 13
+corner_radius_bottom_right = 13
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2c54n"]
+bg_color = Color(0, 0.4745098, 0.7411765, 1)
+
+[sub_resource type="GDScript" id="GDScript_p7fse"]
+script/source = "extends Panel
+@export var cannon: Cannon
+
+func _process(delta: float) -> void:
+
+	self.position.x = (cannon.parry_meter - 1.0) * size.x
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s844g"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 13
+corner_radius_bottom_right = 13
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1hx26"]
+draw_center = false
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
-border_color = Color(0.99999994, 0.22953573, 0.17418528, 1)
-corner_radius_top_left = 16
-corner_radius_bottom_right = 53
-expand_margin_top = 12.0
-expand_margin_bottom = 11.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kei6b"]
-bg_color = Color(0.69612366, 0.091188766, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gac28"]
-bg_color = Color(0.7645044, 0.019060427, 9.62615e-08, 1)
-
-[sub_resource type="GDScript" id="GDScript_kei6b"]
-script/source = "extends HSlider
-
-@export var cannon: Cannon
-
-
-func _process(delta: float) -> void:
-	value = cannon.parry_meter
-"
+border_color = Color(0.8525816, 0.30279854, 0, 1)
+corner_radius_top_left = 13
+corner_radius_bottom_right = 13
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ddhe"]
 size = Vector2(1156, 75)
@@ -199,7 +202,7 @@ sprite_frames = SubResource("SpriteFrames_uinc6")
 script = ExtResource("6_m44s3")
 countdown_bounce_sprite_2d = NodePath(".")
 
-[node name="ParryMeter" type="HSlider" parent="UI/Control" unique_id=1341055045 node_paths=PackedStringArray("cannon")]
+[node name="ParryMeter" type="Control" parent="UI/Control" unique_id=401461095]
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
@@ -212,16 +215,39 @@ offset_bottom = 280.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(416, -80)
-theme_override_styles/slider = SubResource("StyleBoxFlat_bn856")
-theme_override_styles/grabber_area = SubResource("StyleBoxFlat_kei6b")
-theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_gac28")
-max_value = 1.0
-step = 0.0
-editable = false
-scrollable = false
-tick_count = 1
-script = SubResource("GDScript_kei6b")
-cannon = NodePath("../../../Cannon")
+
+[node name="Background" type="Panel" parent="UI/Control/ParryMeter" unique_id=1011173704]
+clip_children = 2
+layout_mode = 0
+offset_top = -3.0
+offset_right = 306.0
+offset_bottom = 26.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_p7fse")
+
+[node name="MeterFill" type="Panel" parent="UI/Control/ParryMeter/Background" unique_id=682097290 node_paths=PackedStringArray("cannon")]
+layout_mode = 0
+offset_right = 306.0
+offset_bottom = 29.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2c54n")
+script = SubResource("GDScript_p7fse")
+cannon = NodePath("../../../../../Cannon")
+
+[node name="PowerNotch" type="Panel" parent="UI/Control/ParryMeter" unique_id=1393456143]
+layout_mode = 0
+offset_left = 59.58499
+offset_top = 4.0
+offset_right = 61.58499
+offset_bottom = 25.0
+pivot_offset = Vector2(2, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_s844g")
+
+[node name="Outline" type="Panel" parent="UI/Control/ParryMeter/PowerNotch" unique_id=147640500]
+layout_mode = 0
+offset_left = -59.58499
+offset_top = -7.0
+offset_right = 246.41501
+offset_bottom = 22.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1hx26")
 
 [node name="BlockRoot" type="Node2D" parent="." unique_id=1591539969 node_paths=PackedStringArray("rootlevel")]
 script = ExtResource("10_bn856")

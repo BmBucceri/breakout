@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dx1se2c6apm1d"]
 
-[ext_resource type="Script" uid="uid://coxsat4udgwk2" path="res://Scenes/transition_button.gd" id="1_chbko"]
+[ext_resource type="Script" uid="uid://coxsat4udgwk2" path="res://Scenes/UI_Scenes/transition_button.gd" id="1_chbko"]
 
 [node name="Node2D" type="Node2D" unique_id=849811843]
 
