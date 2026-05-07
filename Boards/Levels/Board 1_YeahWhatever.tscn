@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://uwsl4p8sccco" path="res://Boards/camera_2d.gd" id="6_esoej"]
 
 [node name="ROOTLEVEL" unique_id=1515406294 instance=ExtResource("1_c7foh")]
-score_target = 2000
+score_target = 100
 
 [node name="MarginContainer" parent="UI/Control" parent_id_path=PackedInt32Array(292381040) index="0" unique_id=568693195]
 metadata/_edit_lock_ = true

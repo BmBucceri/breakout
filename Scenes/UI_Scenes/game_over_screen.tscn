@@ -3,6 +3,20 @@
 [ext_resource type="Script" uid="uid://dan4m14new860" path="res://Boards/game_over.gd" id="1_mnqjf"]
 [ext_resource type="Script" uid="uid://coxsat4udgwk2" path="res://Scenes/UI_Scenes/transition_button.gd" id="2_qlibr"]
 
+[sub_resource type="GDScript" id="GDScript_mnqjf"]
+script/source = "extends Button
+
+func _ready() -> void:
+	pressed.connect(_on_button_pressed)
+
+func _on_button_pressed():
+	_go_to_next_board()
+	
+func _go_to_next_board():
+	var next_board_path: String = LevelManager.get_next_board_path()
+	TransitionManager.change_to_scene(next_board_path)
+"
+
 [node name="GameOverRoot" type="CanvasLayer" unique_id=1925449658 node_paths=PackedStringArray("game_over_win", "game_over_lose")]
 script = ExtResource("1_mnqjf")
 game_over_win = NodePath("Game Over Win")
@@ -46,13 +60,12 @@ offset_right = 701.0
 offset_bottom = 538.0
 metadata/_edit_group_ = true
 
-[node name="Button" type="Button" parent="Game Over Win/VBoxContainer" unique_id=412469269]
+[node name="Next Level Button" type="Button" parent="Game Over Win/VBoxContainer" unique_id=412469269]
 layout_mode = 2
 text = "Go to the next one if you dare"
-script = ExtResource("2_qlibr")
-path = "uid://1eraj5cry3c2"
+script = SubResource("GDScript_mnqjf")
 
-[node name="Button2" type="Button" parent="Game Over Win/VBoxContainer" unique_id=920816041]
+[node name="Level Select Button Win" type="Button" parent="Game Over Win/VBoxContainer" unique_id=920816041]
 layout_mode = 2
 text = "I require the Full Menu, Quanqail"
 script = ExtResource("2_qlibr")
@@ -103,13 +116,14 @@ offset_right = 701.0
 offset_bottom = 538.0
 metadata/_edit_group_ = true
 
-[node name="Button" type="Button" parent="Game Over Lose/VBoxContainer" unique_id=1628626639]
+[node name="Restart Button" type="Button" parent="Game Over Lose/VBoxContainer" unique_id=1628626639]
 layout_mode = 2
 text = "Try again?"
 script = ExtResource("2_qlibr")
 path = "uid://1eraj5cry3c2"
+reload_scene = true
 
-[node name="Button2" type="Button" parent="Game Over Lose/VBoxContainer" unique_id=1626474820]
+[node name="Level Select Button Lose" type="Button" parent="Game Over Lose/VBoxContainer" unique_id=1626474820]
 layout_mode = 2
 text = "I require the Full Menu, Quanqail"
 script = ExtResource("2_qlibr")

@@ -1,17 +1,17 @@
 extends Button
 
 @export var path: String
+@export var reload_scene: bool = false
+
 
 func _ready() -> void:
 	pressed.connect(_on_button_pressed)
-	
+
 
 func _on_button_pressed():
-	TransitionManager.change_to_scene(path)
+	if reload_scene == true:
+		TransitionManager.reload_scene()
+	else: 
+		TransitionManager.change_to_scene(path)
 	pass
  
-func restart():
-	#send queue to start the board youre currently on again
-	#TransitionManager.change_to_scene(self)
-	#Error.reload_sce
-	pass

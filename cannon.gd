@@ -40,7 +40,6 @@ func _process(delta: float) -> void:
 			return
 		parry_meter -= (parry_drain * delta)
 			
-		print_debug(parry_meter)
 	else:
 		if parry_meter >= 1:
 			return

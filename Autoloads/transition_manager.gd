@@ -18,6 +18,11 @@ func change_to_scene(path: String):
 	await _fade_out()
 	pass
 
+func reload_scene():
+	await _fade_in()
+	get_tree().reload_current_scene()
+	await _fade_out()
+
 func _fade_in():
 	if tween:
 		tween.kill()

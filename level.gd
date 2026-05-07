@@ -19,6 +19,7 @@ signal on_lives_changed(remaining: int)
 
 
 func _ready() -> void:
+	LevelManager.set_current_index()
 	game_start()
 	killbox.life_lost.connect(_on_life_lost)
 	current_lives = starting_lives
@@ -51,7 +52,6 @@ func _on_game_win():
 	SignalManager.emit_on_game_win()
 	print_debug("youre winner")
 	pass
-
 
 func _on_game_lose():
 	SignalManager.emit_on_game_lose()

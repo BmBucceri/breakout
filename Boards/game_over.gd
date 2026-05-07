@@ -6,9 +6,9 @@ class_name GameOverState
 @export var visible: bool = false
 
 func _ready() -> void:
-	call_deferred("deferred_ready")
+	call_deferred("_deferred_ready")
 
-func deferred_ready():
+func _deferred_ready():
 	SignalManager.on_game_win.connect(reveal_game_win)
 	SignalManager.on_game_lose.connect(reveal_game_lose)
 	print("connected!")
