@@ -10,6 +10,7 @@ class_name Level
 @export var killbox: Killbox
 @export var gutters: Gutters
 
+
 var current_lives: int
 var current_score: float = 0
 signal score_update
@@ -19,7 +20,6 @@ signal on_lives_changed(remaining: int)
 
 
 func _ready() -> void:
-	LevelManager.set_current_index()
 	game_start()
 	killbox.life_lost.connect(_on_life_lost)
 	current_lives = starting_lives
@@ -29,6 +29,7 @@ func game_start():
 	MusicManager.play_track(music_to_play)
 	GameManager.reset_level()	
 	
+
 #called by the killbox
 func _on_life_lost():
 	current_lives -= 1
@@ -44,9 +45,16 @@ func increment_score(score_value: float):
 	score_update.emit()
 	if current_score >= score_target:
 		_on_game_win()
+		
+#func prime_current_board():
+	#LevelManager.current_board == self.get_tree().current_scene
+	#print_debug(get_tree().current_scene)
+	#
+
 
 func out_of_lives():
 	_on_game_lose()
+
 
 func _on_game_win():
 	SignalManager.emit_on_game_win()

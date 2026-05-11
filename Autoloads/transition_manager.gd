@@ -2,6 +2,7 @@ extends CanvasLayer
 
 @onready var panel: Panel = %Panel
 
+
 var tween: Tween
 
 func _ready() -> void:
@@ -18,6 +19,14 @@ func change_to_scene(path: String):
 	await _fade_out()
 	pass
 
+func change_to_level(path: LevelManager.available_boards):
+	await _fade_in()
+	var level_path = LevelManager.get_board_path(path)
+	LevelManager.next_index = path + 1
+	_change_scene(level_path)
+	await _fade_out()
+	pass
+
 func reload_scene():
 	await _fade_in()
 	get_tree().reload_current_scene()
@@ -30,7 +39,7 @@ func _fade_in():
 	tween.tween_property(panel, "modulate:a", 1, .5)
 	await tween.finished
 
-func _change_scene(path: String):
+func _change_scene(path):
 	get_tree().change_scene_to_file(path)
 
 func _fade_out():
