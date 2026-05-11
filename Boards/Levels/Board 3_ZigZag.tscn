@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://co2jcs3je3qd4" path="res://Boards/polygon_match_shape.gd" id="6_0oy8n"]
 
 [node name="ROOTLEVEL" unique_id=1515406294 instance=ExtResource("1_3csct")]
-score_target = 100
+score_target = 3000
 music_to_play = 2
 
 [node name="BlockSpecialC" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="0" unique_id=12076473 instance=ExtResource("2_66xjb")]

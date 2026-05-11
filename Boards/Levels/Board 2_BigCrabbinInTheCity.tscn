@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://Scenes/Blocks/BlockBase.tscn" id="4_2a47b"]
 
 [node name="ROOTLEVEL" unique_id=1515406294 instance=ExtResource("1_iu0fy")]
+score_target = 2000
 music_to_play = 1
 
 [node name="BlockSpecialC9" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="0" unique_id=974216029 instance=ExtResource("2_egneo")]

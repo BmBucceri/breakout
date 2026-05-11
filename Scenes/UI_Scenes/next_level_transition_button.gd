@@ -9,7 +9,6 @@ func _ready() -> void:
 
 
 func _on_button_pressed():
-	if reload_scene == true:
-		TransitionManager.reload_scene()
-	else: 
-		TransitionManager.change_to_scene(path)
+	TransitionManager.change_to_level(LevelManager.next_index)
+	print_debug("NextIndex Pressed: " +str(LevelManager.next_index))
+	pass

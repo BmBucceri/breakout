@@ -20,7 +20,7 @@ scale = Vector2(0.698947, 0.751631)
 texture = ExtResource("2_ria0b")
 
 [node name="BlockParry" parent="." unique_id=783385433 instance=ExtResource("3_iyehq")]
-position = Vector2(0, -121)
+position = Vector2(0, -102)
 
 [node name="SpawnLocation" type="Marker2D" parent="." unique_id=1613448872]
 position = Vector2(0, -121)

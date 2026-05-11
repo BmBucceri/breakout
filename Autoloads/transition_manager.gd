@@ -4,6 +4,7 @@ extends CanvasLayer
 
 
 var tween: Tween
+#var _level: Level
 
 func _ready() -> void:
 	# set tween to transparent
@@ -23,6 +24,7 @@ func change_to_level(path: LevelManager.available_boards):
 	await _fade_in()
 	var level_path = LevelManager.get_board_path(path)
 	LevelManager.next_index = path + 1
+	print_debug("NextIndex Manager: " +str(LevelManager.next_index))
 	_change_scene(level_path)
 	await _fade_out()
 	pass

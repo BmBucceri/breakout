@@ -46,7 +46,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 32
-text = "press this button or im gonna scream so loud"
+text = "Start Game"
 script = ExtResource("1_60mr1")
 
 [node name="Button2" type="Button" parent="CanvasLayer/Panel/VBoxContainer" unique_id=2089112224]

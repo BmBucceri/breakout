@@ -2,14 +2,14 @@
 extends Node
 
 signal all_boards_completed
+var value
 
-var current_board: PackedScene
-var next_index: int :
-	set(value):
-		if value > available_boards.size():
-			value = 0
+#var current_board: PackedScene
+var next_index: int
+	#set(value):
+		#if value > available_boards.size():
+			#value = 0
 #var current_index = available_boards.find(current_board)
-var change_to_level
 
 enum available_boards {
 	BOARD_1_YEAH_WHATEVER,

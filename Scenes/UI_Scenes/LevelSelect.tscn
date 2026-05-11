@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dx1se2c6apm1d"]
 
 [ext_resource type="Script" uid="uid://coxsat4udgwk2" path="res://Scenes/UI_Scenes/transition_button.gd" id="1_chbko"]
+[ext_resource type="Script" uid="uid://013eguy1naka" path="res://Scenes/UI_Scenes/level_transition_button.gd" id="1_usf8w"]
 
 [node name="Node2D" type="Node2D" unique_id=849811843]
 
@@ -42,8 +43,7 @@ layout_mode = 2
 text = "Level One
 Yeah, Whatever Cop"
 autowrap_mode = 3
-script = ExtResource("1_chbko")
-path = "uid://dt00th4b8utvc"
+script = ExtResource("1_usf8w")
 
 [node name="Button2" type="Button" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer/HBoxContainer" unique_id=973902072]
 custom_minimum_size = Vector2(150, 0)
@@ -52,8 +52,8 @@ text = "Level Two
 Crabbin in tha 
 Big City"
 autowrap_mode = 3
-script = ExtResource("1_chbko")
-path = "uid://coivw1qfolpl3"
+script = ExtResource("1_usf8w")
+level = 1
 
 [node name="Button3" type="Button" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer/HBoxContainer" unique_id=950733028]
 custom_minimum_size = Vector2(150, 0)
@@ -62,8 +62,8 @@ text = "Level Three
 Zig Zag
 Bayyyyyybaeeeeee"
 autowrap_mode = 3
-script = ExtResource("1_chbko")
-path = "uid://lpdjyvd8wulw"
+script = ExtResource("1_usf8w")
+level = 2
 
 [node name="Button4" type="Button" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer/HBoxContainer" unique_id=865478922]
 custom_minimum_size = Vector2(150, 0)
@@ -71,15 +71,16 @@ layout_mode = 2
 text = "Level Four
 Regular SPRONGUS"
 autowrap_mode = 3
-script = ExtResource("1_chbko")
-path = "uid://cfidyogtjo45s"
+script = ExtResource("1_usf8w")
+level = 3
 
 [node name="Button5" type="Button" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer/HBoxContainer" unique_id=1109179158]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
-text = "Placeholder Name"
+text = "having a Great TIME!"
 autowrap_mode = 3
-script = ExtResource("1_chbko")
+script = ExtResource("1_usf8w")
+level = 4
 
 [node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer" unique_id=1282309451]
 layout_mode = 2
