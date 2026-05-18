@@ -15,8 +15,9 @@ func _on_body_entered(body: Node2D) -> void:
 	if body is Ball:
 		var bounce_direction = Vector2.UP.rotated(global_rotation)
 		var new_velocity = bounce_direction * body.speed
-
 		body.ball_bounce(new_velocity)
+		if GameManager.ball_speed > 1000:
+			GameManager.ball_speed = (GameManager.ball_speed / .2)
 
 func toggle_parry(value:bool):
 	is_active = value

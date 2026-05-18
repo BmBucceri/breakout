@@ -271,12 +271,11 @@ total_balls_can_shoot = 1
 rootlevel = NodePath("..")
 
 [node name="Gutters" type="StaticBody2D" parent="." unique_id=1724943246 node_paths=PackedStringArray("rootlevel", "gutter_spawn_marker")]
-position = Vector2(-32, 0)
+position = Vector2(-33, 0)
 collision_layer = 6
 collision_mask = 0
 script = ExtResource("12_3pq72")
 rootlevel = NodePath("..")
-has_gutter_block = true
 gutter_spawn_marker = NodePath("GutterSpawnMarker")
 metadata/_custom_type_script = "uid://dqlermoajjfjp"
 

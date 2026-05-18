@@ -31,6 +31,15 @@ func remove_ball(ball_to_remove: Ball):
 func assign_ball_root(new_root: BallRoot):
 	ball_root = new_root
 
+func increment_ricochet(value:int):
+	ricochet_left += value
+
+func emit_camera_trauma(amount: float):
+	camera_trauma.emit(amount)
+
+
+func reset_level():
+	ball_array = []
 
 #func add_block(new_block: Block):
 	#block_array.append(new_block)
@@ -41,18 +50,3 @@ func assign_ball_root(new_root: BallRoot):
 	#if block_to_remove_index != -1:
 		#block_array.remove_at(block_to_remove_index)
 	#_check_block_status()
-
-
-func increment_ricochet(value:int):
-	ricochet_left += value
-
-func emit_camera_trauma(amount: float):
-	camera_trauma.emit(amount)
-
-#func _check_block_status():
-	#if block_array.size() == 0:
-		#print("you'r winner")
-		#all_block_destroyed.emit()
-
-func reset_level():
-	ball_array = []
