@@ -28,8 +28,7 @@ func remove_block(block_to_remove: Block):
 	
 func _check_block_status():
 	if block_array.size() == 0:
-		print("you'r winner")
-		#all_block_destroyed.emit()
+		pass
 		
 func _setup_child(child: Node):
 	if child is Block:

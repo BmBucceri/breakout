@@ -41,7 +41,6 @@ func _on_life_lost():
 
 func increment_score(score_value: float):
 	current_score += score_value
-	print()
 	score_update.emit()
 	if current_score >= score_target:
 		_on_game_win()

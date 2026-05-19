@@ -24,3 +24,5 @@ texture = ExtResource("3_jmkaj")
 position = Vector2(0, -0.16447926)
 scale = Vector2(1.5189905, 0.518989)
 shape = SubResource("RectangleShape2D_gho8k")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1389074785]

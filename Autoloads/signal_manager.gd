@@ -2,6 +2,8 @@ extends Node
 
 signal on_game_win
 signal on_game_lose
+signal parry_slowdown
+
 
 func emit_on_game_win():
 	print("Nice Job!")

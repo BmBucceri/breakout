@@ -24,11 +24,13 @@ var new_trail: Line2D
 
 signal ball_destroyed
 
+
 func _ready() -> void:
 	GameManager.add_ball(self)
 	InputManager.flip.connect(_try_ricochet)
 	default_sprite_scale = sprite_2d.scale
 	_add_trail()
+	SignalManager.parry_slowdown.connect(parry_speed_reduction)
 
 func _add_trail():
 	new_trail = TRAIL_2D.instantiate()
@@ -110,9 +112,11 @@ func set_direction(new_direction: Vector2):
 func _adjust_velocity(new_vector: Vector2):
 	velocity = velocity.bounce(new_vector)
 
+func parry_speed_reduction():
+	speed = (speed * .5)
+
 func destroy_ball():
 	GameManager.remove_ball(self)
 	new_trail.destroy_trail()
 	ball_destroyed.emit()
 	self.queue_free()
-	

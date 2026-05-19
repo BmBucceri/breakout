@@ -65,17 +65,6 @@ func ball_is_destroyed():
 		total_balls_onscreen -= 1
 
 
-#func parry_activate():
-	#block_parry.toggle_parry(true)
-	#pass
-	##var parry: Area2D = BLOCK.instantiate()
-	##print("made")
-	##spawn_marker.add_child(parry)
-	##await get_tree().create_timer(.2,).timeout
-	##parry.queue_free()
-	##print_debug("unmade")
-
-
 func parry_toggle(value: bool):
 	parry_active = value
 	block_parry.toggle_parry(value)
