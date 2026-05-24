@@ -3,6 +3,8 @@ extends Node
 signal on_game_win
 signal on_game_lose
 signal parry_slowdown
+#used by Block_parry
+signal speed_gameover
 
 
 func emit_on_game_win():

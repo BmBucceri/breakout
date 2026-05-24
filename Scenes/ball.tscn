@@ -21,12 +21,14 @@ random_pitch = 1.122462
 streams_count = 1
 stream_0/stream = ExtResource("3_376qj")
 
-[node name="Ball" type="CharacterBody2D" unique_id=464850111 node_paths=PackedStringArray("sprite_2d")]
+[node name="Ball" type="CharacterBody2D" unique_id=464850111 node_paths=PackedStringArray("sprite_2d", "ball")]
 collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_ij5cq")
+speed = 600.0
 sprite_2d = NodePath("Sprite2D")
 pitch_curve = SubResource("Curve_376qj")
+ball = NodePath(".")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=807473465]

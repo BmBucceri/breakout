@@ -4,6 +4,17 @@
 [ext_resource type="Script" uid="uid://coxsat4udgwk2" path="res://Scenes/UI_Scenes/transition_button.gd" id="1_tt5f1"]
 [ext_resource type="Texture2D" uid="uid://b6k0b2j7qflgx" path="res://Assets/THEBEAST.png" id="2_853f1"]
 
+[sub_resource type="GDScript" id="GDScript_60mr1"]
+script/source = "extends Button
+
+func _ready() -> void:
+	pressed.connect(_on_button_pressed)
+	
+
+func _on_button_pressed():
+	get_tree().quit()
+"
+
 [node name="MainMenu" type="Node2D" unique_id=1851213399]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=250869180]
@@ -41,7 +52,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 
-[node name="Button" type="Button" parent="CanvasLayer/Panel/VBoxContainer" unique_id=127324712]
+[node name="Start Lvl 1" type="Button" parent="CanvasLayer/Panel/VBoxContainer" unique_id=127324712]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -49,7 +60,7 @@ theme_override_font_sizes/font_size = 32
 text = "Start Game"
 script = ExtResource("1_60mr1")
 
-[node name="Button2" type="Button" parent="CanvasLayer/Panel/VBoxContainer" unique_id=2089112224]
+[node name="Level Select" type="Button" parent="CanvasLayer/Panel/VBoxContainer" unique_id=2089112224]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -58,7 +69,7 @@ text = "Level Select"
 script = ExtResource("1_tt5f1")
 path = "uid://dx1se2c6apm1d"
 
-[node name="Button3" type="Button" parent="CanvasLayer/Panel/VBoxContainer" unique_id=456800398]
+[node name="Special button" type="Button" parent="CanvasLayer/Panel/VBoxContainer" unique_id=456800398]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -67,7 +78,7 @@ text = "big button for big boys ;3"
 script = ExtResource("1_tt5f1")
 path = "uid://1eraj5cry3c2"
 
-[node name="Button4" type="Button" parent="CanvasLayer/Panel/VBoxContainer" unique_id=289091247]
+[node name="Options" type="Button" parent="CanvasLayer/Panel/VBoxContainer" unique_id=289091247]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -75,6 +86,14 @@ theme_override_font_sizes/font_size = 32
 text = "Options (derogatory)"
 script = ExtResource("1_tt5f1")
 path = "uid://1eraj5cry3c2"
+
+[node name="Quit Button" type="Button" parent="CanvasLayer/Panel/VBoxContainer" unique_id=310591852]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "man, i'm OUTTA here"
+script = SubResource("GDScript_60mr1")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=837942275]
 position = Vector2(576, 324.25)

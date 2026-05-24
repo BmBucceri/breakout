@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://Scenes/Blocks/BlockBase.tscn" id="2_mhapq"]
 [ext_resource type="PackedScene" uid="uid://b0dac6bf3gfyu" path="res://Scenes/Blocks/BlockSpecialA.tscn" id="3_8ig4a"]
 [ext_resource type="PackedScene" uid="uid://c7y4cotdmurv4" path="res://Scenes/Blocks/BlockSpecialB.tscn" id="4_82vi8"]
-[ext_resource type="PackedScene" uid="uid://dtyeynkxndagi" path="res://Scenes/Blocks/BlockSpecialC.tscn" id="5_55gdg"]
+[ext_resource type="PackedScene" uid="uid://n7d2rebmqtg8" path="res://Scenes/Blocks/BlockSpecialC.tscn" id="5_55gdg"]
 [ext_resource type="Script" uid="uid://uwsl4p8sccco" path="res://Boards/camera_2d.gd" id="6_esoej"]
 
 [node name="ROOTLEVEL" unique_id=1515406294 instance=ExtResource("1_c7foh")]

@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://co443mxrablr3" path="res://Boards/Levels/Board Base_MASTERBOARD.tscn" id="1_bm24u"]
 [ext_resource type="PackedScene" uid="uid://c7y4cotdmurv4" path="res://Scenes/Blocks/BlockSpecialB.tscn" id="2_8s7tp"]
 [ext_resource type="PackedScene" uid="uid://hl5qbnf4ocx5" path="res://Scenes/Blocks/Block_Speed.tscn" id="3_ndym4"]
-[ext_resource type="PackedScene" uid="uid://dtyeynkxndagi" path="res://Scenes/Blocks/BlockSpecialC.tscn" id="4_0fpe0"]
+[ext_resource type="PackedScene" uid="uid://n7d2rebmqtg8" path="res://Scenes/Blocks/BlockSpecialC.tscn" id="4_0fpe0"]
 [ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://Scenes/Blocks/BlockBase.tscn" id="5_4iebc"]
 
 [node name="ROOTLEVEL" unique_id=1515406294 instance=ExtResource("1_bm24u")]

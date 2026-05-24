@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b0dac6bf3gfyu"]
 
 [ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://Scenes/Blocks/BlockBase.tscn" id="1_q6aci"]
+[ext_resource type="Texture2D" uid="uid://24oib3ivhrey" path="res://Assets/2x/Block Double@2x.png" id="2_cbu51"]
 
 [node name="BlockSpecialA" unique_id=997552194 instance=ExtResource("1_q6aci")]
 scale = Vector2(1, 1.009901)
@@ -8,5 +9,4 @@ block_score = 15.0
 next_brick = ExtResource("1_q6aci")
 
 [node name="Sprite2D" parent="." index="2" unique_id=938027310]
-modulate = Color(0.463187, 0.307301, 0.0977078, 1)
-rotation = 1.5708
+texture = ExtResource("2_cbu51")

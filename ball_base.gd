@@ -5,10 +5,11 @@ class_name Ball
 @export var sprite_2d: Sprite2D
 @export var speed_cap: float = 7000
 @export var pitch_curve: Curve
+@export var ball: Ball
 @onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
 
-static var starting_speed = 200
 
+static var starting_speed = 200
 const TRAIL_2D = preload("uid://6bd6r2wmtxl5")
 const RICOCHET_PARTICLES = preload("uid://bywffmt2v53jh")
 
@@ -21,6 +22,7 @@ var increase_speed_percent: float = .05
 var squash_and_stretch_tween: Tween
 var default_sprite_scale: Vector2
 var new_trail: Line2D
+var game_has_ended: bool = false
 
 signal ball_destroyed
 
@@ -31,6 +33,9 @@ func _ready() -> void:
 	default_sprite_scale = sprite_2d.scale
 	_add_trail()
 	SignalManager.parry_slowdown.connect(parry_speed_reduction)
+	SignalManager.speed_gameover.connect(victory_slowdown)
+	SignalManager.on_game_lose.connect(on_game_ended)
+	SignalManager.on_game_win.connect(on_game_ended)
 
 func _add_trail():
 	new_trail = TRAIL_2D.instantiate()
@@ -41,9 +46,12 @@ func _add_trail():
 func _physics_process(delta: float) -> void:
 	_move_and_rotate(delta)
 	
+	#UI speed
 	GameManager.ball_speed = speed - 200
-	
-	
+
+func on_game_ended():
+	game_has_ended = true
+
 func _move_and_rotate(delta: float):
 	collision = move_and_collide(velocity * delta)
 	
@@ -55,7 +63,6 @@ func _move_and_rotate(delta: float):
 		velocity.y = -200
 	if velocity.x == 0:
 		velocity.x = -200
-		
 		
 	self.rotation =velocity.angle() + offset
 
@@ -70,6 +77,7 @@ func ball_bounce(new_velocity: Vector2):
 	GameManager.emit_camera_trauma(1)
 	adjust_sfx_pitch()
 	audio_stream_player.play()
+
 
 func adjust_sfx_pitch():
 	var curve_sample:float = pitch_curve.sample(speed / speed_cap)
@@ -108,6 +116,16 @@ func _increase_speed(value: float):
 # called by cannon
 func set_direction(new_direction: Vector2):
 	self.velocity = new_direction
+
+func victory_slowdown():
+	
+	#create tween, attach tween to speed
+	#slow speed to zero
+	var speed_tween: Tween
+	speed_tween.tween_property(self,"speed",0,5).set_trans(Tween.TRANS_CIRC)
+	await speed_tween.finished
+	pass
+
 
 func _adjust_velocity(new_vector: Vector2):
 	velocity = velocity.bounce(new_vector)

@@ -15,11 +15,14 @@ func _deferred_ready():
 	game_over_win.hide()
 	game_over_lose.hide()
 
+
+
 func reveal_game_win():
 	game_over_win.show()
-	#game_over_lose.hide()
-
+	SignalManager.speed_gameover.emit()
+	game_over_lose.hide()
 
 func reveal_game_lose():
 	game_over_lose.show()
-	#game_over_win.hide()
+	SignalManager.speed_gameover.emit()
+	game_over_win.hide()

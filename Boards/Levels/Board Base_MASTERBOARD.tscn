@@ -280,13 +280,13 @@ gutter_spawn_marker = NodePath("GutterSpawnMarker")
 metadata/_custom_type_script = "uid://dqlermoajjfjp"
 
 [node name="PolygonMatchShape2" type="Polygon2D" parent="Gutters" unique_id=146361951]
-position = Vector2(0, -1)
+position = Vector2(0, -9)
 polygon = PackedVector2Array(16, 592, 448, 648, 448, 672, 16, 672)
 script = ExtResource("8_xc236")
 metadata/_custom_type_script = "uid://co2jcs3je3qd4"
 
 [node name="PolygonMatchShape" type="Polygon2D" parent="Gutters" unique_id=599467329]
-position = Vector2(1216, -1)
+position = Vector2(1216, -9)
 rotation = -3.1415925
 scale = Vector2(1, -1)
 polygon = PackedVector2Array(16, 592, 448, 648, 448, 672, 16, 672)
@@ -294,7 +294,7 @@ script = ExtResource("8_xc236")
 metadata/_custom_type_script = "uid://co2jcs3je3qd4"
 
 [node name="GutterSpawnMarker" type="Marker2D" parent="Gutters" unique_id=2021807883]
-position = Vector2(608, 641)
+position = Vector2(608, 660)
 
 [node name="Killbox" type="Area2D" parent="." unique_id=1162349343]
 position = Vector2(0, 25)

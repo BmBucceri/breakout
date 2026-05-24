@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://buyvsud8eecnx"]
 
 [ext_resource type="Script" uid="uid://1yjlqu7i84db" path="res://block_base.gd" id="1_xfwl5"]
-[ext_resource type="Texture2D" uid="uid://bmrkcdp1krflj" path="res://Assets/icon.svg" id="2_5d32t"]
 [ext_resource type="Script" uid="uid://cxtdhn4hf5pod" path="res://Scenes/UI_Scenes/hurtbox.gd" id="2_xfwl5"]
+[ext_resource type="Texture2D" uid="uid://ca4ducbvnw8wu" path="res://Assets/2x/Block Single@2x.png" id="3_giavo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gho8k"]
-size = Vector2(88, 88)
+size = Vector2(88.000015, 174)
 
 [node name="BlockBase" type="StaticBody2D" unique_id=1282541942]
 collision_layer = 2
@@ -28,7 +28,6 @@ scale = Vector2(0.518989, 0.518989)
 shape = SubResource("RectangleShape2D_gho8k")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=938027310]
-modulate = Color(0.162066, 0.162066, 0.162066, 1)
 light_mask = 3
-scale = Vector2(0.356805, 0.356805)
-texture = ExtResource("2_5d32t")
+scale = Vector2(0.17898835, 0.17898837)
+texture = ExtResource("3_giavo")

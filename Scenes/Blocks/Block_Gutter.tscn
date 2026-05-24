@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://m7ejcqlv54cj"]
 
 [ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://Scenes/Blocks/BlockBase.tscn" id="1_q0o0m"]
+[ext_resource type="Texture2D" uid="uid://c207d3otes71c" path="res://Assets/2x/Gutter Block@2x.png" id="2_82hmi"]
 
 [node name="Gutter" unique_id=1282541942 instance=ExtResource("1_q0o0m")]
 min_break_speed = 800.0
@@ -10,6 +11,7 @@ block_score = 0.0
 scale = Vector2(3.5, 0.25)
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0" unique_id=1996971191]
+position = Vector2(0.10467945, 0)
 scale = Vector2(1, 0.99999994)
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=1853781668]
@@ -17,4 +19,6 @@ scale = Vector2(3.5, 0.25)
 
 [node name="Sprite2D" parent="." index="2" unique_id=938027310]
 modulate = Color(0.58, 0, 0, 1)
-scale = Vector2(2.424, 0.164)
+position = Vector2(-1.0001986e-06, 0)
+scale = Vector2(0.3874214, 0.20853081)
+texture = ExtResource("2_82hmi")

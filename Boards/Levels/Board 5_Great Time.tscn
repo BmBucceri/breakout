@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cjc6cykvd5el5"]
 
 [ext_resource type="PackedScene" uid="uid://co443mxrablr3" path="res://Boards/Levels/Board Base_MASTERBOARD.tscn" id="1_g02os"]
-[ext_resource type="PackedScene" uid="uid://dtyeynkxndagi" path="res://Scenes/Blocks/BlockSpecialC.tscn" id="2_gc3yy"]
+[ext_resource type="PackedScene" uid="uid://n7d2rebmqtg8" path="res://Scenes/Blocks/BlockSpecialC.tscn" id="2_gc3yy"]
 
 [node name="ROOTLEVEL" unique_id=1515406294 instance=ExtResource("1_g02os")]
 score_target = 60

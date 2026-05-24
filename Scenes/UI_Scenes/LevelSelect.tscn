@@ -77,7 +77,8 @@ level = 3
 [node name="Button5" type="Button" parent="CanvasLayer/Panel/BoxContainer/VBoxContainer/HBoxContainer" unique_id=1109179158]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
-text = "having a Great TIME!"
+text = "Level Five
+Having a Great TIME!"
 autowrap_mode = 3
 script = ExtResource("1_usf8w")
 level = 4

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://coivw1qfolpl3"]
 
 [ext_resource type="PackedScene" uid="uid://co443mxrablr3" path="res://Boards/Levels/Board Base_MASTERBOARD.tscn" id="1_iu0fy"]
-[ext_resource type="PackedScene" uid="uid://dtyeynkxndagi" path="res://Scenes/Blocks/BlockSpecialC.tscn" id="2_egneo"]
+[ext_resource type="PackedScene" uid="uid://n7d2rebmqtg8" path="res://Scenes/Blocks/BlockSpecialC.tscn" id="2_egneo"]
 [ext_resource type="PackedScene" uid="uid://b0dac6bf3gfyu" path="res://Scenes/Blocks/BlockSpecialA.tscn" id="3_oqobl"]
 [ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://Scenes/Blocks/BlockBase.tscn" id="4_2a47b"]
 

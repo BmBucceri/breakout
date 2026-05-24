@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dtyeynkxndagi"]
+
+[ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://Scenes/Blocks/BlockBase.tscn" id="1_q6aci"]
+[ext_resource type="Texture2D" uid="uid://bjdp6d33x2ht6" path="res://Assets/2x/Block Quad@2x.png" id="2_lx55f"]
+
+[node name="BlockSpecialC" unique_id=642171937 instance=ExtResource("1_tsr08")]
+next_brick = ExtResource("1_tsr08")
+
+[node name="Sprite2D" parent="." index="2" unique_id=938027310]
+scale = Vector2(0.356805, 0.356805)
+texture = ExtResource("2_lx55f")

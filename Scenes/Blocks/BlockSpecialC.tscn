@@ -1,11 +1,11 @@
-[gd_scene format=3 uid="uid://dtyeynkxndagi"]
+[gd_scene format=3 uid="uid://n7d2rebmqtg8"]
 
+[ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://Scenes/Blocks/BlockBase.tscn" id="1_lx55f"]
 [ext_resource type="PackedScene" uid="uid://c7y4cotdmurv4" path="res://Scenes/Blocks/BlockSpecialB.tscn" id="1_tsr08"]
+[ext_resource type="Texture2D" uid="uid://bjdp6d33x2ht6" path="res://Assets/2x/Block Quad@2x.png" id="2_lx55f"]
 
-[node name="BlockSpecialC" instance=ExtResource("1_tsr08")]
+[node name="BlockSpecialC" unique_id=1282541942 instance=ExtResource("1_lx55f")]
 next_brick = ExtResource("1_tsr08")
 
-[node name="Sprite2D" parent="." index="2"]
-modulate = Color(1.68458e-06, 0.5149, 0.373611, 1)
-rotation = -1.5708
-flip_v = false
+[node name="Sprite2D" parent="." index="2" unique_id=938027310]
+texture = ExtResource("2_lx55f")
