@@ -23,12 +23,13 @@ func _ready() -> void:
 	game_start()
 	killbox.life_lost.connect(_on_life_lost)
 	current_lives = starting_lives
+	SignalManager.reset_game()
 	pass
 
 func game_start():
 	MusicManager.play_track(music_to_play)
 	GameManager.reset_level()	
-	
+
 
 #called by the killbox
 func _on_life_lost():
@@ -39,28 +40,28 @@ func _on_life_lost():
 	if current_lives <= 0:
 		out_of_lives()
 
+
+
 func increment_score(score_value: float):
 	current_score += score_value
 	score_update.emit()
 	if current_score >= score_target:
 		_on_game_win()
-		
+
 #func prime_current_board():
 	#LevelManager.current_board == self.get_tree().current_scene
 	#print_debug(get_tree().current_scene)
-	#
-
+	
 
 func out_of_lives():
 	_on_game_lose()
 
-
 func _on_game_win():
 	SignalManager.emit_on_game_win()
-	print_debug("youre winner")
+	#print_debug("youre winner")
 	pass
 
 func _on_game_lose():
 	SignalManager.emit_on_game_lose()
-	print_debug("rip bozo")
+	#print_debug("rip bozo")
 	pass

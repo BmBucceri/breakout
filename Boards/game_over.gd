@@ -3,7 +3,8 @@ class_name GameOverState
 
 @export var game_over_win: Control
 @export var game_over_lose: Control
-@export var visible: bool = false
+
+var _game_has_ended: bool = false
 
 func _ready() -> void:
 	call_deferred("_deferred_ready")
@@ -18,11 +19,15 @@ func _deferred_ready():
 
 
 func reveal_game_win():
+	if _game_has_ended == true:
+		return
 	game_over_win.show()
-	SignalManager.speed_gameover.emit()
 	game_over_lose.hide()
+	_game_has_ended = true
 
 func reveal_game_lose():
+	if _game_has_ended == true:
+		return
 	game_over_lose.show()
-	SignalManager.speed_gameover.emit()
 	game_over_win.hide()
+	_game_has_ended = true

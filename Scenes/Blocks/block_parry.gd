@@ -11,12 +11,10 @@ func _ready() -> void:
 	self.body_entered.connect(_on_body_entered)
 	toggle_parry(is_active)
 
-
 func _on_body_entered(body: Node2D):
 	if is_active ==false:
 		return
 	_try_bounce_ball(body)
-
 
 func toggle_parry(value:bool):
 	is_active = value
@@ -27,13 +25,13 @@ func toggle_parry(value:bool):
 		for body in overlappingbodies:
 			_try_bounce_ball(body) 
 
-
 func _try_bounce_ball(body: Node2D):
 	if body is Ball:
 		var bounce_direction = Vector2.UP.rotated(global_rotation)
 		var new_velocity = bounce_direction * body.speed
 		body.ball_bounce(new_velocity)
-		
+
 		if GameManager.ball_speed > 1000:
 			SignalManager.parry_slowdown.emit()
+			GameManager.hit_stop(.5)
 			parry_sound.play()

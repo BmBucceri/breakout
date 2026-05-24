@@ -8,6 +8,7 @@ var ball_speed: float
 var ricochet_max: int = 3
 var ricochet_left: int
 var ricochet_cooldown: float = 3
+var hit_stop_tween: Tween
 signal camera_trauma(amount: float)
 
 
@@ -32,10 +33,18 @@ func increment_ricochet(value:int):
 func emit_camera_trauma(amount: float):
 	camera_trauma.emit(amount)
 
-
 func reset_level():
 	ball_array = []
 
+func hit_stop(duration: float):
+	if hit_stop_tween:
+		hit_stop_tween.kill()
+	hit_stop_tween = get_tree().create_tween()
+	hit_stop_tween.set_ignore_time_scale()
+	hit_stop_tween.set_ease(Tween.EASE_OUT)
+	Engine.time_scale = .01
+	hit_stop_tween.tween_property(Engine,"time_scale",1,duration)
+	
 #func add_block(new_block: Block):
 	#block_array.append(new_block)
 #

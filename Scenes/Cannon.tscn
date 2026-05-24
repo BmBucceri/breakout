@@ -6,9 +6,6 @@
 
 [node name="Cannon" type="Node2D" unique_id=1891693759 node_paths=PackedStringArray("spawn_marker", "block_parry")]
 script = ExtResource("1_i175o")
-parry_meter = null
-rotation_offset = null
-total_balls_can_shoot = null
 spawn_marker = NodePath("SpawnLocation")
 block_parry = NodePath("BlockParry")
 metadata/_edit_group_ = true

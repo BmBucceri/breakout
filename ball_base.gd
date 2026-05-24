@@ -5,6 +5,8 @@ class_name Ball
 @export var sprite_2d: Sprite2D
 @export var speed_cap: float = 7000
 @export var pitch_curve: Curve
+#Acceleration curve
+@export var acc_curve: Curve
 @export var ball: Ball
 @onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
 
@@ -22,7 +24,7 @@ var increase_speed_percent: float = .05
 var squash_and_stretch_tween: Tween
 var default_sprite_scale: Vector2
 var new_trail: Line2D
-var game_has_ended: bool = false
+var speed_strength: float = 1.0
 
 signal ball_destroyed
 
@@ -33,24 +35,20 @@ func _ready() -> void:
 	default_sprite_scale = sprite_2d.scale
 	_add_trail()
 	SignalManager.parry_slowdown.connect(parry_speed_reduction)
-	SignalManager.speed_gameover.connect(victory_slowdown)
-	SignalManager.on_game_lose.connect(on_game_ended)
-	SignalManager.on_game_win.connect(on_game_ended)
+	SignalManager.on_game_lose.connect(game_over_slowdown)
+	SignalManager.on_game_win.connect(game_over_slowdown)
 
 func _add_trail():
 	new_trail = TRAIL_2D.instantiate()
 	new_trail._assign_ball(self)
 	add_sibling(new_trail)
 
-
 func _physics_process(delta: float) -> void:
+	velocity = velocity.normalized() * speed * speed_strength
 	_move_and_rotate(delta)
-	
+
 	#UI speed
 	GameManager.ball_speed = speed - 200
-
-func on_game_ended():
-	game_has_ended = true
 
 func _move_and_rotate(delta: float):
 	collision = move_and_collide(velocity * delta)
@@ -72,7 +70,8 @@ func _wall_bounce():
 
 func ball_bounce(new_velocity: Vector2):
 	velocity = new_velocity
-	_increase_speed(increase_speed_percent)
+	var new_acc = acc_curve.sample(speed)
+	_increase_speed(new_acc)
 	_squash_and_stretch()
 	GameManager.emit_camera_trauma(1)
 	adjust_sfx_pitch()
@@ -117,21 +116,18 @@ func _increase_speed(value: float):
 func set_direction(new_direction: Vector2):
 	self.velocity = new_direction
 
-func victory_slowdown():
-	
-	#create tween, attach tween to speed
-	#slow speed to zero
-	var speed_tween: Tween
-	speed_tween.tween_property(self,"speed",0,5).set_trans(Tween.TRANS_CIRC)
+func game_over_slowdown():
+	var speed_tween: Tween = get_tree().create_tween()
+	speed_tween.tween_property(self,"speed_strength",0.0,2)
 	await speed_tween.finished
-	pass
+	return
 
 
 func _adjust_velocity(new_vector: Vector2):
 	velocity = velocity.bounce(new_vector)
 
 func parry_speed_reduction():
-	speed = (speed * .5)
+	speed = (speed * .45)
 
 func destroy_ball():
 	GameManager.remove_ball(self)

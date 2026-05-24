@@ -32,6 +32,8 @@ func _ready() -> void:
 		#parry_toggle(false)
 
 func _process(delta: float) -> void:
+	if SignalManager.game_is_over == true:
+		return
 	look_at(get_global_mouse_position())
 	self.rotation_degrees += rotation_offset
 	if parry_active == true:

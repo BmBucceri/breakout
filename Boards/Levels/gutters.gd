@@ -20,5 +20,5 @@ func spawn_block_gutter():
 	gutter_spawn_marker.add_child.call_deferred(new_gutter)
 	has_gutter_block = true
 
-func _on_gutter_destroyed():
+func _on_gutter_destroyed(_value):
 	has_gutter_block = false

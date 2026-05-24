@@ -265,9 +265,6 @@ script = ExtResource("9_ac8ps")
 [node name="Cannon" parent="." unique_id=750428695 node_paths=PackedStringArray("rootlevel") instance=ExtResource("10_b72y1")]
 y_sort_enabled = true
 position = Vector2(576, 627)
-parry_meter = 1.0
-rotation_offset = 90.0
-total_balls_can_shoot = 1
 rootlevel = NodePath("..")
 
 [node name="Gutters" type="StaticBody2D" parent="." unique_id=1724943246 node_paths=PackedStringArray("rootlevel", "gutter_spawn_marker")]
