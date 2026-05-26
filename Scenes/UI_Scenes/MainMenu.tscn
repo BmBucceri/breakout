@@ -20,8 +20,11 @@ func _on_button_pressed():
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=250869180]
 
 [node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1640760199]
-offset_right = 1150.0
-offset_bottom = 657.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" type="Label" parent="CanvasLayer/Panel" unique_id=184890276]
 layout_mode = 1
@@ -68,15 +71,6 @@ theme_override_font_sizes/font_size = 32
 text = "Level Select"
 script = ExtResource("1_tt5f1")
 path = "uid://dx1se2c6apm1d"
-
-[node name="Special button" type="Button" parent="CanvasLayer/Panel/VBoxContainer" unique_id=456800398]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 32
-text = "big button for big boys ;3"
-script = ExtResource("1_tt5f1")
-path = "uid://1eraj5cry3c2"
 
 [node name="Options" type="Button" parent="CanvasLayer/Panel/VBoxContainer" unique_id=289091247]
 layout_mode = 2

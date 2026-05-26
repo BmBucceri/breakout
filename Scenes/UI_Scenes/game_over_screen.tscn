@@ -10,6 +10,7 @@ game_over_win = NodePath("Game Over Win")
 game_over_lose = NodePath("Game Over Lose")
 
 [node name="Game Over Win" type="Control" parent="." unique_id=2017297727]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 
@@ -65,6 +66,7 @@ script = ExtResource("2_qlibr")
 path = "uid://crap7x0n62h7p"
 
 [node name="Game Over Lose" type="Control" parent="." unique_id=861476940]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 

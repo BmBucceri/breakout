@@ -31,7 +31,7 @@ signal ball_destroyed
 
 func _ready() -> void:
 	GameManager.add_ball(self)
-	InputManager.flip.connect(_try_ricochet)
+	#InputManager.flip.connect(_try_ricochet)
 	default_sprite_scale = sprite_2d.scale
 	_add_trail()
 	SignalManager.parry_slowdown.connect(parry_speed_reduction)
@@ -94,17 +94,17 @@ func _squash_and_stretch():
 	squash_and_stretch_tween.tween_property(sprite_2d, "scale",default_sprite_scale,.1)
 
 
-func _try_ricochet():
-	if GameManager.ricochet_left > 0:
-		_ricochet()
-		#SPAWN PARTICLES AT BALL POSITION
-		var new_particle = RICOCHET_PARTICLES.instantiate()
-		self.add_child(new_particle)
-		_squash_and_stretch()
-
-func _ricochet():
-	_adjust_velocity(Vector2.UP)
-	GameManager.increment_ricochet(-1)
+#func _try_ricochet():
+	#if GameManager.ricochet_left > 0:
+		#_ricochet()
+		##SPAWN PARTICLES AT BALL POSITION
+		#var new_particle = RICOCHET_PARTICLES.instantiate()
+		#self.add_child(new_particle)
+		#_squash_and_stretch()
+#
+#func _ricochet():
+	#_adjust_velocity(Vector2.UP)
+	#GameManager.increment_ricochet(-1)
 
 func _increase_speed(value: float):
 	if speed > speed_cap:

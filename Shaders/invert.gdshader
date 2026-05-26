@@ -1,17 +1,22 @@
 shader_type canvas_item;
 
-// Allows you to control the effect from the Inspector or via Tween
-uniform float strength : hint_range(0.0, 1.0) = 0.0;
-uniform sampler2D SCREEN_TEXTURE : hint_screen_texture, filter_linear_mipmap;
+// Define the screen texture uniform
+uniform sampler2D screen_texture : hint_screen_texture, filter_linear_mipmap;
 
 void fragment() {
-    // Get the color currently behind the panel
-    vec4 screen_color = texture(SCREEN_TEXTURE, SCREEN_UV);
+    // Read the pixel from the screen behind the object
+    vec3 background_color = texture(screen_texture, SCREEN_UV).rgb;
     
-    // Invert the color
-    vec3 inverted_color = vec3(1.0) - screen_color.rgb;
+    // Read the alpha from the node's own texture (to use as a mask)
+    float mask_alpha = texture(TEXTURE, UV).a;
     
-    // Mix between original and inverted based on strength
-    COLOR.rgb = mix(screen_color.rgb, inverted_color, strength);
-    COLOR.a = screen_color.a;
+    // Invert the background colors
+    vec3 inverted_color = vec3(1.0) - background_color;
+    
+    // Apply the inverted color where the mask is visible, 
+    // otherwise keep the original background
+    vec3 final_color = mix(background_color, inverted_color, mask_alpha);
+    
+    // Output the final color with the original mask alpha
+    COLOR = vec4(final_color, mask_alpha);
 }

@@ -8,16 +8,11 @@ var special_score: float = 1
 
 signal block_destroyed(score: int)
 
-#func _ready() -> void:
-	#call_deferred("_deferred_ready")
-#
-#func _deferred_ready():
-	#GameManager.add_block(self)
-
 func destroy_brick():
 	#SignalManager.increment_score(block_score)
 	#GameManager.remove_block(self)
 	block_destroyed.emit(block_score)
+	GameManager.hit_stop(.1)
 	self.queue_free()
 
 

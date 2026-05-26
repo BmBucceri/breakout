@@ -3,12 +3,6 @@
 [ext_resource type="Script" uid="uid://b6tlb3o6p10bs" path="res://level.gd" id="1_4e1jp"]
 [ext_resource type="Script" uid="uid://b8b32otwwftm1" path="res://Scenes/UI_Scenes/score_counter.gd" id="2_ifb0j"]
 [ext_resource type="Script" uid="uid://csgqo872ljmts" path="res://Boards/speedometer.gd" id="3_8ju24"]
-[ext_resource type="Script" uid="uid://brtvwoww4lon3" path="res://Scenes/UI_Scenes/bounces_counter.gd" id="4_20iil"]
-[ext_resource type="Texture2D" uid="uid://06gale2dip5w" path="res://Assets/Sprites/Zero.png" id="5_8ju24"]
-[ext_resource type="Texture2D" uid="uid://dnkjr2thp41mk" path="res://Assets/Sprites/One.png" id="6_20iil"]
-[ext_resource type="Script" uid="uid://bji3ucgy8q4ae" path="res://Boards/CountdownBounceSprite.gd" id="6_m44s3"]
-[ext_resource type="Texture2D" uid="uid://vogo02nb7jdi" path="res://Assets/Sprites/Two.png" id="7_xf2ir"]
-[ext_resource type="Texture2D" uid="uid://dg5mqhs50w32h" path="res://Assets/Sprites/Three.png" id="8_c0ur6"]
 [ext_resource type="Script" uid="uid://co2jcs3je3qd4" path="res://Boards/polygon_match_shape.gd" id="8_xc236"]
 [ext_resource type="Script" uid="uid://dygu38lw21ygj" path="res://Boards/ball_root.gd" id="9_ac8ps"]
 [ext_resource type="PackedScene" uid="uid://naw7he6hb23q" path="res://Scenes/Cannon.tscn" id="10_b72y1"]
@@ -39,27 +33,6 @@ func _ready() -> void:
 func update_text():
 	self.text = (\"Lives: \" +str(rootlevel.current_lives))
 "
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_uinc6"]
-resource_name = "CountdownBounceUI"
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_8ju24")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_20iil")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_xf2ir")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_c0ur6")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p7fse"]
 corner_radius_top_left = 13
@@ -92,11 +65,17 @@ border_color = Color(0.8525816, 0.30279854, 0, 1)
 corner_radius_top_left = 13
 corner_radius_bottom_right = 13
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0worg"]
+size = Vector2(36, 681)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c5avm"]
+size = Vector2(1154, 29)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ddhe"]
-size = Vector2(1156, 75)
+size = Vector2(1268, 75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3mrgh"]
-size = Vector2(63, 708)
+size = Vector2(63, 786)
 
 [sub_resource type="GDScript" id="GDScript_aou6q"]
 script/source = "extends Timer
@@ -115,6 +94,7 @@ killbox = NodePath("Killbox")
 gutters = NodePath("Gutters")
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
+metadata/_edit_horizontal_guides_ = [29.0]
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=918347060]
 
@@ -135,10 +115,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 60
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI/Control/MarginContainer" unique_id=1568574095]
 custom_minimum_size = Vector2(0, 75)
@@ -154,6 +134,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Score tracker"
+vertical_alignment = 1
 script = ExtResource("2_ifb0j")
 rootlevel = NodePath("../../../../../..")
 
@@ -161,46 +142,30 @@ rootlevel = NodePath("../../../../../..")
 layout_mode = 2
 size_flags_vertical = 3
 text = "Speedodometer"
+vertical_alignment = 1
 script = ExtResource("3_8ju24")
 
 [node name="Right UI" type="VBoxContainer" parent="UI/Control/MarginContainer/HBoxContainer" unique_id=870658274]
 layout_mode = 2
-
-[node name="BounceCounter" type="Label" parent="UI/Control/MarginContainer/HBoxContainer/Right UI" unique_id=709888670]
-layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 1
-text = "Bounces left"
-horizontal_alignment = 2
-script = ExtResource("4_20iil")
 
 [node name="ScoreGoal" type="Label" parent="UI/Control/MarginContainer/HBoxContainer/Right UI" unique_id=1298948610 node_paths=PackedStringArray("rootlevel")]
 layout_mode = 2
-size_flags_vertical = 6
+size_flags_vertical = 3
 text = "Score Goal"
+horizontal_alignment = 2
+vertical_alignment = 1
 script = SubResource("GDScript_bn856")
 rootlevel = NodePath("../../../../../..")
 
 [node name="LivesLeft" type="Label" parent="UI/Control/MarginContainer/HBoxContainer/Right UI" unique_id=1845268779 node_paths=PackedStringArray("rootlevel")]
 layout_mode = 2
+size_flags_vertical = 3
 text = "Lives Left"
+horizontal_alignment = 2
+vertical_alignment = 1
 script = SubResource("GDScript_gac28")
 rootlevel = NodePath("../../../../../..")
-
-[node name="CountdownCanvasLayer" type="CanvasLayer" parent="UI/Control/MarginContainer/HBoxContainer" unique_id=656124029]
-layer = -25
-
-[node name="CountdownBounceSprite2D" type="AnimatedSprite2D" parent="UI/Control/MarginContainer/HBoxContainer/CountdownCanvasLayer" unique_id=1059208540 node_paths=PackedStringArray("countdown_bounce_sprite_2d")]
-self_modulate = Color(0, 0.34901962, 1, 1)
-visibility_layer = 512
-z_index = -100
-z_as_relative = false
-y_sort_enabled = true
-position = Vector2(580, 346)
-scale = Vector2(1.3856255, 1.3856255)
-sprite_frames = SubResource("SpriteFrames_uinc6")
-script = ExtResource("6_m44s3")
-countdown_bounce_sprite_2d = NodePath(".")
 
 [node name="ParryMeter" type="Control" parent="UI/Control" unique_id=401461095]
 layout_mode = 1
@@ -256,8 +221,17 @@ rootlevel = NodePath("..")
 [node name="Boundary" type="StaticBody2D" parent="." unique_id=1943351621]
 collision_layer = 3
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boundary" unique_id=460050043]
-polygon = PackedVector2Array(1, -2, 3, 643, 27, 641, 27, 19, 1128, 19, 1129, 639, 1153, 649, 1149, 0)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary" unique_id=1961752424]
+position = Vector2(8, 330.5)
+shape = SubResource("RectangleShape2D_0worg")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Boundary" unique_id=694825245]
+position = Vector2(1136, 330.5)
+shape = SubResource("RectangleShape2D_0worg")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Boundary" unique_id=296224111]
+position = Vector2(571, 4.5)
+shape = SubResource("RectangleShape2D_c5avm")
 
 [node name="BallRoot" type="Node2D" parent="." unique_id=233957837]
 script = ExtResource("9_ac8ps")
@@ -302,18 +276,22 @@ script = ExtResource("11_hx4y6")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killbox" unique_id=113753005]
 position = Vector2(576, 672)
 shape = SubResource("RectangleShape2D_3ddhe")
+debug_color = Color(0.96, 0, 0.19200027, 0.09019608)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Killbox" unique_id=1570178760]
 position = Vector2(576, -64)
 shape = SubResource("RectangleShape2D_3ddhe")
+debug_color = Color(0.96, 0, 0.19200027, 0.09019608)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Killbox" unique_id=1510897235]
 position = Vector2(-46, 299)
 shape = SubResource("RectangleShape2D_3mrgh")
+debug_color = Color(0.96, 0, 0.19200027, 0.09019608)
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Killbox" unique_id=1377668504]
-position = Vector2(1194, 299)
+position = Vector2(1185, 299)
 shape = SubResource("RectangleShape2D_3mrgh")
+debug_color = Color(0.96, 0, 0.19200027, 0.09019608)
 
 [node name="Timer" type="Timer" parent="." unique_id=1399520966]
 wait_time = 3.0
@@ -325,3 +303,5 @@ position = Vector2(578, 323)
 script = ExtResource("12_hlflf")
 
 [node name="GameOverRoot" parent="." unique_id=1760825076 instance=ExtResource("16_jseu4")]
+
+[node name="Overlays" type="CanvasLayer" parent="." unique_id=856908683]
