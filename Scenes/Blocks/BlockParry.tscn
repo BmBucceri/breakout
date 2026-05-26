@@ -1,37 +1,17 @@
 [gd_scene format=3 uid="uid://cyoixg7484f5d"]
 
 [ext_resource type="Script" uid="uid://de3odfe0ottv2" path="res://Scenes/Blocks/block_parry.gd" id="1_d4p0c"]
-[ext_resource type="AudioStream" uid="uid://gjqd46r7i2u1" path="res://Audio/SFX/parry 01.wav" id="2_om4ow"]
-[ext_resource type="AudioStream" uid="uid://dfh4ysoey1im1" path="res://Audio/SFX/parry 02.wav" id="3_8btur"]
 [ext_resource type="Texture2D" uid="uid://cqfgm6ebniw0l" path="res://Assets/ParryIcon.svg" id="3_jmkaj"]
-[ext_resource type="AudioStream" uid="uid://b6sygnj0xnk45" path="res://Audio/SFX/parry 03.wav" id="4_i3jou"]
-[ext_resource type="AudioStream" uid="uid://b2wft6wktflub" path="res://Audio/SFX/parry 04.wav" id="5_ew8fk"]
-[ext_resource type="Shader" uid="uid://y7wuigcaun6f" path="res://Shaders/invert.gdshader" id="7_i3jou"]
-[ext_resource type="Texture2D" uid="uid://ccp6a8yu6t3ky" path="res://Assets/Particle FX/light_03.png" id="8_ew8fk"]
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_kmn2r"]
-streams_count = 4
-stream_0/stream = ExtResource("2_om4ow")
-stream_1/stream = ExtResource("3_8btur")
-stream_2/stream = ExtResource("4_i3jou")
-stream_3/stream = ExtResource("5_ew8fk")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gho8k"]
 size = Vector2(102.69978, 134.24376)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_kmn2r"]
-shader = ExtResource("7_i3jou")
 
 [node name="BlockParry" type="Area2D" unique_id=783385433 node_paths=PackedStringArray("invert_impact", "visuals")]
 collision_layer = 2
 collision_mask = 4
 script = ExtResource("1_d4p0c")
-invert_impact = NodePath("InvertImpact")
+invert_impact = NodePath("")
 visuals = NodePath("Visuals")
-
-[node name="ParrySound" type="AudioStreamPlayer" parent="." unique_id=1389074785]
-stream = SubResource("AudioStreamRandomizer_kmn2r")
-volume_db = -10.0
 
 [node name="Visuals" type="Node2D" parent="." unique_id=1867375566]
 
@@ -45,8 +25,3 @@ texture = ExtResource("3_jmkaj")
 position = Vector2(0, -0.16447926)
 scale = Vector2(1.5189905, 0.518989)
 shape = SubResource("RectangleShape2D_gho8k")
-
-[node name="InvertImpact" type="Sprite2D" parent="." unique_id=310006209]
-z_index = 100
-material = SubResource("ShaderMaterial_kmn2r")
-texture = ExtResource("8_ew8fk")

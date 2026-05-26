@@ -2,18 +2,19 @@ extends Node2D
 class_name Cannon
 
 @export_range(0.0,1.0) var parry_meter: float = 1.0
-@export var rotation_offset: float = 90
 @export var total_balls_can_shoot: int = 1
 @export_group("References")
 @export var spawn_marker: Marker2D
 @export var block_parry: Parry
 @export var rootlevel: Level
 
+var rotation_offset: float = 90
 var total_balls_onscreen : int = 0
 var can_shoot: bool = true
 var parry_active: bool = false
 var parry_drain: float = .5
 var parry_refill: float = .35
+var follow_speed: float = 8.0
 
 const BALL = preload("uid://d1ogb0eean0hi")
 const BLOCK = preload("uid://cyoixg7484f5d")
@@ -34,8 +35,14 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if SignalManager.game_is_over == true:
 		return
-	look_at(get_global_mouse_position())
-	self.rotation_degrees += rotation_offset
+	var _direction_to_mouse:Vector2 = get_global_mouse_position() - self.global_position
+	var _target_angle = _direction_to_mouse.angle() + deg_to_rad(rotation_offset)
+	self.rotation =lerp(rotation, _target_angle, delta * follow_speed)
+	
+	
+	#look_at(get_global_mouse_position())
+	#self.rotation_degrees += rotation_offset
+
 	if parry_active == true:
 		if parry_meter <= 0:
 			parry_toggle(false)

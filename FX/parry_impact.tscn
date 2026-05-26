@@ -1,0 +1,170 @@
+[gd_scene format=3 uid="uid://dprpo6rxr876k"]
+
+[ext_resource type="Shader" uid="uid://y7wuigcaun6f" path="res://Shaders/invert.gdshader" id="1_1cvbw"]
+[ext_resource type="Script" uid="uid://fqxevy8oysii" path="res://FX/parry_impact.gd" id="1_sflu7"]
+[ext_resource type="AudioStream" uid="uid://gjqd46r7i2u1" path="res://Audio/SFX/parry 01.wav" id="2_iollj"]
+[ext_resource type="Texture2D" uid="uid://ccp6a8yu6t3ky" path="res://Assets/Particle FX/light_03.png" id="2_sflu7"]
+[ext_resource type="AudioStream" uid="uid://dfh4ysoey1im1" path="res://Audio/SFX/parry 02.wav" id="3_7lwuw"]
+[ext_resource type="Texture2D" uid="uid://b411p8e61fb0w" path="res://Assets/Particle FX/magic_05.png" id="4_ha0x6"]
+[ext_resource type="AudioStream" uid="uid://b6sygnj0xnk45" path="res://Audio/SFX/parry 03.wav" id="4_xnso5"]
+[ext_resource type="AudioStream" uid="uid://b2wft6wktflub" path="res://Audio/SFX/parry 04.wav" id="5_rpodi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8y52w"]
+shader = ExtResource("1_1cvbw")
+shader_parameter/alpha_multiplier = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dnyst"]
+shader = ExtResource("1_1cvbw")
+shader_parameter/alpha_multiplier = 1.0
+
+[sub_resource type="Animation" id="Animation_ha0x6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InvertImpact:material:shader_parameter/alpha_multiplier")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InvertImpact:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("InvertImpact2:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.7226563, 1.7226563)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("InvertImpact2:material:shader_parameter/alpha_multiplier")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_iollj"]
+streams_count = 4
+stream_0/stream = ExtResource("2_iollj")
+stream_1/stream = ExtResource("3_7lwuw")
+stream_2/stream = ExtResource("4_xnso5")
+stream_3/stream = ExtResource("5_rpodi")
+
+[sub_resource type="Animation" id="Animation_sflu7"]
+resource_name = "parry_impact"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InvertImpact:material:shader_parameter/alpha_multiplier")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.23333333, 0.5666667, 1.5),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InvertImpact:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1666667, 1.4, 1.5),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1), Vector2(1.766, 1.766), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("InvertImpact2:material:shader_parameter/alpha_multiplier")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.6666667, 1.5),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("InvertImpact2:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.73333335),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.7226563, 1.7226563), Vector2(0, 0)]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ParrySound")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": SubResource("AudioStreamRandomizer_iollj")
+}],
+"times": PackedFloat32Array(0.033333335)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ha0x6"]
+_data = {
+&"RESET": SubResource("Animation_ha0x6"),
+&"parry_impact": SubResource("Animation_sflu7")
+}
+
+[node name="ParryImpact" type="Node2D" unique_id=1057312351]
+top_level = true
+script = ExtResource("1_sflu7")
+
+[node name="ParrySound" type="AudioStreamPlayer" parent="." unique_id=179664050]
+volume_db = -10.0
+
+[node name="InvertImpact" type="Sprite2D" parent="." unique_id=87706632]
+z_index = 100
+material = SubResource("ShaderMaterial_8y52w")
+texture = ExtResource("2_sflu7")
+
+[node name="InvertImpact2" type="Sprite2D" parent="." unique_id=635693957]
+z_index = 100
+material = SubResource("ShaderMaterial_dnyst")
+scale = Vector2(1.7226563, 1.7226563)
+texture = ExtResource("4_ha0x6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1719086331]
+libraries/ = SubResource("AnimationLibrary_ha0x6")
