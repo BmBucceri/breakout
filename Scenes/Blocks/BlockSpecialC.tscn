@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://Scenes/Blocks/BlockBase.tscn" id="1_lx55f"]
 [ext_resource type="PackedScene" uid="uid://c7y4cotdmurv4" path="res://Scenes/Blocks/BlockSpecialB.tscn" id="1_tsr08"]
-[ext_resource type="Texture2D" uid="uid://bjdp6d33x2ht6" path="res://Assets/2x/Block Quad@2x.png" id="2_lx55f"]
+[ext_resource type="Texture2D" uid="uid://dc5bjgjm75gu7" path="res://Assets/2x/Block Quad Star.png" id="3_jcbu8"]
 
 [node name="BlockSpecialC" unique_id=1282541942 instance=ExtResource("1_lx55f")]
 next_brick = ExtResource("1_tsr08")
 
 [node name="Sprite2D" parent="." index="2" unique_id=938027310]
-texture = ExtResource("2_lx55f")
+texture = ExtResource("3_jcbu8")

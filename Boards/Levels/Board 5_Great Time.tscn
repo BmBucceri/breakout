@@ -1,13 +1,254 @@
 [gd_scene format=3 uid="uid://cjc6cykvd5el5"]
 
 [ext_resource type="PackedScene" uid="uid://co443mxrablr3" path="res://Boards/Levels/Board Base_MASTERBOARD.tscn" id="1_g02os"]
-[ext_resource type="PackedScene" uid="uid://n7d2rebmqtg8" path="res://Scenes/Blocks/BlockSpecialC.tscn" id="2_gc3yy"]
+[ext_resource type="PackedScene" uid="uid://hl5qbnf4ocx5" path="res://Scenes/Blocks/Block_Speed_Low.tscn" id="2_gc3yy"]
+[ext_resource type="PackedScene" uid="uid://by5sev3g3th0x" path="res://Scenes/Blocks/Block_Speed_Med.tscn" id="3_pxuqe"]
+[ext_resource type="PackedScene" uid="uid://bmmejjb83hd5r" path="res://Scenes/Blocks/Block_Speed_High.tscn" id="4_yaiw6"]
+[ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://Scenes/Blocks/BlockBase.tscn" id="5_mnc1f"]
+[ext_resource type="PackedScene" uid="uid://n7d2rebmqtg8" path="res://Scenes/Blocks/BlockSpecialC.tscn" id="6_eri3t"]
+[ext_resource type="PackedScene" uid="uid://b0dac6bf3gfyu" path="res://Scenes/Blocks/BlockSpecialA.tscn" id="7_i3gxa"]
 
 [node name="ROOTLEVEL" unique_id=1515406294 instance=ExtResource("1_g02os")]
-score_target = 60
+score_target = 4500
+music_to_play = 4
 
-[node name="BlockSpecialC" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="0" unique_id=1204270669 instance=ExtResource("2_gc3yy")]
-position = Vector2(578, 465)
+[node name="Control" parent="UI" parent_id_path=PackedInt32Array(918347060) index="0" unique_id=292381040]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="BlockSpeedLow" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="0" unique_id=1282541942 instance=ExtResource("2_gc3yy")]
+position = Vector2(504, 408)
+
+[node name="BlockSpeedLow2" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="1" unique_id=204084063 instance=ExtResource("2_gc3yy")]
+position = Vector2(456, 408)
+
+[node name="BlockSpeedLow3" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="2" unique_id=1724014150 instance=ExtResource("2_gc3yy")]
+position = Vector2(408, 408)
+
+[node name="BlockSpeedLow4" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="3" unique_id=899150485 instance=ExtResource("2_gc3yy")]
+position = Vector2(408, 456)
+
+[node name="BlockSpeedLow5" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="4" unique_id=357111253 instance=ExtResource("2_gc3yy")]
+position = Vector2(360, 456)
+
+[node name="BlockSpeedLow6" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="5" unique_id=1259846701 instance=ExtResource("2_gc3yy")]
+position = Vector2(360, 504)
+
+[node name="BlockSpeedLow7" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="6" unique_id=751192581 instance=ExtResource("2_gc3yy")]
+position = Vector2(360, 552)
+
+[node name="BlockSpeedLow8" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="7" unique_id=1075981494 instance=ExtResource("2_gc3yy")]
+position = Vector2(360, 600)
+
+[node name="BlockSpeedLow9" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="8" unique_id=1484384012 instance=ExtResource("2_gc3yy")]
+position = Vector2(648, 408)
+
+[node name="BlockSpeedLow10" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="9" unique_id=2016478629 instance=ExtResource("2_gc3yy")]
+position = Vector2(696, 408)
+
+[node name="BlockSpeedLow11" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="10" unique_id=395515309 instance=ExtResource("2_gc3yy")]
+position = Vector2(744, 408)
+
+[node name="BlockSpeedLow12" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="11" unique_id=406138272 instance=ExtResource("2_gc3yy")]
+position = Vector2(744, 456)
+
+[node name="BlockSpeedLow13" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="12" unique_id=1122894761 instance=ExtResource("2_gc3yy")]
+position = Vector2(792, 456)
+
+[node name="BlockSpeedLow14" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="13" unique_id=1093695853 instance=ExtResource("2_gc3yy")]
+position = Vector2(792, 504)
+
+[node name="BlockSpeedLow15" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="14" unique_id=1690569682 instance=ExtResource("2_gc3yy")]
+position = Vector2(792, 552)
+
+[node name="BlockSpeedLow16" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="15" unique_id=1246627393 instance=ExtResource("2_gc3yy")]
+position = Vector2(792, 600)
+
+[node name="BlockSpeedMed" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="16" unique_id=279232572 instance=ExtResource("3_pxuqe")]
+position = Vector2(552, 408)
+
+[node name="BlockSpeedMed2" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="17" unique_id=2122355746 instance=ExtResource("3_pxuqe")]
+position = Vector2(600, 408)
+
+[node name="BlockSpeedMed3" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="18" unique_id=1998322755 instance=ExtResource("3_pxuqe")]
+position = Vector2(168, 576)
+
+[node name="BlockSpeedMed4" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="19" unique_id=1656750252 instance=ExtResource("3_pxuqe")]
+position = Vector2(168, 528)
+
+[node name="BlockSpeedMed5" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="20" unique_id=1336450575 instance=ExtResource("3_pxuqe")]
+position = Vector2(168, 480)
+
+[node name="BlockSpeedMed6" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="21" unique_id=1538302236 instance=ExtResource("3_pxuqe")]
+position = Vector2(168, 432)
+
+[node name="BlockSpeedMed7" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="22" unique_id=1846354142 instance=ExtResource("3_pxuqe")]
+position = Vector2(168, 384)
+
+[node name="BlockSpeedMed8" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="23" unique_id=1805479057 instance=ExtResource("3_pxuqe")]
+position = Vector2(168, 336)
+
+[node name="BlockSpeedMed9" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="24" unique_id=1952041605 instance=ExtResource("3_pxuqe")]
+position = Vector2(216, 336)
+
+[node name="BlockSpeedMed10" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="25" unique_id=924697291 instance=ExtResource("3_pxuqe")]
+position = Vector2(216, 288)
+
+[node name="BlockSpeedMed11" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="26" unique_id=620105658 instance=ExtResource("3_pxuqe")]
+position = Vector2(264, 288)
+
+[node name="BlockSpeedMed12" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="27" unique_id=570291942 instance=ExtResource("3_pxuqe")]
+position = Vector2(264, 240)
+
+[node name="BlockSpeedMed13" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="28" unique_id=1819163285 instance=ExtResource("3_pxuqe")]
+position = Vector2(312, 240)
+
+[node name="BlockSpeedMed14" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="29" unique_id=1078203022 instance=ExtResource("3_pxuqe")]
+position = Vector2(360, 240)
+
+[node name="BlockSpeedMed15" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="30" unique_id=1928232423 instance=ExtResource("3_pxuqe")]
+position = Vector2(408, 240)
+
+[node name="BlockSpeedMed16" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="31" unique_id=1858955429 instance=ExtResource("3_pxuqe")]
+position = Vector2(456, 240)
+
+[node name="BlockSpeedHigh" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="32" unique_id=2059353511 instance=ExtResource("4_yaiw6")]
+position = Vector2(552, 240)
+
+[node name="BlockSpeedHigh2" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="33" unique_id=2001707541 instance=ExtResource("4_yaiw6")]
+position = Vector2(504, 240)
+
+[node name="BlockSpeedHigh3" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="34" unique_id=1953347744 instance=ExtResource("4_yaiw6")]
+position = Vector2(600, 240)
+
+[node name="BlockSpeedHigh4" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="35" unique_id=1704563946 instance=ExtResource("4_yaiw6")]
+position = Vector2(648, 240)
+
+[node name="BlockSpeedMed17" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="36" unique_id=544462851 instance=ExtResource("3_pxuqe")]
+position = Vector2(696, 240)
+
+[node name="BlockSpeedMed18" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="37" unique_id=1861684984 instance=ExtResource("3_pxuqe")]
+position = Vector2(744, 240)
+
+[node name="BlockSpeedMed19" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="38" unique_id=264831758 instance=ExtResource("3_pxuqe")]
+position = Vector2(792, 240)
+
+[node name="BlockSpeedMed20" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="39" unique_id=1745954935 instance=ExtResource("3_pxuqe")]
+position = Vector2(840, 240)
+
+[node name="BlockSpeedMed21" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="40" unique_id=148242881 instance=ExtResource("3_pxuqe")]
+position = Vector2(888, 240)
+
+[node name="BlockSpeedMed22" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="41" unique_id=2137219616 instance=ExtResource("3_pxuqe")]
+position = Vector2(888, 288)
+
+[node name="BlockSpeedMed23" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="42" unique_id=1427244157 instance=ExtResource("3_pxuqe")]
+position = Vector2(936, 288)
+
+[node name="BlockSpeedMed24" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="43" unique_id=1991314024 instance=ExtResource("3_pxuqe")]
+position = Vector2(936, 336)
+
+[node name="BlockSpeedMed25" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="44" unique_id=1541432772 instance=ExtResource("3_pxuqe")]
+position = Vector2(984, 336)
+
+[node name="BlockSpeedMed26" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="45" unique_id=1650373748 instance=ExtResource("3_pxuqe")]
+position = Vector2(984, 384)
+
+[node name="BlockSpeedMed27" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="46" unique_id=2009875404 instance=ExtResource("3_pxuqe")]
+position = Vector2(984, 432)
+
+[node name="BlockSpeedMed28" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="47" unique_id=1989913054 instance=ExtResource("3_pxuqe")]
+position = Vector2(984, 480)
+
+[node name="BlockSpeedMed29" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="48" unique_id=512997396 instance=ExtResource("3_pxuqe")]
+position = Vector2(984, 528)
+
+[node name="BlockSpeedMed30" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="49" unique_id=1076628543 instance=ExtResource("3_pxuqe")]
+position = Vector2(984, 576)
+
+[node name="BlockBase" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="50" unique_id=1329652845 instance=ExtResource("5_mnc1f")]
+position = Vector2(504, 192)
+
+[node name="BlockBase2" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="51" unique_id=222902739 instance=ExtResource("5_mnc1f")]
+position = Vector2(552, 192)
+
+[node name="BlockBase3" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="52" unique_id=1471749560 instance=ExtResource("5_mnc1f")]
+position = Vector2(312, 408)
+
+[node name="BlockBase4" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="53" unique_id=1987804143 instance=ExtResource("5_mnc1f")]
+position = Vector2(360, 408)
+
+[node name="BlockBase5" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="54" unique_id=1642408245 instance=ExtResource("5_mnc1f")]
+position = Vector2(312, 352)
+
+[node name="BlockBase6" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="55" unique_id=1530633836 instance=ExtResource("5_mnc1f")]
+position = Vector2(360, 352)
+
+[node name="BlockBase9" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="56" unique_id=944121589 instance=ExtResource("5_mnc1f")]
+position = Vector2(600, 192)
+
+[node name="BlockBase10" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="57" unique_id=1750356879 instance=ExtResource("5_mnc1f")]
+position = Vector2(648, 192)
+
+[node name="BlockBase11" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="58" unique_id=401891335 instance=ExtResource("5_mnc1f")]
+position = Vector2(792, 408)
+
+[node name="BlockBase12" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="59" unique_id=1106241383 instance=ExtResource("5_mnc1f")]
+position = Vector2(840, 408)
+
+[node name="BlockBase13" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="60" unique_id=1882864573 instance=ExtResource("5_mnc1f")]
+position = Vector2(792, 352)
+
+[node name="BlockBase14" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="61" unique_id=1148478683 instance=ExtResource("5_mnc1f")]
+position = Vector2(840, 352)
+
+[node name="BlockBase17" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="62" unique_id=619693015 instance=ExtResource("5_mnc1f")]
+position = Vector2(312, 296)
+
+[node name="BlockBase18" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="63" unique_id=181993560 instance=ExtResource("5_mnc1f")]
+position = Vector2(360, 296)
+
+[node name="BlockBase19" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="64" unique_id=569038140 instance=ExtResource("5_mnc1f")]
+position = Vector2(792, 296)
+
+[node name="BlockBase20" parent="BlockRoot" parent_id_path=PackedInt32Array(1591539969) index="65" unique_id=390556162 instance=ExtResource("5_mnc1f")]
+position = Vector2(840, 296)
 
 [node name="Killbox" parent="." index="6" unique_id=1162349343]
 visible = false
+
+[node name="BlockSpecialC" parent="." index="11" unique_id=794849197 instance=ExtResource("6_eri3t")]
+position = Vector2(552, 144)
+
+[node name="BlockSpecialC2" parent="." index="12" unique_id=1313310241 instance=ExtResource("6_eri3t")]
+position = Vector2(600, 144)
+
+[node name="BlockSpecialC3" parent="." index="13" unique_id=1427123297 instance=ExtResource("6_eri3t")]
+position = Vector2(552, 96)
+
+[node name="BlockSpecialC4" parent="." index="14" unique_id=1834689799 instance=ExtResource("6_eri3t")]
+position = Vector2(600, 96)
+
+[node name="BlockSpecialC5" parent="." index="15" unique_id=9750026 instance=ExtResource("6_eri3t")]
+position = Vector2(552, 48)
+
+[node name="BlockSpecialC6" parent="." index="16" unique_id=1133463219 instance=ExtResource("6_eri3t")]
+position = Vector2(600, 48)
+
+[node name="BlockSpecialA" parent="." index="17" unique_id=997552194 instance=ExtResource("7_i3gxa")]
+position = Vector2(456, 144)
+
+[node name="BlockSpecialA2" parent="." index="18" unique_id=255901571 instance=ExtResource("7_i3gxa")]
+position = Vector2(456, 96)
+
+[node name="BlockSpecialA3" parent="." index="19" unique_id=614854813 instance=ExtResource("7_i3gxa")]
+position = Vector2(456, 48)
+
+[node name="BlockSpecialA4" parent="." index="20" unique_id=404256316 instance=ExtResource("7_i3gxa")]
+position = Vector2(696, 144)
+
+[node name="BlockSpecialA5" parent="." index="21" unique_id=1262410307 instance=ExtResource("7_i3gxa")]
+position = Vector2(696, 96)
+
+[node name="BlockSpecialA6" parent="." index="22" unique_id=279743010 instance=ExtResource("7_i3gxa")]
+position = Vector2(696, 48)

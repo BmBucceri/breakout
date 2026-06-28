@@ -9,8 +9,6 @@ var special_score: float = 1
 signal block_destroyed(score: int)
 
 func destroy_brick():
-	#SignalManager.increment_score(block_score)
-	#GameManager.remove_block(self)
 	block_destroyed.emit(block_score)
 	GameManager.hit_stop(.1)
 	self.queue_free()
@@ -30,6 +28,5 @@ func on_hit(speed: float):
 		var new_brick = next_brick.instantiate()
 		
 		add_sibling(new_brick)
-		#print("are you on phone")
 		new_brick.global_position = global_position
 		destroy_brick()

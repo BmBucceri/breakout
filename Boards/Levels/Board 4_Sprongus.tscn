@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://co443mxrablr3" path="res://Boards/Levels/Board Base_MASTERBOARD.tscn" id="1_bm24u"]
 [ext_resource type="PackedScene" uid="uid://c7y4cotdmurv4" path="res://Scenes/Blocks/BlockSpecialB.tscn" id="2_8s7tp"]
-[ext_resource type="PackedScene" uid="uid://hl5qbnf4ocx5" path="res://Scenes/Blocks/Block_Speed.tscn" id="3_ndym4"]
+[ext_resource type="PackedScene" uid="uid://hl5qbnf4ocx5" path="res://Scenes/Blocks/Block_Speed_Low.tscn" id="3_ndym4"]
 [ext_resource type="PackedScene" uid="uid://n7d2rebmqtg8" path="res://Scenes/Blocks/BlockSpecialC.tscn" id="4_0fpe0"]
 [ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://Scenes/Blocks/BlockBase.tscn" id="5_4iebc"]
 
@@ -14,9 +14,6 @@ music_to_play = 3
 metadata/_edit_lock_ = true
 
 [node name="MarginContainer" parent="UI/Control" index="0" unique_id=568693195]
-metadata/_edit_lock_ = true
-
-[node name="CountdownBounceSprite2D" parent="UI/Control/MarginContainer/HBoxContainer/CountdownCanvasLayer" parent_id_path=PackedInt32Array(656124029) index="0" unique_id=1059208540]
 metadata/_edit_lock_ = true
 
 [node name="BlockRoot" parent="." index="1" unique_id=1591539969]

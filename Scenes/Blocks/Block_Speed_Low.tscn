@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://hl5qbnf4ocx5"]
+
+[ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://Scenes/Blocks/BlockBase.tscn" id="1_x7hfc"]
+[ext_resource type="Texture2D" uid="uid://n11ak23r2smc" path="res://Assets/2x/SpeedBlock- Low Speed@2x.png" id="2_mn4jq"]
+
+[node name="BlockSpeedLow" unique_id=1282541942 instance=ExtResource("1_x7hfc")]
+min_break_speed = 700.0
+block_score = 50.0
+
+[node name="Sprite2D" parent="." index="2" unique_id=938027310]
+texture = ExtResource("2_mn4jq")

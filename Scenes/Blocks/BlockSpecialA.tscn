@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b0dac6bf3gfyu"]
 
 [ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://Scenes/Blocks/BlockBase.tscn" id="1_q6aci"]
-[ext_resource type="Texture2D" uid="uid://24oib3ivhrey" path="res://Assets/2x/Block Double@2x.png" id="2_cbu51"]
+[ext_resource type="Texture2D" uid="uid://bpuo3b138o0gn" path="res://Assets/2x/Block Double Star.png" id="2_cbu51"]
 
 [node name="BlockSpecialA" unique_id=997552194 instance=ExtResource("1_q6aci")]
 scale = Vector2(1, 1.009901)

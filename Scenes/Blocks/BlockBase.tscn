@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://1yjlqu7i84db" path="res://block_base.gd" id="1_xfwl5"]
 [ext_resource type="Script" uid="uid://cxtdhn4hf5pod" path="res://Scenes/UI_Scenes/hurtbox.gd" id="2_xfwl5"]
-[ext_resource type="Texture2D" uid="uid://ca4ducbvnw8wu" path="res://Assets/2x/Block Single@2x.png" id="3_giavo"]
+[ext_resource type="Texture2D" uid="uid://da77j17bth1y1" path="res://Assets/2x/Block Single Star.png" id="3_giavo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gho8k"]
-size = Vector2(88.000015, 174)
+size = Vector2(88, 88)
 
 [node name="BlockBase" type="StaticBody2D" unique_id=1282541942]
 collision_layer = 2

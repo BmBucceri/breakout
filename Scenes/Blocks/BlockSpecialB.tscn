@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://buyvsud8eecnx" path="res://Scenes/Blocks/BlockBase.tscn" id="1_c27op"]
 [ext_resource type="PackedScene" uid="uid://b0dac6bf3gfyu" path="res://Scenes/Blocks/BlockSpecialA.tscn" id="2_bkc56"]
-[ext_resource type="Texture2D" uid="uid://d1jnkwwe76wyc" path="res://Assets/2x/Block Triple@2x.png" id="3_ep61k"]
+[ext_resource type="Texture2D" uid="uid://b50dc7xnffstg" path="res://Assets/2x/Block Triple Star.png" id="3_ep61k"]
 
 [node name="BlockSpecialB" unique_id=451493038 instance=ExtResource("1_c27op")]
 next_brick = ExtResource("2_bkc56")

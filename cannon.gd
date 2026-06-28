@@ -12,7 +12,7 @@ var rotation_offset: float = 90
 var total_balls_onscreen : int = 0
 var can_shoot: bool = true
 var parry_active: bool = false
-var parry_drain: float = .5
+var parry_drain: float = .5 ## how fast does the bar drain
 var parry_refill: float = .35
 var follow_speed: float = 8.0
 

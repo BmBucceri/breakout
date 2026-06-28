@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bwjswcw8dd3jo"]
+
+[ext_resource type="Script" uid="uid://upu21a3iikhe" path="res://Scenes/UI_Scenes/button_juice.gd" id="1_wcg2g"]
+[ext_resource type="AudioStream" path="res://Audio/SFX/Interface/InspectorJ - Robotic Functions - Tiny Hatch Closing Click Clack .wav" id="2_0ulit"]
+[ext_resource type="AudioStream" path="res://Audio/SFX/Interface/Mouse over.wav" id="2_xe7g8"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_xe7g8"]
+random_pitch = 1.2599211
+streams_count = 1
+stream_0/stream = ExtResource("2_xe7g8")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_0ulit"]
+random_pitch = 1.2599211
+streams_count = 1
+stream_0/stream = ExtResource("2_0ulit")
+
+[node name="ButtonJuice" type="Node" unique_id=1502323413 node_paths=PackedStringArray("hover", "pressed")]
+script = ExtResource("1_wcg2g")
+scale_pressed = Vector2(0.92, 1)
+scale_hover = Vector2(1.05, 1)
+duration = 0.05
+hover = NodePath("Hover")
+pressed = NodePath("Pressed")
+
+[node name="Hover" type="AudioStreamPlayer" parent="." unique_id=237767154]
+stream = SubResource("AudioStreamRandomizer_xe7g8")
+volume_db = -10.0
+pitch_scale = 3.0
+
+[node name="Pressed" type="AudioStreamPlayer" parent="." unique_id=2009808659]
+stream = SubResource("AudioStreamRandomizer_0ulit")
